@@ -3,101 +3,97 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Earth Commons DAO | El Nuevo Paradigma</title>
+    <title>Earth Commons DAO | Nodo Planetario</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #030303; color: #e5e7eb; font-family: 'Space Grotesk', sans-serif; overflow-x: hidden; }
+        body { background-color: #000; color: #fff; font-family: 'Space Grotesk', sans-serif; overflow: hidden; }
         
-        /* Efecto Tierra Central Dinámica */
-        .earth-container {
-            position: relative; width: 100%; height: 600px;
-            display: flex; align-items: center; justify-content: center;
-        }
+        /* Tierra Central con Glitch de Daño */
+        .earth-wrapper { position: relative; height: 100vh; display: flex; align-items: center; justify-content: center; }
+        
         .earth-sphere {
-            position: absolute; width: 300px; height: 300px;
-            background: radial-gradient(circle, #22c55e 0%, #3b82f6 50%, #000 100%);
-            border-radius: 50%; filter: blur(60px); opacity: 0.4;
-            animation: pulse-earth 10s infinite alternate;
+            width: 350px; height: 350px; border-radius: 50%;
+            background: radial-gradient(circle, #22c55e 0%, #1e40af 80%, #000 100%);
+            position: relative; z-index: 10; transition: all 0.5s ease;
+            animation: rotate-earth 60s linear infinite;
         }
-        /* Órbitas que representan las 3 capas */
-        .layer-orbit {
-            position: absolute; border-radius: 50%; border: 1px solid rgba(255,255,255,0.08);
-            transition: all 0.5s ease;
+
+        .damage-glitch { animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both; filter: hue-rotate(90deg) saturate(2); }
+
+        @keyframes rotate-earth { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        @keyframes shake { 10%, 90% { transform: translate3d(-1px, 0, 0); } 20%, 80% { transform: translate3d(2px, 0, 0); } }
+
+        /* Capas Laterales */
+        .layer-box {
+            position: absolute; width: 250px; padding: 20px; background: rgba(255,255,255,0.02);
+            backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px;
         }
-        .orbit-1 { width: 400px; height: 400px; animation: rotate 20s linear infinite; }
-        .orbit-2 { width: 550px; height: 550px; animation: rotate 35s linear reverse infinite; }
-        .orbit-3 { width: 700px; height: 700px; animation: rotate 50s linear infinite; }
 
-        @keyframes pulse-earth { 0% { transform: scale(1); opacity: 0.3; } 100% { transform: scale(1.3); opacity: 0.6; } }
-        @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-
-        .glass-panel { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); }
-        .btn-paradigm { background: white; color: black; box-shadow: 0 0 20px rgba(255,255,255,0.2); transition: all 0.3s ease; }
-        .btn-paradigm:hover { transform: scale(1.05); box-shadow: 0 0 40px rgba(255,255,255,0.4); }
+        /* Data Incómoda (Ticker) */
+        #data-ticker {
+            position: absolute; top: 10%; width: 100%; text-align: center;
+            color: #ef4444; font-weight: bold; font-family: monospace; letter-spacing: 2px;
+        }
     </style>
 </head>
 <body>
 
-    <section class="relative min-h-screen flex flex-col items-center justify-center pt-20">
-        <div class="earth-container">
-            <div class="earth-sphere"></div>
-            <div class="layer-orbit orbit-1"></div>
-            <div class="layer-orbit orbit-2"></div>
-            <div class="layer-orbit orbit-3"></div>
-            
-            <div class="relative z-10 text-center px-6">
-                <h1 class="text-7xl md:text-9xl font-bold tracking-tighter mb-4">EARTH COMMONS</h1>
-                <p class="text-2xl md:text-3xl font-light text-blue-400 mb-10 tracking-widest uppercase">Gobernanza de los Comunes</p>
-                <button onclick="document.getElementById('paradigma').scrollIntoView()" class="btn-paradigm px-12 py-5 rounded-full font-bold text-xl">
-                    Únete al Cambio de Paradigma
-                </button>
-            </div>
+    <div id="data-ticker">SISTEMA TERMINAL: MONITOREO DE FALLOS...</div>
+
+    <main class="earth-wrapper">
+        <div class="layer-box" style="top:15%; left:5%">
+            <p class="text-green-400 font-bold text-xs uppercase">Capa 1: Formal</p>
+            <p class="text-[10px] text-gray-400">Transparencia absoluta en flujos de capital público.</p>
         </div>
-    </section>
-
-    <section id="paradigma" class="max-w-6xl mx-auto px-6 py-32">
-        <div class="grid md:grid-cols-2 gap-16">
-            <div class="space-y-6">
-                <h2 class="text-sm font-bold text-red-500 uppercase tracking-widest">Diagnóstico: Sistema Terminal</h2>
-                <p class="text-4xl font-bold leading-tight">La escasez artificial y el sedentarismo impuesto.</p>
-                <div class="h-1 w-20 bg-red-500"></div>
-                <p class="text-gray-400 text-lg">Un sistema que invisibiliza el cuidado ($10.8T) y criminaliza la economía real del 60% de la población.</p>
-            </div>
-            
-            <div class="space-y-6">
-                <h2 class="text-sm font-bold text-green-400 uppercase tracking-widest">Propuesta: Nuevo Paradigma</h2>
-                <p class="text-4xl font-bold leading-tight">Integración de la Sombra y Reciprocidad.</p>
-                <div class="h-1 w-20 bg-green-400"></div>
-                <p class="text-gray-400 text-lg">Custodia mutua por IA y nomadismo transnacional basado en reputación, no en permisos estatales.</p>
-            </div>
+        <div class="layer-box" style="bottom:15%; left:5%">
+            <p class="text-blue-400 font-bold text-xs uppercase">Capa 2: Reciproca</p>
+            <p class="text-[10px] text-gray-400">Economía del cuidado protegida por ZK-Proofs.</p>
         </div>
-    </section>
 
-    <section class="max-w-7xl mx-auto px-6 py-24 border-t border-white/5">
-        <div class="grid md:grid-cols-3 gap-6">
-            <div class="glass-panel p-10 rounded-2xl">
-                <p class="text-green-400 font-mono text-xs mb-6 tracking-widest">CAPA 01 / FORMAL</p>
-                <h3 class="text-2xl font-bold mb-4">Transparencia</h3>
-                <p class="text-gray-400">Inversiones audidables y bonos de infraestructura mediante Smart Contracts públicos.</p>
-            </div>
-            <div class="glass-panel p-10 rounded-2xl">
-                <p class="text-blue-400 font-mono text-xs mb-6 tracking-widest">CAPA 02 / RECIPROCA</p>
-                <h3 class="text-2xl font-bold mb-4">Ayuda Mutua</h3>
-                <p class="text-gray-400">Privacidad total mediante Zero Knowledge Proofs. Datos en manos de los ciudadanos.</p>
-            </div>
-            <div class="glass-panel p-10 rounded-2xl">
-                <p class="text-purple-400 font-mono text-xs mb-6 tracking-widest">CAPA 03 / SOMBRA</p>
-                <h3 class="text-2xl font-bold mb-4">Consentimiento</h3>
-                <p class="text-gray-400">Libertad de intercambio protegida por una IA de custodia y límites éticos infranqueables.</p>
-            </div>
+        <div id="earth" class="earth-sphere flex items-center justify-center">
+            <button onclick="activateNode()" class="z-20 bg-white text-black font-bold py-5 px-10 rounded-full hover:scale-110 transition shadow-2xl">
+                ACTIVAR NODO IA
+            </button>
         </div>
-    </section>
 
-    <footer class="py-20 text-center opacity-40">
-        <p class="text-xs tracking-[0.3em] uppercase">Earth Commons DAO • Acción precede a consciencia • 2025</p>
-    </footer>
+        <div class="layer-box" style="top:15%; right:5%">
+            <p class="text-purple-400 font-bold text-xs uppercase">Capa 3: Sombra</p>
+            <p class="text-[10px] text-gray-400">Consentimiento libre y custodia mutua.</p>
+        </div>
+        <div class="layer-box" style="bottom:15%; right:5%">
+            <p class="text-yellow-400 font-bold text-xs uppercase">Capa 4: Evolución</p>
+            <p class="text-[10px] text-gray-400">Transferencia de saberes y resiliencia.</p>
+        </div>
+    </main>
 
+    <script>
+        const rawData = [
+            "FALLO: $10.8 TRILLONES EN CUIDADO INVISIBLE",
+            "ERROR: 60% ACTIVIDAD ECONÓMICA CRIMINALIZADA",
+            "CRISIS: DESIGUALDAD ESTRUCTURAL CRÓNICA",
+            "ALERTA: SEDENTARISMO IMPUESTO POR FRONTERAS",
+            "SÍNTOMA: PACIENTE TERMINAL EN NEGACIÓN"
+        ];
+
+        const ticker = document.getElementById('data-ticker');
+        const earth = document.getElementById('earth');
+
+        // Ciclo de Daño (Glitch)
+        setInterval(() => {
+            const randomData = rawData[Math.floor(Math.random() * rawData.length)];
+            ticker.innerText = randomData;
+            earth.classList.add('damage-glitch');
+            setTimeout(() => earth.classList.remove('damage-glitch'), 500);
+        }, 4000);
+
+        function activateNode() {
+            alert("Sincronizando con Earth Commons DAO... Iniciando Protocolo de Sanación Sistémica.");
+            earth.style.background = "radial-gradient(circle, #4ade80 0%, #3b82f6 100%)";
+            earth.style.boxShadow = "0 0 150px rgba(74, 222, 128, 0.6)";
+            ticker.style.color = "#4ade80";
+            ticker.innerText = "NODO ACTIVO: ECONOMÍA RECÍPROCA INICIADA";
+        }
+    </script>
 </body>
 </html>
