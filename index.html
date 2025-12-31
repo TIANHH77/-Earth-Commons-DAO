@@ -3,96 +3,120 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Earth Commons DAO | Nodo Planetario</title>
+    <title>Earth Commons DAO | El Motor del Mundo</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700&display=swap" rel="stylesheet">
     <style>
         body { background-color: #000; color: #fff; font-family: 'Space Grotesk', sans-serif; overflow: hidden; }
         
-        /* Tierra Central con Glitch de Daño */
-        .earth-wrapper { position: relative; height: 100vh; display: flex; align-items: center; justify-content: center; }
-        
-        .earth-sphere {
-            width: 350px; height: 350px; border-radius: 50%;
+        /* Contenedor del Mundo */
+        .world-system { 
+            position: relative; height: 100vh; width: 100vw; 
+            display: flex; align-items: center; justify-content: center;
+        }
+
+        /* Tierra Central con Reacción */
+        .earth-core {
+            width: 380px; height: 380px; border-radius: 50%;
             background: radial-gradient(circle, #22c55e 0%, #1e40af 80%, #000 100%);
-            position: relative; z-index: 10; transition: all 0.5s ease;
-            animation: rotate-earth 60s linear infinite;
+            position: relative; z-index: 10; transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 0 60px rgba(59, 130, 246, 0.2);
+            cursor: pointer;
         }
 
-        .damage-glitch { animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both; filter: hue-rotate(90deg) saturate(2); }
-
-        @keyframes rotate-earth { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-        @keyframes shake { 10%, 90% { transform: translate3d(-1px, 0, 0); } 20%, 80% { transform: translate3d(2px, 0, 0); } }
-
-        /* Capas Laterales */
-        .layer-box {
-            position: absolute; width: 250px; padding: 20px; background: rgba(255,255,255,0.02);
-            backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px;
+        /* Capas como Órbitas Activas */
+        .node-layer {
+            position: absolute; width: 220px; z-index: 20;
+            transition: all 0.5s ease; cursor: help;
+        }
+        
+        .info-detail { 
+            max-height: 0; overflow: hidden; opacity: 0; 
+            transition: all 0.5s ease; font-size: 0.75rem; color: #9ca3af;
         }
 
-        /* Data Incómoda (Ticker) */
-        #data-ticker {
-            position: absolute; top: 10%; width: 100%; text-align: center;
-            color: #ef4444; font-weight: bold; font-family: monospace; letter-spacing: 2px;
+        .node-layer:hover .info-detail { max-height: 200px; opacity: 1; margin-top: 10px; }
+        .node-layer:hover h3 { color: #fff; transform: scale(1.1); }
+
+        /* Posicionamiento y Vínculo con la Tierra */
+        .layer-1 { top: 15%; left: 15%; border-left: 2px solid #22c55e; padding-left: 15px; }
+        .layer-2 { bottom: 15%; left: 15%; border-left: 2px solid #3b82f6; padding-left: 15px; }
+        .layer-3 { top: 15%; right: 15%; border-right: 2px solid #a855f7; padding-right: 15px; text-align: right; }
+        .layer-4 { bottom: 15%; right: 15%; border-right: 2px solid #facc15; padding-right: 15px; text-align: right; }
+
+        /* Animación cuando la Sombra (Capa 3) toma el control */
+        .layer-3:hover ~ .earth-core { 
+            box-shadow: 0 0 100px rgba(168, 85, 247, 0.5); 
+            transform: scale(1.1) rotate(15deg);
+        }
+
+        /* Ticker de Daño Sistémico */
+        #glitch-text {
+            position: absolute; top: 5%; width: 100%; text-align: center;
+            font-family: monospace; color: #ef4444; font-size: 0.8rem; letter-spacing: 3px;
         }
     </style>
 </head>
 <body>
 
-    <div id="data-ticker">SISTEMA TERMINAL: MONITOREO DE FALLOS...</div>
+    <div id="glitch-text">MONITOREANDO FALLOS DEL SISTEMA TERMINAL...</div>
 
-    <main class="earth-wrapper">
-        <div class="layer-box" style="top:15%; left:5%">
-            <p class="text-green-400 font-bold text-xs uppercase">Capa 1: Formal</p>
-            <p class="text-[10px] text-gray-400">Transparencia absoluta en flujos de capital público.</p>
-        </div>
-        <div class="layer-box" style="bottom:15%; left:5%">
-            <p class="text-blue-400 font-bold text-xs uppercase">Capa 2: Reciproca</p>
-            <p class="text-[10px] text-gray-400">Economía del cuidado protegida por ZK-Proofs.</p>
+    <main class="world-system">
+        
+        <div class="node-layer layer-1">
+            <h3 class="text-green-400 font-bold uppercase tracking-tighter transition-all">01. Capa Formal</h3>
+            <div class="info-detail">
+                Inversiones audidables y bonos de infraestructura. Transparencia absoluta mediante Smart Contracts.
+            </div>
         </div>
 
-        <div id="earth" class="earth-sphere flex items-center justify-center">
-            <button onclick="activateNode()" class="z-20 bg-white text-black font-bold py-5 px-10 rounded-full hover:scale-110 transition shadow-2xl">
+        <div class="node-layer layer-2">
+            <h3 class="text-blue-400 font-bold uppercase tracking-tighter transition-all">02. Reciprocidad</h3>
+            <div class="info-detail">
+                El motor invisible del cuidado ($10.8T). Intercambios encriptados con Zero Knowledge Proofs.
+            </div>
+        </div>
+
+        <div class="earth-core flex items-center justify-center group" id="main-earth">
+            <button onclick="activateAI()" class="bg-white text-black font-bold py-4 px-8 rounded-full group-hover:scale-110 transition-transform shadow-2xl">
                 ACTIVAR NODO IA
             </button>
         </div>
 
-        <div class="layer-box" style="top:15%; right:5%">
-            <p class="text-purple-400 font-bold text-xs uppercase">Capa 3: Sombra</p>
-            <p class="text-[10px] text-gray-400">Consentimiento libre y custodia mutua.</p>
+        <div class="node-layer layer-3">
+            <h3 class="text-purple-400 font-bold uppercase tracking-tighter transition-all">03. La Sombra</h3>
+            <div class="info-detail">
+                Donde ocurre la vida real. Consentimiento verificado por IA. Integración de lo que el sistema reprime.
+            </div>
         </div>
-        <div class="layer-box" style="bottom:15%; right:5%">
-            <p class="text-yellow-400 font-bold text-xs uppercase">Capa 4: Evolución</p>
-            <p class="text-[10px] text-gray-400">Transferencia de saberes y resiliencia.</p>
+
+        <div class="node-layer layer-4">
+            <h3 class="text-yellow-400 font-bold uppercase tracking-tighter transition-all">04. Evolución (PAL)</h3>
+            <div class="info-detail">
+                Aprendizaje dinámico. Si enseñas, creces. Si aprendes, fortaleces el nodo. La acción precede a la consciencia.
+            </div>
         </div>
+
     </main>
 
     <script>
-        const rawData = [
-            "FALLO: $10.8 TRILLONES EN CUIDADO INVISIBLE",
-            "ERROR: 60% ACTIVIDAD ECONÓMICA CRIMINALIZADA",
-            "CRISIS: DESIGUALDAD ESTRUCTURAL CRÓNICA",
-            "ALERTA: SEDENTARISMO IMPUESTO POR FRONTERAS",
-            "SÍNTOMA: PACIENTE TERMINAL EN NEGACIÓN"
+        const glitchMessages = [
+            "ERROR: $10.8T EN CUIDADO INVISIBLE",
+            "SÍNTOMA: 60% ECONOMÍA CRIMINALIZADA",
+            "ALERTA: FRONTERAS BLOQUEAN EL FLUJO",
+            "FALLO: SISTEMA TERMINAL EN CRISIS"
         ];
 
-        const ticker = document.getElementById('data-ticker');
-        const earth = document.getElementById('earth');
-
-        // Ciclo de Daño (Glitch)
         setInterval(() => {
-            const randomData = rawData[Math.floor(Math.random() * rawData.length)];
-            ticker.innerText = randomData;
-            earth.classList.add('damage-glitch');
-            setTimeout(() => earth.classList.remove('damage-glitch'), 500);
-        }, 4000);
+            const msg = glitchMessages[Math.floor(Math.random() * glitchMessages.length)];
+            document.getElementById('glitch-text').innerText = msg;
+        }, 3000);
 
-        function activateNode() {
-            alert("Sincronizando con Earth Commons DAO... Iniciando Protocolo de Sanación Sistémica.");
+        function activateAI() {
+            const earth = document.getElementById('main-earth');
             earth.style.background = "radial-gradient(circle, #4ade80 0%, #3b82f6 100%)";
-            earth.style.boxShadow = "0 0 150px rgba(74, 222, 128, 0.6)";
-            ticker.style.color = "#4ade80";
-            ticker.innerText = "NODO ACTIVO: ECONOMÍA RECÍPROCA INICIADA";
+            earth.style.boxShadow = "0 0 150px rgba(74, 222, 128, 0.4)";
+            alert("Nodo Sincronizado. Iniciando Protocolo de Reestructuración Global.");
         }
     </script>
 </body>
