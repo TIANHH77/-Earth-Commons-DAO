@@ -1,112 +1,102 @@
 <!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Earth Commons DAO | El Cambio de Paradigma</title>
+    <title>Earth Commons DAO | El Nuevo Paradigma</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #050505; color: #f5f5f5; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        h1, h2, .font-space { font-family: 'Space Grotesk', sans-serif; }
-        .gradient-text { background: linear-gradient(90deg, #4ade80, #3b82f6, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        body { background-color: #030303; color: #e5e7eb; font-family: 'Space Grotesk', sans-serif; overflow-x: hidden; }
         
-        /* La Tierra Abstracta y sus Capas */
-        .earth-core {
-            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-            width: 500px; height: 500px; border-radius: 50%;
-            background: radial-gradient(circle, rgba(74,222,128,0.1) 0%, rgba(59,130,246,0.05) 50%, transparent 70%);
-            z-index: -1; filter: blur(40px); animation: pulse-earth 8s infinite alternate;
+        /* Efecto Tierra Central Dinámica */
+        .earth-container {
+            position: relative; width: 100%; height: 600px;
+            display: flex; align-items: center; justify-content: center;
         }
-        .orbit {
-            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-            border: 1px solid rgba(255,255,255,0.05); border-radius: 50%; z-index: -1;
+        .earth-sphere {
+            position: absolute; width: 300px; height: 300px;
+            background: radial-gradient(circle, #22c55e 0%, #3b82f6 50%, #000 100%);
+            border-radius: 50%; filter: blur(60px); opacity: 0.4;
+            animation: pulse-earth 10s infinite alternate;
         }
-        @keyframes pulse-earth { 0% { transform: translate(-50%, -50%) scale(1); opacity: 0.3; } 100% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.6; } }
-        
-        .card-glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); transition: all 0.4s ease; }
-        .card-glass:hover { border-color: rgba(74, 222, 128, 0.4); background: rgba(255, 255, 255, 0.05); }
-        .match-success { animation: success-glow 2s infinite; border-color: #4ade80 !important; }
-        @keyframes success-glow { 0%, 100% { box-shadow: 0 0 10px rgba(74, 222, 128, 0.2); } 50% { box-shadow: 0 0 30px rgba(74, 222, 128, 0.4); } }
+        /* Órbitas que representan las 3 capas */
+        .layer-orbit {
+            position: absolute; border-radius: 50%; border: 1px solid rgba(255,255,255,0.08);
+            transition: all 0.5s ease;
+        }
+        .orbit-1 { width: 400px; height: 400px; animation: rotate 20s linear infinite; }
+        .orbit-2 { width: 550px; height: 550px; animation: rotate 35s linear reverse infinite; }
+        .orbit-3 { width: 700px; height: 700px; animation: rotate 50s linear infinite; }
+
+        @keyframes pulse-earth { 0% { transform: scale(1); opacity: 0.3; } 100% { transform: scale(1.3); opacity: 0.6; } }
+        @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+        .glass-panel { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .btn-paradigm { background: white; color: black; box-shadow: 0 0 20px rgba(255,255,255,0.2); transition: all 0.3s ease; }
+        .btn-paradigm:hover { transform: scale(1.05); box-shadow: 0 0 40px rgba(255,255,255,0.4); }
     </style>
 </head>
 <body>
 
-    <header class="relative min-h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden">
-        <div class="earth-core"></div>
-        <div class="orbit w-[600px] h-[600px]"></div>
-        <div class="orbit w-[800px] h-[800px] opacity-50"></div>
-
-        <div class="relative z-10 max-w-4xl">
-            <h1 class="text-6xl md:text-8xl font-bold mb-6 tracking-tighter leading-tight">
-                Earth Commons <span class="gradient-text">DAO</span>
-            </h1>
-            <p class="text-xl md:text-2xl text-gray-400 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
-                No es una reforma. Es una reestructuración global para lo que el sistema actual elige no ver.
-            </p>
-            <div class="flex flex-col md:flex-row gap-6 justify-center">
-                <button onclick="document.getElementById('contraste').scrollIntoView()" class="bg-white text-black font-bold py-5 px-12 rounded-full text-xl hover:scale-105 transition-all shadow-[0_0_40px_rgba(255,255,255,0.2)]">
+    <section class="relative min-h-screen flex flex-col items-center justify-center pt-20">
+        <div class="earth-container">
+            <div class="earth-sphere"></div>
+            <div class="layer-orbit orbit-1"></div>
+            <div class="layer-orbit orbit-2"></div>
+            <div class="layer-orbit orbit-3"></div>
+            
+            <div class="relative z-10 text-center px-6">
+                <h1 class="text-7xl md:text-9xl font-bold tracking-tighter mb-4">EARTH COMMONS</h1>
+                <p class="text-2xl md:text-3xl font-light text-blue-400 mb-10 tracking-widest uppercase">Gobernanza de los Comunes</p>
+                <button onclick="document.getElementById('paradigma').scrollIntoView()" class="btn-paradigm px-12 py-5 rounded-full font-bold text-xl">
                     Únete al Cambio de Paradigma
                 </button>
             </div>
         </div>
-    </header>
+    </section>
 
-    <section id="contraste" class="max-w-6xl mx-auto px-6 py-24 border-t border-white/5">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold mb-4">El Diagnóstico del Paciente</h2>
-            <p class="text-gray-500">Comparativa entre el sistema terminal y la emergencia de la reciprocidad.</p>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="p-10 rounded-3xl border border-red-900/20 bg-red-950/5">
-                <h3 class="text-red-500 font-space font-bold mb-6 tracking-widest uppercase text-sm">Sistema Terminal (Actual)</h3>
-                <ul class="space-y-4 text-gray-400">
-                    <li class="flex items-start"><span class="mr-3 text-red-500">✕</span> Sedentarismo e invisibilidad del cuidado ($10.8T).</li>
-                    <li class="flex items-start"><span class="mr-3 text-red-500">✕</span> Economía informal criminalizada (50-60%).</li>
-                    <li class="flex items-start"><span class="mr-3 text-red-500">✕</span> Centralización basada en la vigilancia y la deuda.</li>
-                </ul>
+    <section id="paradigma" class="max-w-6xl mx-auto px-6 py-32">
+        <div class="grid md:grid-cols-2 gap-16">
+            <div class="space-y-6">
+                <h2 class="text-sm font-bold text-red-500 uppercase tracking-widest">Diagnóstico: Sistema Terminal</h2>
+                <p class="text-4xl font-bold leading-tight">La escasez artificial y el sedentarismo impuesto.</p>
+                <div class="h-1 w-20 bg-red-500"></div>
+                <p class="text-gray-400 text-lg">Un sistema que invisibiliza el cuidado ($10.8T) y criminaliza la economía real del 60% de la población.</p>
             </div>
-
-            <div class="p-10 rounded-3xl border border-green-500/20 bg-green-500/5">
-                <h3 class="text-green-400 font-space font-bold mb-6 tracking-widest uppercase text-sm">Nuevo Paradigma (Earth Commons)</h3>
-                <ul class="space-y-4 text-white">
-                    <li class="flex items-start"><span class="mr-3 text-green-400">✓</span> Nomadismo libre basado en reputación portable.</li>
-                    <li class="flex items-start"><span class="mr-3 text-green-400">✓</span> Integración de la Sombra y Reciprocidad.</li>
-                    <li class="flex items-start"><span class="mr-3 text-green-400">✓</span> Custodia mutua por IA: Seguridad sin vigilancia.</li>
-                </ul>
+            
+            <div class="space-y-6">
+                <h2 class="text-sm font-bold text-green-400 uppercase tracking-widest">Propuesta: Nuevo Paradigma</h2>
+                <p class="text-4xl font-bold leading-tight">Integración de la Sombra y Reciprocidad.</p>
+                <div class="h-1 w-20 bg-green-400"></div>
+                <p class="text-gray-400 text-lg">Custodia mutua por IA y nomadismo transnacional basado en reputación, no en permisos estatales.</p>
             </div>
         </div>
     </section>
 
-    <section class="max-w-6xl mx-auto px-6 py-24">
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="card-glass p-8 rounded-3xl">
-                <div class="text-green-400 font-mono text-xs mb-4">CAPA 01 / TRANSPARENCIA</div>
-                <h3 class="text-xl font-bold mb-4">Formalidad Pública</h3>
-                <p class="text-gray-400 text-sm">Inversiones, bonos de infraestructura y votación por Smart Contracts.</p>
+    <section class="max-w-7xl mx-auto px-6 py-24 border-t border-white/5">
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="glass-panel p-10 rounded-2xl">
+                <p class="text-green-400 font-mono text-xs mb-6 tracking-widest">CAPA 01 / FORMAL</p>
+                <h3 class="text-2xl font-bold mb-4">Transparencia</h3>
+                <p class="text-gray-400">Inversiones audidables y bonos de infraestructura mediante Smart Contracts públicos.</p>
             </div>
-            <div class="card-glass p-8 rounded-3xl">
-                <div class="text-blue-400 font-mono text-xs mb-4">CAPA 02 / RECIPROCIDAD</div>
-                <h3 class="text-xl font-bold mb-4">Ayuda Mutua</h3>
-                <p class="text-gray-400 text-sm">Privacidad por Zero Knowledge Proofs. Tu datos son tuyos.</p>
+            <div class="glass-panel p-10 rounded-2xl">
+                <p class="text-blue-400 font-mono text-xs mb-6 tracking-widest">CAPA 02 / RECIPROCA</p>
+                <h3 class="text-2xl font-bold mb-4">Ayuda Mutua</h3>
+                <p class="text-gray-400">Privacidad total mediante Zero Knowledge Proofs. Datos en manos de los ciudadanos.</p>
             </div>
-            <div class="card-glass p-8 rounded-3xl">
-                <div class="text-purple-400 font-mono text-xs mb-4">CAPA 03 / LIBERTAD</div>
-                <h3 class="text-xl font-bold mb-4">Espacio de Sombra</h3>
-                <p class="text-gray-400 text-sm">Intercambios bajo consentimiento verificado por la IA de custodia.</p>
+            <div class="glass-panel p-10 rounded-2xl">
+                <p class="text-purple-400 font-mono text-xs mb-6 tracking-widest">CAPA 03 / SOMBRA</p>
+                <h3 class="text-2xl font-bold mb-4">Consentimiento</h3>
+                <p class="text-gray-400">Libertad de intercambio protegida por una IA de custodia y límites éticos infranqueables.</p>
             </div>
         </div>
     </section>
 
-    <footer class="max-w-6xl mx-auto px-6 py-20 border-t border-white/5 text-center">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 opacity-50">
-            <div><p class="text-[10px] uppercase tracking-widest mb-1">Cuidado</p><p class="text-xl font-bold">850 XP</p></div>
-            <div><p class="text-[10px] uppercase tracking-widest mb-1">Reputación</p><p class="text-xl font-bold">1.2K XP</p></div>
-            <div><p class="text-[10px] uppercase tracking-widest mb-1">Matches</p><p class="text-xl font-bold">43</p></div>
-            <div><p class="text-[10px] uppercase tracking-widest mb-1">Ética</p><p class="text-xl font-bold text-green-400">100%</p></div>
-        </div>
-        <p class="text-gray-600 text-xs">Acción precede a consciencia. Earth Commons DAO 2025.</p>
+    <footer class="py-20 text-center opacity-40">
+        <p class="text-xs tracking-[0.3em] uppercase">Earth Commons DAO • Acción precede a consciencia • 2025</p>
     </footer>
 
 </body>
