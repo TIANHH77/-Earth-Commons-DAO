@@ -4,130 +4,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Earth Commons DAO | El Salto a la Acción</title>
+    <title>Earth Commons DAO | Declaración de Intenciones</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #050505; color: #fff; font-family: 'Space Grotesk', sans-serif; scroll-behavior: smooth; overflow-x: hidden; }
+        body { background-color: #030303; color: #fff; font-family: 'Space Grotesk', sans-serif; scroll-behavior: smooth; }
         .gradient-text { background: linear-gradient(90deg, #4ade80, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .glass { background: rgba(255,255,255,0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); transition: all 0.3s ease; }
-        .glass:hover { border-color: rgba(74, 222, 128, 0.5); }
+        .glass { background: rgba(255,255,255,0.02); backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.05); }
         
-        /* Animación Tierra Central */
+        /* La Tierra: El Corazón del Intento Desesperado */
         .earth-sphere {
-            width: 320px; height: 320px; border-radius: 50%;
+            width: 350px; height: 350px; border-radius: 50%;
             background: url('https://upload.wikimedia.org/wikipedia/commons/c/cb/The_Blue_Marble_cloudless.jpg');
-            background-size: cover; animation: rotate 40s linear infinite;
-            box-shadow: 0 0 60px rgba(59, 130, 246, 0.2);
-            transition: all 1s ease;
+            background-size: cover; animation: rotate 50s linear infinite;
+            box-shadow: 0 0 80px rgba(59, 130, 246, 0.1);
         }
         @keyframes rotate { from { background-position: 0 0; } to { background-position: 800px 0; } }
-        
-        .damage-glow { box-shadow: 0 0 50px rgba(239, 68, 68, 0.4); filter: grayscale(0.6); }
-        .success-glow { box-shadow: 0 0 80px rgba(74, 222, 128, 0.6); filter: saturate(1.2); }
+
+        /* Indicadores Laterales: Reservas de Humanidad */
+        .human-reserve {
+            position: fixed; top: 50%; transform: translateY(-50%);
+            width: 180px; font-size: 0.65rem; letter-spacing: 2px;
+            color: rgba(255,255,255,0.3); z-index: 100;
+        }
+        .reserve-left { left: 30px; border-left: 1px solid rgba(74, 222, 128, 0.3); padding-left: 15px; }
+        .reserve-right { right: 30px; border-right: 1px solid rgba(59, 130, 246, 0.3); padding-right: 15px; text-align: right; }
     </style>
 </head>
 <body>
 
+    <aside class="human-reserve reserve-left hidden lg:block">
+        <p class="mb-8"><span class="block text-green-400 font-bold mb-1">RESERVA BIÓTICA</span> Regeneración de Suelo: 14.2% <br></p>
+        <p class="mb-8"><span class="block text-green-400 font-bold mb-1">CUIDADO ACTIVO</span> $10.8T Re-valorizándose <br></p>
+        <p><span class="block text-green-400 font-bold mb-1">SOBERANÍA</span> Nodos Activos: 1.402</p>
+    </aside>
+
+    <aside class="human-reserve reserve-right hidden lg:block">
+        <p class="mb-8"><span class="block text-blue-400 font-bold mb-1">INTENTO ANÓNIMO</span> Fase 0: Prototipo Real <br></p>
+        <p class="mb-8"><span class="block text-blue-400 font-bold mb-1">RECIPROCIDAD</span> Intercambios sin Deuda: 89k <br></p>
+        <p><span class="block text-blue-400 font-bold mb-1">SABERES</span> Capa 4: Evolución Activa <br></p>
+    </aside>
+
     <header class="min-h-screen flex flex-col items-center justify-center text-center px-6">
-        <div id="status" class="text-red-500 text-xs tracking-[0.4em] mb-8 uppercase animate-pulse">
-            SISTEMA TERMINAL: DETECTANDO AGRIETAMIENTO...
-        </div>
-        <h1 class="text-6xl md:text-8xl font-bold mb-6 tracking-tighter">EARTH <span class="gradient-text">COMMONS</span></h1>
-        <p class="text-xl text-gray-400 max-w-2xl mb-12 leading-relaxed">
-            El sistema global actual es un paciente terminal en negación. Proponemos una reestructuración basada en la reciprocidad y la sombra.
+        <div class="mb-6 opacity-40 text-xs tracking-[0.5em] uppercase">Un intento desesperado por lo real</div>
+        <h1 class="text-6xl md:text-8xl font-bold mb-8 tracking-tighter">HUMANIZAR EL <span class="gradient-text">PLANETA</span></h1>
+        <p class="text-xl text-gray-400 max-w-3xl mb-12 leading-relaxed">
+            Antes de que el cuento se cierre del todo. Earth Commons DAO no es una app, es una <span class="text-white">declaración de intenciones</span> para salir de la burbuja de libertad individual y entrar en la libertad colectiva.
         </p>
-        <a href="#explicacion" class="border border-white/20 py-4 px-12 rounded-full hover:bg-white hover:text-black transition font-bold uppercase text-sm tracking-widest">
-            Entrar al Paradigma
+        <a href="#accion" class="bg-white text-black font-bold py-5 px-12 rounded-full hover:scale-105 transition-all shadow-[0_0_50px_rgba(255,255,255,0.2)] uppercase tracking-widest text-sm">
+            Activar Nodo Humano
         </a>
     </header>
 
-    <section id="explicacion" class="max-w-6xl mx-auto px-6 py-32">
-        <h2 class="text-4xl font-bold mb-20 text-center">Arquitectura de Reestructuración</h2>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="glass p-10 rounded-3xl">
-                <h3 class="text-green-400 font-bold mb-4 uppercase tracking-tighter">01. Capa Formal</h3>
-                <p class="text-gray-400 text-sm">Transparencia absoluta. Smart Contracts para bonos e infraestructura donde el factor humano no puede corromper el flujo.</p>
+    <section class="max-w-6xl mx-auto px-6 py-24">
+        <div class="grid md:grid-cols-4 gap-4">
+            <div class="glass p-6 rounded-2xl">
+                <h4 class="text-green-400 text-xs font-bold mb-2 uppercase">Capa 1</h4>
+                <p class="text-gray-400 text-[11px]">Transparencia radical frente a la corrupción sistémica.</p>
             </div>
-            <div class="glass p-10 rounded-3xl">
-                <h3 class="text-blue-400 font-bold mb-4 uppercase tracking-tighter">02. Reciprocidad</h3>
-                <p class="text-gray-400 text-sm">Protegiendo el valor real del cuidado ($10.8T invisibilizados). Ayuda mutua encriptada con Zero Knowledge Proofs.</p>
+            <div class="glass p-6 rounded-2xl">
+                <h4 class="text-blue-400 text-xs font-bold mb-2 uppercase">Capa 2</h4>
+                <p class="text-gray-400 text-[11px]">Reciprocidad: La economía del cuidado como base.</p>
             </div>
-            <div class="glass p-10 rounded-3xl">
-                <h3 class="text-purple-400 font-bold mb-4 uppercase tracking-tighter">03. La Sombra</h3>
-                <p class="text-gray-400 text-sm">Donde ocurre la vida real. Integración de la economía reprimida bajo consentimiento verificado por IA.</p>
+            <div class="glass p-6 rounded-2xl">
+                <h4 class="text-purple-400 text-xs font-bold mb-2 uppercase">Capa 3</h4>
+                <p class="text-gray-400 text-[11px]">La Sombra: Integrar lo reprimido para ser libres.</p>
             </div>
-            <div class="glass p-10 rounded-3xl">
-                <h3 class="text-yellow-400 font-bold mb-4 uppercase tracking-tighter">04. Evolución (PAL)</h3>
-                <p class="text-gray-400 text-sm">Aprendizaje dinámico. Tu estatus en la red depende de tus aportes y saberes, no de la acumulación de capital.</p>
+            <div class="glass p-6 rounded-2xl">
+                <h4 class="text-yellow-400 text-xs font-bold mb-2 uppercase">Capa 4</h4>
+                <p class="text-gray-400 text-[11px]">Evolución: Aprender para no depender del capital.</p>
             </div>
         </div>
     </section>
 
-    <section id="accion" class="min-h-screen bg-gradient-to-b from-transparent to-blue-900/10 py-24 flex flex-col items-center justify-center">
-        <div id="earth" class="earth-sphere damage-glow mb-16"></div>
+    <section id="accion" class="min-h-screen py-24 flex flex-col items-center justify-center relative">
+        <div class="earth-sphere mb-12"></div>
         
-        <div class="glass p-10 rounded-3xl max-w-2xl w-full mx-6">
-            <h2 class="text-3xl font-bold mb-2 text-center">Activar Nodo de Reciprocidad</h2>
-            <p class="text-center text-gray-500 mb-10 text-sm italic">Sin esclavitud del dinero: la acción precede a la consciencia.</p>
+        <div class="glass p-12 rounded-3xl max-w-2xl w-full mx-6 relative z-10">
+            <h2 class="text-3xl font-bold mb-6 text-center italic font-light">"Sin la esclavitud del dinero"</h2>
             
             <div class="space-y-6">
                 <div>
-                    <label class="text-[10px] uppercase text-gray-500 tracking-widest">¿Qué saber u oficio ofreces al pro-común?</label>
-                    <input id="input-offer" type="text" class="w-full bg-black/40 border border-white/10 p-4 rounded-xl mt-2 focus:border-green-500 outline-none transition" placeholder="Ej: Carpintería, Cuidado, Bio-construcción...">
+                    <label class="text-[10px] uppercase text-gray-500 tracking-widest">¿Qué saber pones hoy al servicio de la Tierra?</label>
+                    <input id="offer" type="text" class="w-full bg-black/60 border border-white/10 p-5 rounded-xl mt-2 focus:border-green-500 outline-none" placeholder="Tus habilidades son la verdadera reserva...">
                 </div>
                 <div>
-                    <label class="text-[10px] uppercase text-gray-500 tracking-widest">¿Qué necesitas aprender o recibir hoy?</label>
-                    <input id="input-need" type="text" class="w-full bg-black/40 border border-white/10 p-4 rounded-xl mt-2 focus:border-blue-500 outline-none transition" placeholder="Ej: Mentoría, Alimento, Hospedaje...">
+                    <label class="text-[10px] uppercase text-gray-500 tracking-widest">¿Qué necesitas de otro humano para evolucionar?</label>
+                    <input id="need" type="text" class="w-full bg-black/60 border border-white/10 p-5 rounded-xl mt-2 focus:border-blue-500 outline-none" placeholder="Recibir es un acto de humildad recíproca...">
                 </div>
                 
-                <button onclick="syncNode()" class="w-full bg-white text-black font-bold py-5 rounded-xl hover:scale-105 transition-all shadow-xl">
-                    INGRESAR A LA RED NÓMADA
+                <button onclick="syncNode()" class="w-full bg-white text-black font-bold py-6 rounded-xl hover:bg-green-400 transition-colors uppercase tracking-[0.2em]">
+                    Sincronizar Humanidad
                 </button>
             </div>
         </div>
     </section>
 
-    <footer class="py-20 text-center opacity-20 text-[10px] tracking-[0.5em] uppercase">
-        Earth Commons DAO • 2025 • Reestructuración Global
+    <footer class="py-20 text-center opacity-30 text-[9px] tracking-[0.6em] uppercase">
+        Este es un prototipo anónimo para una posibilidad única. Earth Commons DAO 2025.
     </footer>
 
     <script>
-        // Función de Sincronización (Preparada para Firebase)
         async function syncNode() {
-            const offer = document.getElementById('input-offer').value;
-            const need = document.getElementById('input-need').value;
-            const earth = document.getElementById('earth');
-            const status = document.getElementById('status');
+            const offer = document.getElementById('offer').value;
+            const need = document.getElementById('need').value;
+            if(!offer || !need) return alert("El nodo requiere tu verdad para activarse.");
 
-            if(!offer || !need) {
-                alert("La IA de Custodia requiere que especifiques qué aportas y qué necesitas.");
-                return;
-            }
-
-            // Simulación de impacto visual
-            earth.classList.replace('damage-glow', 'success-glow');
-            status.innerText = "NODO ACTIVO: SINCRONÍA EN CAPA 4 INICIADA";
-            status.classList.replace('text-red-500', 'text-green-400');
-
-            console.log("Datos para Firebase:", { offer, need, location: 'Junín Nodo #1' });
-            
-            alert(`✅ NODO SINCRONIZADO\n\nTu oferta de "${offer}" ha sido registrada en la red.\nBuscando matches para tu necesidad de "${need}"...`);
+            alert(`✅ NODO VIVO\n\nTu oferta de "${offer}" está alimentando la reserva humana.\nBuscando conexión para tu necesidad de "${need}"...\n\nLa acción ha precedido a la consciencia.`);
         }
-
-        // Ticker de datos incómodos
-        const glitches = [
-            "ERROR: $10.8T EN CUIDADO INVISIBLE",
-            "FALLO: 60% ACTIVIDAD CRIMINALIZADA",
-            "CRISIS: SISTEMA TERMINAL EN NEGACIÓN",
-            "ALERTA: FRONTERAS BLOQUEAN EL FLUJO"
-        ];
-        setInterval(() => {
-            const status = document.getElementById('status');
-            if(status.innerText.includes("DETECTANDO")) {
-                status.innerText = glitches[Math.floor(Math.random()*glitches.length)];
-            }
-        }, 4000);
     </script>
 </body>
 </html>
