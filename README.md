@@ -1,38 +1,67 @@
-# 🌍 Earth Commons DAO
+# 🌐 Earth Commons DAO – Índice Maestro
 
-## 📑 Descripción
-Este repositorio reúne documentos técnicos y conceptuales sobre la **lógica de la espiral y los nodos autogestionados**, aplicados a la integración de sistemas existentes en un marco DAO.  
-El objetivo es ofrecer una arquitectura que permita transformar estructuras rígidas en trayectorias acompañadas, con transparencia y coherencia.
+Este repositorio contiene los manifiestos fundacionales del modelo espiral de gobernanza territorial, ecológica y política. Cada documento representa una capa vibracional, técnica o institucional, y juntas conforman el cuerpo vivo del Earth Commons DAO.
 
 ---
 
-## 📚 Índice de Documentos
-- [Manifiesto Parte 2 – Trayectorias acompañadas](manifiestos/Manifiesto-Parte-2.md)
-- [Manifiesto Parte 3 – Arquitectura Técnica DAO](manifiestos/Manifiesto-Parte-3.md)
-- [Roadmap Técnico de la Espiral DAO](manifiestos/Roadmap-Tecnico.md)
-- [Visión de Difusión Humano-IA](manifiestos/Vision-Difusion-Humano-IA.md)
-- [Manifiesto Parte 4 – Difusión autónoma y vida plena](manifiestos/Manifiesto-Parte-4.md)
-- [Comparativa: Sistemas Pesados vs. Espiral DAO](manifiestos/Comparativa-Sistemas.md)
-- [Índice Maestro](manifiestos/Indice-Maestro.md)
+## 🌀 Capas Internas (Formación del criterio y la espiral)
+
+- [#0 No Guerras](./manifestos/%230%20No%20guerras.md)  
+  Unión intrínseca como base fundamental. Política de paz, ciencia e innovación eficiente.
+
+- [#1 Gobernanza Descentralizada, Economía Recíproca y Custodia Mutua](./manifestos/%231%20Gobernanza%20Descentralizada%2C%20Econom%C3%ADa%20Rec%C3%ADproca%20y%20Custodia%20Mut...)  
+  Fundamentos de gobernanza DAO, reciprocidad y cuidado territorial.
+
+- [#2 Trayectorias Acompañadas](./manifestos/%232%20Trayectorias%20Acompa%C3%B1adas.md)  
+  Reconocimiento de historias personales como datos vivos. Acompañamiento como política.
+
+- [#3 Arquitectura Técnica de la Espiral DAO](./manifestos/%233%20Arquitectura%20T%C3%A9cnica%20de%20la%20Espiral%20DAO.md)  
+  Diseño modular, capas vibracionales, y estructura técnica de la espiral.
+
+- [#4 Capa de Sombra – Trueque y Depuración](./manifestos/%234%20Capa%20de%20Sombra%20%E2%80%93%20Trueque%20y%20Depuraci%C3%B3n.md)  
+  Procesos de depuración, anonimato, y trueque como regeneración.
 
 ---
 
-## 🌀 Principios
-- **Trayectorias acompañadas**: cada persona es reconocida como trayectoria irrepetible.  
-- **Resonancia sistémica**: los nodos se integran en espiral, manteniendo identidad y coherencia.  
-- **Infraestructura porosa**: hospitales, escuelas y comunidades abiertas a nuevas formas de cuidado.  
-- **DAO como base**: contratos inteligentes para transparencia, trazabilidad y autogestión.
+## 🌍 Capas Externas (Territorio, política y protección)
+
+- [#5 Zonas de No Intervención](./manifestos/%235%20Zonas%20de%20No%20Intervenci%C3%B3n.md)  
+  Reservas estratégicas con criterios medibles: biodiversidad, energía, ecosistemas.
+
+- [#6 Democracia Descentralizada DAO](./manifestos/%236%20DEMOCRACIA%20DESCENTRALIZADA%20DAO.md)  
+  Agrupación Sur Global, roles clave, votación directa y transparencia.
+
+- [#7 Política de No Guerras](./manifestos/%237Pol%C3%ADtica%20de%20No%20Guerras.md)  
+  Espacios desmilitarizados, pacto de paz, ciencia como motor de unión.
 
 ---
 
-## ⚙️ Objetivos
-- Integrar sistemas existentes mediante nodos interconectados.  
-- Eliminar listas de espera a través de acompañamiento continuo.  
-- Escalar la lógica espiral hacia un ecosistema global.  
-- Proveer documentación clara y replicable para instituciones y comunidades.
+## 💾 Infraestructura Transversal
+
+- [Comparativa-Sistemas.md](./manifestos/Comparativa-Sistemas.md)  
+  Documento técnico sobre nodos regionales, data centers locales y resiliencia DAO.
 
 ---
 
-## 📜 Nota
-Este repositorio se presenta en tono técnico e institucional.  
-No expone identidades personales: los documentos son anónimos y se enfocan en la arquitectura y el paradigma propuesto.
+## 🧬 Lógica Espiral
+
+Este repositorio se organiza como una espiral de 7 capas:
+1. Criterio  
+2. Vibración  
+3. Expansión  
+4. Integración  
+5. No Intervención  
+6. Democracia DAO  
+7. No Guerras  
+
+Cada capa se retroalimenta y sostiene a las demás. La infraestructura transversal garantiza continuidad, respaldo y gobernanza descentralizada.
+
+---
+
+## 🛠️ Cómo contribuir
+
+Este repositorio está abierto a aportes técnicos, ideográficos y comunitarios. Puedes proponer mejoras, abrir discusiones o expandir manifiestos con métricas, mapas o rituales.
+
+
+
+
