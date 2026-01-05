@@ -16,7 +16,7 @@ Este repositorio contiene los manifiestos fundacionales del modelo espiral de go
   Reconocimiento de historias personales como datos vivos. Acompañamiento como política.
 
 - [#3 Arquitectura Técnica de la Espiral DAO](./manifestos/%233%20Arquitectura%20T%C3%A9cnica%20de%20la%20Espiral%20DAO.md)  
-  Diseño modular, capas vibracionales, y estructura técnica de la espiral.
+  Diseño modular, capas humanas en todas sus dimensiones mostrando la realidad tal cual es y estructura técnica de la espiral.
 
 - [#4 Capa de Sombra – Trueque y Depuración](./manifestos/%234%20Capa%20de%20Sombra%20%E2%80%93%20Trueque%20y%20Depuraci%C3%B3n.md)  
   Procesos de depuración, anonimato, y trueque como regeneración.
@@ -46,10 +46,10 @@ Este repositorio contiene los manifiestos fundacionales del modelo espiral de go
 ## 🧬 Lógica Espiral
 
 Este repositorio se organiza como una espiral de 7 capas:
-1. Criterio  
-2. Vibración  
-3. Expansión  
-4. Integración  
+1. DAO, nivel de infraestructura critico, subsistemas dependientes, seguridad y etica, capacidad humana para relevar problemas pasados.
+2. Institucional, sistemica/ nivel gobierno, instituciones, asociaciones/ grupos/ comunidades/ es posible que todos estos coexistan.     
+3. Capa humana, capa de luz y sombra. Trueque y reciprocidad como cambio de paradigma. 
+4. Integración y depuracion, capa que vive en la sombra, que va a su tiempo, hay quienes se integren y aporten de otras formas y otros que vivan su depuracion conciente. 
 5. No Intervención  
 6. Democracia DAO  
 7. No Guerras  
