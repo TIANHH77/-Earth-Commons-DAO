@@ -1,67 +1,38 @@
 # 🌐 Earth Commons DAO – Índice Maestro
+# SUR DAO - Piloto Resiliencia Educativa 🇨🇱➡️🇦🇷
 
-Este repositorio contiene los manifiestos fundacionales del modelo espiral de gobernanza territorial, ecológica y política. Cada documento representa una capa vibracional, técnica o institucional, y juntas conforman el cuerpo vivo del Earth Commons DAO.
+**Reciprocidad > Burocracia**. Herramienta descentralizada que detecta "capa sombra" (71k estudiantes congelados/año, 28.8% primer año deserción) y alerta redes humanas (WhatsApp 9AM ARG).[file:13]
 
----
+## 🚨 Problema Estructural
+- **Mineduc/SIES**: 28.8% deserción año 1 (49k), 14.6% permanente (22k). [datos.gob.cl]
+- **USACH**: Renuncias 2022: 427 (4.5%). Normativa Formación Integral (Res. Exenta 008417.05.12.19) obliga apoyo psicosocial/diversidad/ciudadanía – NO cumple para congelados.[file:13]
+- **Tu Caso**: 6 silos fallan (USACH/JUNAEB/VRAE/etc), deuda 2.5M sin apoyo.
 
-## 🌀 Capas Internas (Formación del criterio y la espiral)
+## 🌐 Arquitectura DAO
+- **Nodos x6**: USACH, JUNAEB, VRAE, etc. Pandas scrape + triggers riesgo.
+- **Dashboard**: Streamlit live (sur_dashboard.py).
+- **Alertas**: GitHub Actions cron 9AM → Twilio WhatsApp "Fase 1: Renuncias >400".
+- **Datos**: CSV Mineduc (1.4M registros), USACH renuncias histórico.
 
-- [#0 No Guerras](./manifestos/%230%20No%20guerras.md)  
-  Unión intrínseca como base fundamental. Política de paz, ciencia e innovación eficiente.
+| Año | Renuncias USACH | Tasa |
+|-----|-----------------|------|
+| 2022| 427             | 4.5% |
+| 2021| 567             | 6.0% |
+| 2020| 450             | 5.2% |[conversation_history:15]
 
-- [#1 Gobernanza Descentralizada, Economía Recíproca y Custodia Mutua](./manifestos/%231%20Gobernanza%20Descentralizada%2C%20Econom%C3%ADa%20Rec%C3%ADproca%20y%20Custodia%20Mut...)  
-  Fundamentos de gobernanza DAO, reciprocidad y cuidado territorial.
+## 📋 Deploy 1-Click
+1. `pip install streamlit pandas twilio`
+2. Secrets GitHub: `TWILIO_SID`, `ASISTENTE_PHONE` (Haroldo).
+3. `streamlit run sur_dashboard.py` → share.streamlit.io.
+4. Actions YAML auto-cron.
 
-- [#2 Trayectorias Acompañadas](./manifestos/%232%20Trayectorias%20Acompa%C3%B1adas.md)  
-  Reconocimiento de historias personales como datos vivos. Acompañamiento como política.
+## 🇦🇷 Convalidación ARG
+Créditos SCT Formación Integral USACH transferibles (DFL 149/1981, Res.7441/2017). UTN FRSN TUPAD: "Excepción post-deadline + normativa integral".[file:13][conversation_history:8]
 
-- [#3 Arquitectura Técnica de la Espiral DAO](./manifestos/%233%20Arquitectura%20T%C3%A9cnica%20de%20la%20Espiral%20DAO.md)  
-  Diseño modular, capas humanas en todas sus dimensiones mostrando la realidad tal cual es y estructura técnica de la espiral.
+## 🤝 Contribuir
+- Fork → PR con nodos nuevos.
+- Migrate Argentina 2026: Junín base + paramotor.
 
-- [#4 Capa de Sombra – Trueque y Depuración](./manifestos/%234%20Capa%20de%20Sombra%20%E2%80%93%20Trueque%20y%20Depuraci%C3%B3n.md)  
-  Procesos de depuración, anonimato, y trueque como regeneración.
-
----
-
-## 🌍 Capas Externas (Territorio, política y protección)
-
-- [#5 Zonas de No Intervención](./manifestos/%235%20Zonas%20de%20No%20Intervenci%C3%B3n.md)  
-  Reservas estratégicas con criterios medibles: biodiversidad, energía, ecosistemas.
-
-- [#6 Democracia Descentralizada DAO](./manifestos/%236%20DEMOCRACIA%20DESCENTRALIZADA%20DAO.md)  
-  Agrupación Sur Global, roles clave, votación directa y transparencia.
-
-- [#7 Política de No Guerras](./manifestos/%237Pol%C3%ADtica%20de%20No%20Guerras.md)  
-  Espacios desmilitarizados, pacto de paz, ciencia como motor de unión.
-
----
-
-## 💾 Infraestructura Transversal
-
-- [Comparativa-Sistemas.md](./manifestos/Comparativa-Sistemas.md)  
-  Documento técnico sobre nodos regionales, data centers locales y resiliencia DAO.
-
----
-
-## 🧬 Lógica Espiral
-
-Este repositorio se organiza como una espiral de 7 capas:
-1. DAO, nivel de infraestructura critico, subsistemas dependientes, seguridad y etica, capacidad humana para relevar problemas pasados.
-2. Institucional, sistemica/ nivel gobierno, instituciones, asociaciones/ grupos/ comunidades/ es posible que todos estos coexistan.     
-3. Capa humana, capa de luz y sombra. Trueque y reciprocidad como cambio de paradigma. 
-4. Integración y depuracion, capa que vive en la sombra, que va a su tiempo, hay quienes se integren y aporten de otras formas y otros que vivan su depuracion conciente. 
-5. No Intervención  
-6. Democracia DAO  
-7. No Guerras  
-
-Cada capa se retroalimenta y sostiene a las demás. La infraestructura transversal garantiza continuidad, respaldo y gobernanza descentralizada.
-
----
-
-## 🛠️ Cómo contribuir
-
-Este repositorio está abierto a aportes técnicos, ideográficos y comunitarios. Puedes proponer mejoras, abrir discusiones o expandir manifiestos con métricas, mapas o rituales.
-
-
+**Santiago Horta Hurtado** – Herramienta + espíritu liberados. No más USACH.
 
 
