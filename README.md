@@ -1,38 +1,45 @@
 # 🌐 Earth Commons DAO – Índice Maestro
-# SUR DAO - Piloto Resiliencia Educativa 🇨🇱➡️🇦🇷
+🛰️ SUR DAO: Protocolo de Migración y Resiliencia Educativa
+Arquitectura de Datos para la Transición Académica Transfronteriza (CL ➡️ AR)
 
-**Reciprocidad > Burocracia**. Herramienta descentralizada que detecta "capa sombra" (71k estudiantes congelados/año, 28.8% primer año deserción) y alerta redes humanas (WhatsApp 9AM ARG).[file:13]
+🛠️ Stack Tecnológico de la Transición
+Origen: Universidad de Santiago de Chile (USACH) - Terapia Ocupacional.
 
-## 🚨 Problema Estructural
-- **Mineduc/SIES**: 28.8% deserción año 1 (49k), 14.6% permanente (22k). [datos.gob.cl]
-- **USACH**: Renuncias 2022: 427 (4.5%). Normativa Formación Integral (Res. Exenta 008417.05.12.19) obliga apoyo psicosocial/diversidad/ciudadanía – NO cumple para congelados.[file:13]
-- **Tu Caso**: 6 silos fallan (USACH/JUNAEB/VRAE/etc), deuda 2.5M sin apoyo.
+Destino: Universidad Tecnológica Nacional (UTN FRSN) - Tecnicatura en Programación.
 
-## 🌐 Arquitectura DAO
-- **Nodos x6**: USACH, JUNAEB, VRAE, etc. Pandas scrape + triggers riesgo.
-- **Dashboard**: Streamlit live (sur_dashboard.py).
-- **Alertas**: GitHub Actions cron 9AM → Twilio WhatsApp "Fase 1: Renuncias >400".
-- **Datos**: CSV Mineduc (1.4M registros), USACH renuncias histórico.
+Middleware Legal: Marco normativo SCT (Créditos Transferibles) bajo Res. Exenta 008417.
 
-| Año | Renuncias USACH | Tasa |
-|-----|-----------------|------|
-| 2022| 427             | 4.5% |
-| 2021| 567             | 6.0% |
-| 2020| 450             | 5.2% |[conversation_history:15]
+Base de Datos Familiar: Registro Civil CABA (Flores/Liniers) - Datos de origen María Cristina Hurtado (1950).
 
-## 📋 Deploy 1-Click
-1. `pip install streamlit pandas twilio`
-2. Secrets GitHub: `TWILIO_SID`, `ASISTENTE_PHONE` (Haroldo).
-3. `streamlit run sur_dashboard.py` → share.streamlit.io.
-4. Actions YAML auto-cron.
+📊 Métricas de Performance Académica
+Eficiencia de Cursada: 94% (34 de 36 asignaturas aprobadas con éxito).
 
-## 🇦🇷 Convalidación ARG
-Créditos SCT Formación Integral USACH transferibles (DFL 149/1981, Res.7441/2017). UTN FRSN TUPAD: "Excepción post-deadline + normativa integral".[file:13][conversation_history:8]
+Índice de Avance: 59% del plan de estudios original completado.
 
-## 🤝 Contribuir
-- Fork → PR con nodos nuevos.
-- Migrate Argentina 2026: Junín base + paramotor.
+Validación de Competencias Transversales:
 
-**Santiago Horta Hurtado** – Herramienta + espíritu liberados. No más USACH.
+Idiomas: Inglés I, II y III aprobados (Nivel intermedio certificado).
+
+Epistemología: 6.8 en Filosofía de la Ciencia.
+
+Tecnología: Formación en Inclusión, Accesibilidad y Tecnologías I (A11y Ready).
+
+⚖️ Fundamentos para Convalidación (SCT)
+El reconocimiento de saberes previos se sustenta en la Resolución Exenta 008417.05.12.19 (USACH):
+
+Art. 3 (f y e): Define los idiomas y las competencias tecnológicas como dimensiones fundamentales de la formación integral.
+
+Art. 8: Establece que estas actividades consideran la asignación de Créditos Académicos Transferibles (SCT), facilitando la movilidad institucional.
+
+Art. 1: Garantiza el reconocimiento de estos espacios formativos dentro de la trayectoria curricular del estudiante.
+
+🗺️ Roadmap: Despliegue Argentina 2026
+Validación de Identidad: Confirmación de origen en Flores/Liniers y extracción de partida vía portal CABA.
+
+Certificación de Vínculo: Uso del Certificado de Matrimonio (1990) para acreditar filiación y nacionalidad por opción.
+
+Migración Geográfica: Traslado a Junín, Provincia de Buenos Aires, como nodo de residencia y estudio.
+
+Santiago Horta Hurtado Analista de Sistemas en Formación | Ex-Alumno Regular USACH (Retiro Temporal por Migración).
 
 
