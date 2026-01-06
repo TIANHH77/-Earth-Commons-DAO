@@ -1,45 +1,23 @@
-# 🌐 Earth Commons DAO – Índice Maestro
-🛰️ SUR DAO: Protocolo de Migración y Resiliencia Educativa
-Arquitectura de Datos para la Transición Académica Transfronteriza (CL ➡️ AR)
+# 🛤️ Nodo Migración: USACH ➡️ UTN FRSN (Potenciador SUR DAO)
 
-🛠️ Stack Tecnológico de la Transición
-Origen: Universidad de Santiago de Chile (USACH) - Terapia Ocupacional.
+**Vínculo con README**: Extiende "Capa Sombra" (71k congelados/año) a migración transfronteriza. Normativa USACH (Res.008417 Art.1/3e-f/8) obliga SCT transferibles (idiomas/digitales) – USACH falla, DAO resuelve.[file:13]
 
-Destino: Universidad Tecnológica Nacional (UTN FRSN) - Tecnicatura en Programación.
+## Datos Nodo Vivo
+- **Analítico Scrape**: `data/analitico_santiago.csv` (94% eficiencia, 76 SCT).[file:13]
+- **Métricas**: 34/36 aprobs, 59% avance Terapia Ocupacional → Programación UTN.[web:19]
+- **Trigger DAO**: SCT >60 → "Fase Junín: Convalidar FRSN".
 
-Middleware Legal: Marco normativo SCT (Créditos Transferibles) bajo Res. Exenta 008417.
+| Dimensión USACH | SCT | Equiv UTN Programación |
+|-----------------|-----|-------------------------|
+| Idiomas (x3)    | 9   | Electivas comunicación [web:19] |
+| Digital/A11y    | 3   | A11y/Tech base [web:19] |
+| TO (30 asigs)   | 60  | Créditos genérico [web:28] |
 
-Base de Datos Familiar: Registro Civil CABA (Flores/Liniers) - Datos de origen María Cristina Hurtado (1950).
+## Potenciación DAO
+- **README Core**: Deserción → Alertas WhatsApp. **Aquí**: + Migración (CL-AR) como Fase 2 resiliencia.
+- **Escala**: 17% sombra congelados → convalidaciones LATAM (Chile-ARG convenio).[web:31]
+- **Roadmap 2026**: Junín nodo (Haroldo) → TAD argentina.gob.ar auto-submit.
 
-📊 Métricas de Performance Académica
-Eficiencia de Cursada: 94% (34 de 36 asignaturas aprobadas con éxito).
-
-Índice de Avance: 59% del plan de estudios original completado.
-
-Validación de Competencias Transversales:
-
-Idiomas: Inglés I, II y III aprobados (Nivel intermedio certificado).
-
-Epistemología: 6.8 en Filosofía de la Ciencia.
-
-Tecnología: Formación en Inclusión, Accesibilidad y Tecnologías I (A11y Ready).
-
-⚖️ Fundamentos para Convalidación (SCT)
-El reconocimiento de saberes previos se sustenta en la Resolución Exenta 008417.05.12.19 (USACH):
-
-Art. 3 (f y e): Define los idiomas y las competencias tecnológicas como dimensiones fundamentales de la formación integral.
-
-Art. 8: Establece que estas actividades consideran la asignación de Créditos Académicos Transferibles (SCT), facilitando la movilidad institucional.
-
-Art. 1: Garantiza el reconocimiento de estos espacios formativos dentro de la trayectoria curricular del estudiante.
-
-🗺️ Roadmap: Despliegue Argentina 2026
-Validación de Identidad: Confirmación de origen en Flores/Liniers y extracción de partida vía portal CABA.
-
-Certificación de Vínculo: Uso del Certificado de Matrimonio (1990) para acreditar filiación y nacionalidad por opción.
-
-Migración Geográfica: Traslado a Junín, Provincia de Buenos Aires, como nodo de residencia y estudio.
-
-Santiago Horta Hurtado Analista de Sistemas en Formación | Ex-Alumno Regular USACH (Retiro Temporal por Migración).
+**No Aleja: Potencia**. De crítica USACH → solución DAO transfronteriza. Commit → live!
 
 
