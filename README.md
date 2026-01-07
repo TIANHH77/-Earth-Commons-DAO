@@ -9,7 +9,7 @@ Early detection of dropout risk using anonymized data. No regulations changed.
 
 ## 🎯 Propósito / Purpose
 Detectar tempranamente estudiantes en riesgo (congelamiento, deserción) → activar apoyos VRAE/VRA.  
-Python dashboard con datos SCT anonimizados.  
+Python dashboard con datos SCT anonimizados + capas institucionales y comunitarias.  
 📄 Documentación completa: [`docs/piloto_piloto.md`](docs/piloto_piloto.md)
 
 ---
@@ -17,7 +17,8 @@ Python dashboard con datos SCT anonimizados.
 ## 📊 Problem
 - **28.8%** tasa de deserción en primer año (SIES).  
 - **427 renuncias** en USACH durante 2022.  
-- Falta un sistema integrado que conecte datos académicos con apoyos psicosociales.  
+- **14.6%** deserción permanente (OECD).  
+- Falta de coordinación entre MINEDUC, JUNAEB, becas internas y apoyo comunitario.  
 
 ---
 
@@ -27,4 +28,7 @@ flowchart TD
   A[Datos SCT anon.] --> B[Motor de reglas en Python]
   B --> C[Dashboard VRA/VRAE]
   C --> D[Alertas psicosociales]
+  D --> E[Capas institucionales: MINEDUC, JUNAEB, Becas]
+  E --> F[Capas humanas: Apoyo entre pares, Centro de estudiantes]
+
 
