@@ -34,9 +34,7 @@ flowchart TD
   D --> E[Capas institucionales: MINEDUC, JUNAEB, Becas]
   E --> F[Capas humanas: Apoyo entre pares, Centro de estudiantes]
 
-Viene este bloque:
 
-```markdown
 ## 🌀 Combinaciones y planteamientos sugeridos
 
 | Riesgo académico | Beneficios institucionales       | Apoyo entre pares | Centro de estudiantes | Planteamiento sugerido                                      |
