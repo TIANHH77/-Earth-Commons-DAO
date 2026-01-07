@@ -16,19 +16,6 @@ df_full = usach.merge(mineduc, on="ID", how="left") \
                .merge(becas, on="ID", how="left") \
                .merge(pares, on="ID", how="left")
 
-st.subheader("📊 Cohorte completa")
+st.subheader("🧑‍🎓 Cohorte completa")
 st.dataframe(df_full)
 
-# Alertas combinadas
-st.subheader("🌪️ Alertas combinadas")
-for i, row in df_full.iterrows():
-    if "🔴" in row["CategoriaRiesgo"] or "🟠" in row["CategoriaRiesgo"]:
-        alerta = f"Estudiante {row['ID']} ({row['Carrera']}): {row['CategoriaRiesgo']}"
-        acciones = []
-        if row["EstadoBeca"] == "Inactivo":
-            acciones.append("❌ Sin beca ministerial")
-        if row["ApoyoPar"]:
-            acciones.append("🤝 Apoyo entre pares activo")
-        if row["CentroEstudiantes"] == "Activo":
-            acciones.append("🎓 Centro de estudiantes activo")
-        st.write(alerta + " → " + ", ".join(acciones))
