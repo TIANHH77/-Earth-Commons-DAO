@@ -14,6 +14,8 @@ Python dashboard con datos SCT anonimizados + capas institucionales y comunitari
 
 ---
 
+
+
 ## 📊 Problem
 - **28.8%** tasa de deserción en primer año (SIES).  
 - **427 renuncias** en USACH durante 2022.  
@@ -30,6 +32,9 @@ flowchart TD
   C --> D[Alertas psicosociales]
   D --> E[Capas institucionales: MINEDUC, JUNAEB, Becas]
   E --> F[Capas humanas: Apoyo entre pares, Centro de estudiantes]
+
+
+
 
 ## 📜 Segundo Manifiesto SUR DAO
 - La deserción no es solo estadística: es 71k estudiantes/año invisibilizados en la capa sombra.
