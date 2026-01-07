@@ -1,3 +1,6 @@
+> "El respeto no se gana. Cuando vayas a algún lugar, trata de que después de irte, hayas aportado en algo ahí, que ojalá esté mejor de como cuando llegaste."  
+— Principio materno, SUR DAO
+
 # SUR DAO – Earth Commons DAO (USACH Pilot)
 
 **Piloto SUR DAO – Herramienta de Monitoreo Integral de Estudiantes USACH**  
