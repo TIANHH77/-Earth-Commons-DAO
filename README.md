@@ -3,7 +3,7 @@
 **Piloto SUR DAO – Herramienta de Monitoreo Integral de Estudiantes USACH**  
 Early detection of dropout risk using anonymized data. No regulations changed.  
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://streamlit.io/cloud)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://<tu-usuario>-earth-commons-dao.streamlit.app)
 
 ---
 
@@ -27,5 +27,4 @@ flowchart TD
   A[Datos SCT anon.] --> B[Motor de reglas en Python]
   B --> C[Dashboard VRA/VRAE]
   C --> D[Alertas psicosociales]
-
 
