@@ -35,6 +35,17 @@ flowchart TD
   E --> F[Capas humanas: Apoyo entre pares, Centro de estudiantes]
 
 
+```markdown
+## 🌀 Combinaciones y planteamientos sugeridos
+
+| Riesgo académico | Beneficios institucionales       | Apoyo entre pares | Centro de estudiantes | Planteamiento sugerido                                      |
+|------------------|----------------------------------|--------------------|------------------------|--------------------------------------------------------------|
+| 🔴 Alto          | ❌ Sin beca ministerial/JUNAEB   | ❌ No apoyo par    | ❌ Inactivo            | Derivación urgente a VRAE + ONG psicosocial                  |
+| 🔴 Alto          | ❌ Sin beca ministerial          | ✅ Apoyo par       | ✅ Activo              | Contención grupal + asesoría administrativa                  |
+| 🟠 Medio         | ✅ Becas activas                 | ✅ Apoyo par       | ❌ Inactivo            | Seguimiento académico + mentoría estudiantil                 |
+| 🟡 Leve          | ✅ Becas activas                 | ❌ No apoyo par    | ✅ Activo              | Tutorías comunitarias + monitoreo ligero                     |
+| 🟢 Sin riesgo    | ✅ Becas activas                 | ✅ Apoyo par       | ✅ Activo              | Mantener acompañamiento, reforzar comunidad                  |
+
 
 
 
