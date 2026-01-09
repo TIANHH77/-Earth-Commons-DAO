@@ -29,15 +29,15 @@ Reciprocidad > Burocracia
 [Tu tabla 71k-500k]
 
 ## 🛠️ Arquitectura
+## 🛠️ Arquitectura
 ```mermaid
 flowchart TD
-  A[Datos SCT anon] --> B[Motor reglas Python]
+  A[Datos SCT anon.] --> B[Motor reglas Python]
   B --> C[Dashboard VRA/VRAE]
   C --> D[Alertas psicosociales]
-  D --> E[Capas institucionales]
+  D --> E[MINEDUC/JUNAEB/Becas]
   E --> F[Apoyo pares/centro]
-
-+``` ---
++---
 ## 🎯 Propósito / Purpose
 +Detectar tempranamente estudiantes en riesgo (congelamiento, deserción) → activar apoyos VRAE/VRA. +Python dashboard con datos SCT anonimizados + capas institucionales y comunitarias. ---
 ## 📊 Datos clave
