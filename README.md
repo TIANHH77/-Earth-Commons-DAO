@@ -18,4 +18,18 @@ Principio materno, SUR DAO+# SUR DAO – Piloto Retención Estudiantil USACH/Min
 +```mermaid +flowchart TD + A[Datos SCT anon.] --> B[Motor de reglas en Python] + B --> C[Dashboard VRA/VRAE] + C --> D[Alertas psicosociales] + D --> E[Capas institucionales: MINEDUC, JUNAEB, Becas] + E --> F[Capas humanas: Apoyo entre pares, Centro de estudiantes] +
 
 
+# SUR DAO – Piloto Retención Estudiantil USACH/Mineduc
+**Reciprocidad > Burocracia**
+
+> "El respeto no se gana. [...] esté mejor de como cuando llegaste." — Principio materno
+
+[![Streamlit](https://surdao-dashboard.streamlit.app/)]
+
+## 📊 Problema
+| Año | Ingresos | Deserción | Stock |
+|-----|----------|-----------|-------|
+| 2020| 250k    | 72k      | 504k |
+**Total**: ~500k sombra
+
+[Tu código + tablas + Mermaid abajo...]
 
