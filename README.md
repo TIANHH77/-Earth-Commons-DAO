@@ -35,24 +35,7 @@ flowchart TD
   E --> F[Capas humanas: Apoyo entre pares, Centro de estudiantes]
 
 
-st.subheader(" Alertas combinadas")
 
-for i, row in df_full.iterrows():
-    riesgo = row["CategoriaRiesgo"]
-    beca = row["EstadoBeca"]
-    apoyo = row["ApoyoPar"]
-    centro = row["CentroEstudiantes"]
-
-    if riesgo in [" Riesgo alto", " Riesgo medio"]:
-        acciones = []
-        if beca == "Inactivo":
-            acciones.append(" Sin beca ministerial")
-        if apoyo:
-            acciones.append(" Apoyo entre pares activo")
-        if centro == "Activo":
-            acciones.append(" Centro de estudiantes activo")
-
-        st.markdown(f"**Estudiante {row['ID']} ({row['Carrera']})** – {riesgo} → " + ", ".join(acciones))
 
 
 
