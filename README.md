@@ -45,20 +45,19 @@ for i, row in df_full.iterrows():
         if row["CentroEstudiantes"] == "Activo":
             acciones.append("Centro de estudiantes activo")
         
-        st.markdown(f"**Estudiante {row['ID']} ({row['Carrera']})** – {riesgo} → " + ", ".join(acciones)
-```
+        st.markdown(f"**Estudiante {row['ID']} ({row['Carrera']})** – {riesgo} → " + ", ".join(acciones)```
 
 🎯 Propósito / Purpose
 Detectar tempranamente estudiantes en riesgo (congelamiento, deserción) → activar apoyos VRAE/VRA.
 Python dashboard con datos SCT anonimizados + capas institucionales y comunitarias.
 
 🔔 Alertas combinadas (ejemplos del piloto)
-
+---
 ID	Carrera	Riesgo	Beca	Apoyo Par	Centro Estudiantes	Alerta generada
 1	Arquitectura	Medio	Inactivo	No	Inactivo	Sin beca ministerial
 2	Derecho	Medio	Inactivo	Sí	Activo	Sin beca + Apoyo pares + Centro activo
 4	Derecho	Alto	Inactivo	Sí	Inactivo	Riesgo alto + Sin beca + Apoyo pares
-```
+---
 
 Lógica: Alertas solo para Riesgo medio/alto + Sin beca ministerial. Se prioriza acompañamiento donde hay red activa (pares/centro) pero falta cobertura estatal.
 
@@ -71,8 +70,14 @@ flowchart TD
   D --> E[Capas institucionales: MINEDUC, JUNAEB, Becas]
   E --> F[Capas humanas: Apoyo entre pares, Centro de estudiantes]```
 
-  
+---
 ---
 
-
+flowchart TD
+  A[Datos SCT anon.] --> B[Motor de reglas en Python]
+  B --> C[Dashboard VRA/VRAE]
+  C --> D[Alertas psicosociales]
+  D --> E[Capas institucionales: MINEDUC, JUNAEB, Becas]
+  E --> F[Capas humanas: Apoyo entre pares, Centro de estudiantes]
+---
 
