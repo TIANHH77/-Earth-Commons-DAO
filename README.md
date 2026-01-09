@@ -29,16 +29,24 @@ Python dashboard con datos SCT anonimizados + capas institucionales y comunitari
 
 La app genera alertas solo para estudiantes en **Riesgo medio** o **Riesgo alto**, combinando becas, apoyo entre pares y centros de estudiantes activos:
 
-| Categoría de riesgo | Condición beca ministerial      | Apoyo entre pares             | Centro de estudiantes         | Alerta generada                                                    |
-|---------------------|---------------------------------|-------------------------------|-------------------------------|--------------------------------------------------------------------|
-| Riesgo alto / medio | Inactivo                        | No                            | Inactivo                      | Estudiante en riesgo sin beca ni apoyo organizado                  |
-| Riesgo alto / medio | Inactivo                        | Sí                            | Inactivo                      | Riesgo con apoyo entre pares, sin beca ministerial                 |
-| Riesgo alto / medio | Inactivo                        | Sí / No                       | Activo                        | Riesgo con centro de estudiantes activo, sin beca ministerial      |
-| Riesgo alto / medio | Activo                          | Sí                            | Activo                        | Riesgo con red completa: beca, apoyo entre pares y centro activo   |
-
-
+### Alertas combinadas (ejemplos reales del piloto)
 En la app, cada fila se muestra como:  
-`Estudiante ID (Carrera) – Riesgo alto → Sin beca ministerial, Apoyo entre pares activo, Centro de estudiantes activo`.
+
+| ID | Carrera       | Categoría Riesgo | Beca     | Apoyo Par | Centro Estudiantes | Alerta generada |
+|----|---------------|------------------|----------|-----------|--------------------|-----------------|
+| 1  | Arquitectura  | Riesgo medio     | Inactivo | No        | Inactivo           | **Estudiante 1 (Arquitectura)** – Riesgo medio → Sin beca ministerial |
+| 2  | Derecho       | Riesgo medio     | Inactivo | Sí        | Activo             | **Estudiante 2 (Derecho)** – Riesgo medio → Sin beca ministerial, Apoyo entre pares activo, Centro de estudiantes activo |
+| 3  | Psicología    | Riesgo medio     | Inactivo | Sí        | Inactivo           | **Estudiante 3 (Psicología)** – Riesgo medio → Sin beca ministerial, Apoyo entre pares activo |
+| 4  | Derecho       | Riesgo alto      | Inactivo | Sí        | Inactivo           | **Estudiante 4 (Derecho)** – Riesgo alto → Sin beca ministerial, Apoyo entre pares activo |
+| 5  | Derecho       | Riesgo medio     | Activo   | Sí        | Activo             | **Estudiante 5 (Derecho)** – Riesgo medio → Apoyo entre pares activo, Centro de estudiantes activo |
+| 6  | Medicina      | Riesgo alto      | Activo   | Sí        | Inactivo           | **Estudiante 6 (Medicina)** – Riesgo alto → Apoyo entre pares activo |
+| 7  | Psicología    | Riesgo medio     | Inactivo | No        | Activo             | **Estudiante 7 (Psicología)** – Riesgo medio → Sin beca ministerial, Centro de estudiantes activo |
+| 8  | Psicología    | Riesgo medio     | Inactivo | No        | Inactivo           | **Estudiante 8 (Psicología)** – Riesgo medio → Sin beca ministerial |
+| 9  | Psicología    | Riesgo medio     | Inactivo | No        | Activo             | **Estudiante 9 (Psicología)** – Riesgo medio → Sin beca ministerial, Centro de estudiantes activo |
+| 10 | Derecho       | Riesgo medio     | Activo   | No        | Inactivo           | **Estudiante 10 (Derecho)** – Riesgo medio → (Sin alertas prioritarias) |
+
+**Lógica**: Alertas solo para Riesgo medio/alto + Sin beca ministerial. Prioriza estudiantes con red activa (apoyo pares/centro) pero sin cobertura estatal.
+|
 
 
 ## 🛠️ Arquitectura del piloto
