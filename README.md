@@ -3,6 +3,11 @@
 Principio materno, SUR DAO+# SUR DAO – Piloto Retención Estudiantil USACH/Mineduc +**Reciprocidad > Burocracia**
 +Herramienta open-source que detecta estudiantes "sombra" (congelados, sin beca, riesgo alto) y alerta redes institucionales para acompañamiento proactivo.
 
+
+SUR DAO – Piloto Retención Estudiantil USACH/Mineduc
+Reciprocidad > Burocracia
+
+👉 Dashboard en tiempo real
 # SUR DAO – Piloto Retención Estudiantil USACH/Mineduc
 **Reciprocidad > Burocracia**
 
