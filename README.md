@@ -25,16 +25,6 @@ Python dashboard con datos SCT anonimizados + capas institucionales y comunitari
 
 ---
 
-## 🛠️ Arquitectura del piloto
-```mermaid
-flowchart TD
-  A[Datos SCT anon.] --> B[Motor de reglas en Python]
-  B --> C[Dashboard VRA/VRAE]
-  C --> D[Alertas psicosociales]
-  D --> E[Capas institucionales: MINEDUC, JUNAEB, Becas]
-  E --> F[Capas humanas: Apoyo entre pares, Centro de estudiantes]
-
-
 ### Alertas combinadas (resumen)
 
 La app genera alertas solo para estudiantes en **Riesgo medio** o **Riesgo alto**, combinando becas, apoyo entre pares y centros de estudiantes activos:
@@ -46,6 +36,15 @@ La app genera alertas solo para estudiantes en **Riesgo medio** o **Riesgo alto*
 | Riesgo alto / medio | Inactivo                        | Sí / No                       | Activo                        | Riesgo con centro de estudiantes activo, sin beca ministerial      |
 | Riesgo alto / medio | Activo                          | Sí                            | Activo                        | Riesgo con red completa: beca, apoyo entre pares y centro activo   |
 
+
+## 🛠️ Arquitectura del piloto
+```mermaid
+flowchart TD
+  A[Datos SCT anon.] --> B[Motor de reglas en Python]
+  B --> C[Dashboard VRA/VRAE]
+  C --> D[Alertas psicosociales]
+  D --> E[Capas institucionales: MINEDUC, JUNAEB, Becas]
+  E --> F[Capas humanas: Apoyo entre pares, Centro de estudiantes]
 
 
 
