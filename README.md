@@ -1,12 +1,43 @@
 > "El respeto no se gana. Cuando vayas a algún lugar, trata de que después de irte, hayas aportado en algo ahí, que ojalá esté mejor de como cuando llegaste."  
 — Principio materno, SUR DAO
 
-# SUR DAO – Earth Commons DAO (USACH Pilot)
+# SUR DAO – Piloto Retención Estudiantil USACH/Mineduc
 
-**Piloto SUR DAO – Herramienta de Monitoreo Integral de Estudiantes USACH**  
-Early detection of dropout risk using anonymized data. No regulations changed.  
+**Reciprocidad > Burocracia**  
+Herramienta open-source que detecta estudiantes "sombra" (congelados, sin beca, riesgo alto) y alerta redes institucionales para acompañamiento proactivo.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://<tu-usuario>-earth-commons-dao.streamlit.app)
+---
+
+## 📊 Problema: 71k anual → 500k+ sombra acumulada
+
+| Año  | Ingresos | Deserción (28.8%) | Stock acumulado |
+|------|----------|-------------------|-----------------|
+| 2020 | 250k     | 72k               | 504k            |
+| 2021 | 250k     | 72k               | 432k            |
+| 2022 | 250k     | 72k               | 360k            |
+| **Total 7 años** | — | — | ~500k estudiantes sombra |
+
+**Fuente:** Mineduc/SIES (28.8% primer año) + USACH Anuario (14.6% reprobación).
+
+---
+
+## ⚙️ Funcionalidad
+
+```python
+st.subheader("Alertas combinadas")
+for i, row in df_full.iterrows():
+    riesgo = row["CategoriaRiesgo"]
+    if riesgo in ["Riesgo alto", "Riesgo medio"]:
+        acciones = []
+        if row["EstadoBeca"] == "Inactivo":
+            acciones.append("Sin beca ministerial")
+        if row["ApoyoPar"] == "Sí":
+            acciones.append("Apoyo entre pares activo")
+        if row["CentroEstudiantes"] == "Activo":
+            acciones.append("Centro de estudiantes activo")
+        
+        st.markdown(f"**Estudiante {row['ID']} ({row['Carrera']})** – {riesgo} → " + ", ".join(acciones))
+
 
 ---
 
