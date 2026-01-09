@@ -21,10 +21,22 @@ Reciprocidad > Burocracia
 | 2020| 250k    | 72k      | 504k |
 **Total**: ~500k sombra
 
-[Tu código + tablas + Mermaid abajo...]
 +---
 +## 📊 Problema: 71k anual → 500k+ sombra acumulada + +| Año | Ingresos | Deserción (28.8%) | Stock acumulado | +|------|----------|-------------------|-----------------| +| 2020 | 250k | 72k | 504k | +| 2021 | 250k | 72k | 432k | +| 2022 | 250k | 72k | 360k | +| **Total 7 años** | — | — | ~500k estudiantes sombra | + +**Fuente:** Mineduc/SIES (28.8% primer año) + USACH Anuario (14.6% reprobación)
 +--- + +## ⚙️ Funcionalidad (ejemplo en Python) + +```python +st.subheader("Alertas combinadas") for i, row in df_full.iterrows(): riesgo = row["CategoriaRiesgo"] if riesgo in ["Riesgo alto", "Riesgo medio"]: acciones = [] if row["EstadoBeca"] == "Inactivo": acciones.append("Sin beca ministerial") if row["ApoyoPar"] == "Sí": acciones.append("Apoyo entre pares activo") if row["CentroEstudiantes"] == "Activo": acciones.append("Centro de estudiantes activo") st.markdown(f"**Estudiante {row['ID']} ({row['Carrera']})** – {riesgo} →
+
+## 📊 Problema
+[Tu tabla 71k-500k]
+
+## 🛠️ Arquitectura
+```mermaid
+flowchart TD
+  A[Datos SCT anon] --> B[Motor reglas Python]
+  B --> C[Dashboard VRA/VRAE]
+  C --> D[Alertas psicosociales]
+  D --> E[Capas institucionales]
+  E --> F[Apoyo pares/centro]
+
 +``` ---
 ## 🎯 Propósito / Purpose
 +Detectar tempranamente estudiantes en riesgo (congelamiento, deserción) → activar apoyos VRAE/VRA. +Python dashboard con datos SCT anonimizados + capas institucionales y comunitarias. ---
