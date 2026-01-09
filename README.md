@@ -58,8 +58,7 @@ for i, row in df_full.iterrows():
 - Ejemplos de alertas
 🔔 Alertas combinadas (ejemplos del piloto)
 
-```mermaid
- flowchart TD
+```mermaidflowchart TD
   A[Datos SCT anon.] --> B[Motor de reglas en Python]
   B --> C[Dashboard VRA/VRAE]
   C --> D[Alertas psicosociales]
