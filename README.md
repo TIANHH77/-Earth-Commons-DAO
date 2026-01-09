@@ -56,7 +56,8 @@ for i, row in df_full.iterrows():
         st.markdown(f"**Estudiante {row['ID']} ({row['Carrera']})** – {riesgo} → " + ", ".join(acciones))
 ```
 - Ejemplos de alertas
-🔔 Alertas combinadas (ejemplos del piloto) 
+🔔 Alertas combinadas (ejemplos del piloto)
+
 ```mermaid
  flowchart TD
   A[Datos SCT anon.] --> B[Motor de reglas en Python]
@@ -65,9 +66,6 @@ for i, row in df_full.iterrows():
   D --> E[Capas institucionales: MINEDUC, JUNAEB, Becas]
   E --> F[Capas humanas: Apoyo entre pares, Centro de estudiantes]
 
-
-🔔 Alertas combinadas (ejemplos del piloto)
-```mermaid
 ID	Carrera	Riesgo	Beca	Apoyo Par	Centro Estudiantes	Alerta generada
 1	Arquitectura	Medio	Inactivo	No	Inactivo	Sin beca ministerial
 2	Derecho	Medio	Inactivo	Sí	Activo	Sin beca + Apoyo pares + Centro activo
