@@ -8,6 +8,7 @@ Herramienta open-source que detecta estudiantes "sombra" (congelados, sin beca, 
 
 ---
 
+
 ## 📊 Problema: 71k anual → 500k+ sombra acumulada
 
 | Año  | Ingresos | Deserción (28.8%) | Stock acumulado |
@@ -32,7 +33,7 @@ Falta de coordinación entre MINEDUC, JUNAEB, becas internas y apoyo comunitario
 
 ## ⚙️ Funcionalidad (ejemplo en Python)
 
-```python
+```**.python
 st.subheader("Alertas combinadas")
 for i, row in df_full.iterrows():
     riesgo = row["CategoriaRiesgo"]
@@ -46,6 +47,7 @@ for i, row in df_full.iterrows():
             acciones.append("Centro de estudiantes activo")
         
         st.markdown(f"**Estudiante {row['ID']} ({row['Carrera']})** – {riesgo} → " + ", ".join(acciones)```
+```**.
 
 🎯 Propósito / Purpose
 Detectar tempranamente estudiantes en riesgo (congelamiento, deserción) → activar apoyos VRAE/VRA.
