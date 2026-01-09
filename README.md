@@ -1,6 +1,17 @@
 > "El respeto no se gana. Cuando vayas a algún lugar, trata de que después de irte, hayas aportado en algo ahí, que ojalá esté mejor de como cuando llegaste."  
 — Principio materno, SUR DAO
 
+---
+
+👉 Con esta estructura ya tenés tu **manual institucional completo**:  
+- Problema con datos duros  
+- Funcionalidad en Python  
+- Ejemplos de alertas  
+- Arquitectura visual en Mermaid  
+- Propósito y Roadmap  
+
+¿Querés que te prepare también una **versión bilingüe (ES/EN)** de este README para que sea internacional desde el inicio?
+
 # SUR DAO – Piloto Retención Estudiantil USACH/Mineduc
 
 **Reciprocidad > Burocracia**  
