@@ -53,21 +53,26 @@ Detectar tempranamente estudiantes en riesgo (congelamiento, deserción) → act
 Python dashboard con datos SCT anonimizados + capas institucionales y comunitarias.
 
 🔔 Alertas combinadas (ejemplos del piloto)
-```ID	Carrera	Riesgo	Beca	Apoyo Par	Centro Estudiantes	Alerta generada
+
+ID	Carrera	Riesgo	Beca	Apoyo Par	Centro Estudiantes	Alerta generada
 1	Arquitectura	Medio	Inactivo	No	Inactivo	Sin beca ministerial
 2	Derecho	Medio	Inactivo	Sí	Activo	Sin beca + Apoyo pares + Centro activo
-4	Derecho	Alto	Inactivo	Sí	Inactivo	Riesgo alto + Sin beca + Apoyo pares```
+4	Derecho	Alto	Inactivo	Sí	Inactivo	Riesgo alto + Sin beca + Apoyo pares
+```
 
 Lógica: Alertas solo para Riesgo medio/alto + Sin beca ministerial. Se prioriza acompañamiento donde hay red activa (pares/centro) pero falta cobertura estatal.
 
 🛠️ Arquitectura del piloto
-
+```
 flowchart TD
- ``` A[Datos SCT anon.] --> B[Motor de reglas en Python]
+  A[Datos SCT anon.] --> B[Motor de reglas en Python]
   B --> C[Dashboard VRA/VRAE]
   C --> D[Alertas psicosociales]
   D --> E[Capas institucionales: MINEDUC, JUNAEB, Becas]
   E --> F[Capas humanas: Apoyo entre pares, Centro de estudiantes]```
 
   
+---
+
+
 
