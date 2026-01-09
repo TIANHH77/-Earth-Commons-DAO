@@ -93,6 +93,19 @@ flowchart TD
     Riesgo --> Centro
 
 
+flowchart TD
+    Riesgo["📊 Riesgo académico"]
+    Becas["🎓 Becas ministeriales/internas"]
+    Junaeb["🍽️ JUNAEB"]
+    Pares["🤝 Apoyo entre pares"]
+    Centro["🏛️ Centro de estudiantes"]
+
+    Riesgo --> Becas
+    Riesgo --> Junaeb
+    Riesgo --> Pares
+    Riesgo --> Centro
+
+
 
 ---
 
