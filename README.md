@@ -10,9 +10,6 @@ Reciprocidad > Burocracia
 👉 Dashboard en tiempo real
 # SUR DAO – Piloto Retención Estudiantil USACH/Mineduc
 **Reciprocidad > Burocracia**
-
-> "El respeto no se gana. [...] esté mejor de como cuando llegaste." — Principio materno
-
 [![Streamlit](https://surdao-dashboard.streamlit.app/)]
 
 ## 📊 Problema
