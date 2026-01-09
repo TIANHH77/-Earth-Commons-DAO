@@ -2,25 +2,19 @@
 — Principio materno, SUR DAO
 
 ---
-
-👉 Con esta estructura ya tenés tu **manual institucional completo**:  
-- Problema con datos duros  
-- Funcionalidad en Python  
-- Ejemplos de alertas  
-- Arquitectura visual en Mermaid  
-- Propósito y Roadmap  
-
-¿Querés que te prepare también una **versión bilingüe (ES/EN)** de este README para que sea internacional desde el inicio?
-
 # SUR DAO – Piloto Retención Estudiantil USACH/Mineduc
 
 **Reciprocidad > Burocracia**  
 Herramienta open-source que detecta estudiantes "sombra" (congelados, sin beca, riesgo alto) y alerta redes institucionales para acompañamiento proactivo.
 
----
+🎯 Propósito / Purpose
+Detectar tempranamente estudiantes en riesgo (congelamiento, deserción) → activar apoyos VRAE/VRA.
+Python dashboard con datos SCT anonimizados + capas institucionales y comunitarias.
 
+👉 **manual institucional completo**:
 
-## 📊 Problema: 71k anual → 500k+ sombra acumulada
+- Problema con datos duros
+- ## 📊 Problema: 71k anual → 500k+ sombra acumulada
 
 | Año  | Ingresos | Deserción (28.8%) | Stock acumulado |
 |------|----------|-------------------|-----------------|
@@ -29,7 +23,7 @@ Herramienta open-source que detecta estudiantes "sombra" (congelados, sin beca, 
 | 2022 | 250k     | 72k               | 360k            |
 | **Total 7 años** | — | — | ~500k estudiantes sombra |
 
-**Fuente:** Mineduc/SIES (28.8% primer año) + USACH Anuario (14.6% reprobación).
+**Fuente:** Mineduc/SIES (28.8% primer año) + USACH Anuario (14.6% reprobación)
 
 📊 Datos clave
 28.8% tasa de deserción en primer año (SIES).
@@ -40,11 +34,12 @@ Herramienta open-source que detecta estudiantes "sombra" (congelados, sin beca, 
 
 Falta de coordinación entre MINEDUC, JUNAEB, becas internas y apoyo comunitario.
 
----
+```python
+st.subheader("Alertas combinadas")
+for i, row in df_full.iterrows():
+    riesgo```
 
-## ⚙️ Funcionalidad (ejemplo en Python)
-
-
+- Funcionalidad en Python
 ```python
 st.subheader("Alertas combinadas")
 for i, row in df_full.iterrows():
@@ -60,40 +55,42 @@ for i, row in df_full.iterrows():
         
         st.markdown(f"**Estudiante {row['ID']} ({row['Carrera']})** – {riesgo} → " + ", ".join(acciones))
 ```
-
-🎯 Propósito / Purpose
-Detectar tempranamente estudiantes en riesgo (congelamiento, deserción) → activar apoyos VRAE/VRA.
-Python dashboard con datos SCT anonimizados + capas institucionales y comunitarias.
-
-🔔 Alertas combinadas (ejemplos del piloto)
-```mermaid flowchart TD
+- Ejemplos de alertas
+🔔 Alertas combinadas (ejemplos del piloto) 
+```mermaid
+ flowchart TD
   A[Datos SCT anon.] --> B[Motor de reglas en Python]
   B --> C[Dashboard VRA/VRAE]
   C --> D[Alertas psicosociales]
   D --> E[Capas institucionales: MINEDUC, JUNAEB, Becas]
   E --> F[Capas humanas: Apoyo entre pares, Centro de estudiantes]
+
+
 🔔 Alertas combinadas (ejemplos del piloto)
+```mermaid
 ID	Carrera	Riesgo	Beca	Apoyo Par	Centro Estudiantes	Alerta generada
 1	Arquitectura	Medio	Inactivo	No	Inactivo	Sin beca ministerial
 2	Derecho	Medio	Inactivo	Sí	Activo	Sin beca + Apoyo pares + Centro activo
 3	Derecho	Alto	Inactivo	Sí	Inactivo	Riesgo alto + Sin beca + Apoyo pares
-4   Terapia ALTO    Inactivo    NO  INACTIVO    Riesgo Alto + Sin beca - Apoyo pares
+4   Terapia ALTO    Inactivo    NO  INACTIVO    Riesgo Alto + Sin beca - Apoyo pares```
+
 ```
-
-Lógica: Alertas solo para Riesgo medio/alto + Sin beca ministerial. Se prioriza acompañamiento donde hay red activa (pares/centro) pero falta cobertura estatal.
-
-🛠️ Arquitectura del piloto
+ 
+- Arquitectura visual en Mermaid
+  🛠️ Arquitectura del piloto
 ```mermaidflowchart TD
   A[Datos SCT anon.] --> B[Motor de reglas en Python]
   B --> C[Dashboard VRA/VRAE]
   C --> D[Alertas psicosociales]
   D --> E[Capas institucionales: MINEDUC, JUNAEB, Becas]
-  E --> F[Capas humanas: Apoyo entre pares, Centro de estudiantes]
+  E --> F[Capas humanas: Apoyo entre pares, Centro de estudiantes]  
+- Propósito y Roadmap
+```  
+
+Lógica: Alertas solo para Riesgo medio/alto + Sin beca ministerial. Se prioriza acompañamiento donde hay red activa (pares/centro) pero falta cobertura estatal.
+
+
 ```
 
-```python
-st.subheader("Alertas combinadas")
-for i, row in df_full.iterrows():
-    riesgo```
-```
+
 
