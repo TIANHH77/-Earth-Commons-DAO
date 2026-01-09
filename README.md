@@ -1,8 +1,12 @@
 
-> "El respeto no se gana. Cuando vayas a algún lugar, trata de que después de irte, hayas aportado en algo ahí, que ojalá esté mejor de como cuando llegaste."  
+"El respeto no se gana. Cuando vayas a algún lugar, trata de que después de irte, hayas aportado en algo ahí, que ojalá esté mejor de como cuando llegaste."
 — Principio materno, SUR DAO
 
 # SUR DAO – Piloto Retención Estudiantil USACH/Mineduc
+
+**Reciprocidad > Burocracia**. Herramienta open-source que detecta estudiantes "sombra" (congelados, sin beca, riesgo alto) y alerta redes institucionales para acompañamiento proactivo.
+
+## 📊 Problema: 71k anual → 500k+
 
 **Reciprocidad > Burocracia**  
 Herramienta open-source que detecta estudiantes "sombra" (congelados, sin beca, riesgo alto) y alerta redes institucionales para acompañamiento proactivo.
