@@ -35,6 +35,18 @@ flowchart TD
   E --> F[Capas humanas: Apoyo entre pares, Centro de estudiantes]
 
 
+### Alertas combinadas (resumen)
+
+La app genera alertas solo para estudiantes en **Riesgo medio** o **Riesgo alto**, combinando becas, apoyo entre pares y centros de estudiantes activos:
+
+| Categoría de riesgo | Condición beca ministerial      | Apoyo entre pares             | Centro de estudiantes         | Alerta generada                                                    |
+|---------------------|---------------------------------|-------------------------------|-------------------------------|--------------------------------------------------------------------|
+| Riesgo alto / medio | Inactivo                        | No                            | Inactivo                      | Estudiante en riesgo sin beca ni apoyo organizado                  |
+| Riesgo alto / medio | Inactivo                        | Sí                            | Inactivo                      | Riesgo con apoyo entre pares, sin beca ministerial                 |
+| Riesgo alto / medio | Inactivo                        | Sí / No                       | Activo                        | Riesgo con centro de estudiantes activo, sin beca ministerial      |
+| Riesgo alto / medio | Activo                          | Sí                            | Activo                        | Riesgo con red completa: beca, apoyo entre pares y centro activo   |
+
+
 
 
 
