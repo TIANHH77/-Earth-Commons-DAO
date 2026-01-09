@@ -37,6 +37,10 @@ La app genera alertas solo para estudiantes en **Riesgo medio** o **Riesgo alto*
 | Riesgo alto / medio | Activo                          | Sí                            | Activo                        | Riesgo con red completa: beca, apoyo entre pares y centro activo   |
 
 
+En la app, cada fila se muestra como:  
+`Estudiante ID (Carrera) – Riesgo alto → Sin beca ministerial, Apoyo entre pares activo, Centro de estudiantes activo`.
+
+
 ## 🛠️ Arquitectura del piloto
 ```mermaid
 flowchart TD
