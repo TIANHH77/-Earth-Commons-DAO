@@ -23,8 +23,9 @@ alertas = usach[
 ]
 
 for _, row in alertas.head(10).iterrows():
-    st.markdown(
-        f"**Estudiante {row['ID']} ({row['Nombre']})** – {row['Riesgo']} → "
-        f"Sin beca ministerial, "
-        f\"Apoyo par: {row['ApoyoPar']}, Centro estudiantes: {row['CentroEstudiantes']}\""
-    )
+    st.markdown(f"""
+        **Estudiante {row['ID']} ({row['Nombre']})** – {row['Riesgo']} → 
+        Sin beca ministerial, Apoyo par: {row['ApoyoPar']}, 
+        Centro estudiantes: {row['CentroEstudiantes']}
+    """)
+
