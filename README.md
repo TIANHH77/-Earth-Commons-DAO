@@ -1,28 +1,18 @@
- "SUR DAO = Universidades ganan $1.2B matrícula + MINEDUC cumple metas + estudiantes títulos sin deuda."
-
-# SUR DAO – Piloto Retención Estudiantil USACH/Mineduc  
-**Reciprocidad > Burocracia**  
-**Trayectorias Flexibles DAO**
-
+Earth-Commons-DAO / SUR DAO
+“Gobernanza descentralizada para los bienes comunes y trayectorias educativas flexibles.”
 👉 [![SUR DAO Live](https://img.shields.io/badge/Streamlit-LIVE-brightgreen)](https://surdao-dashboard.streamlit.app/)
-
 ---
 
+Visión: Crear un sistema DAO que articule territorios, comunidades y universidades para proteger y reconvertir capital humano y ecológico.
+
+Propósito: Retención estudiantil y reconversión de créditos académicos.Gobernanza comunitaria de datos y recursos.Activación de apoyos institucionales y humanos.
+---
 ## 📊 Crisis: 500k Estudiantes Sombra
 - **28.8%** deserción en primer año (SIES).  
 - **500k créditos vigentes** acumulados en estudiantes que abandonaron.  
 - **Capital humano latente estimado: $6B**.  
 
 ---
-
-## 🎯 Propósito
-- Detectar tempranamente estudiantes en riesgo.  
-- Reconectar trayectorias congeladas o abandonadas.  
-- Reconversión inteligente de créditos SCT hacia áreas críticas.  
-- Activar apoyos institucionales (MINEDUC, JUNAEB, VRAE/VRA) y comunitarios (pares, centros de estudiantes).  
-
----
-
 ## 🔄 Match Deserción → Afines Prioritarios
 Ejemplos de reconversión:  
 
@@ -52,11 +42,16 @@ def winwin_ues(match):
     return "Revisar convalidación"
 
 ```
-
+---
 ## 📊 Mapa de Oportunidades
 🔴Zona Crítica: Psicología/Periodismo (deserción + saturación)
 🟢 Zona Oportunidad: Computación/Construcción (deserción alta → demanda)
 
+---
+Arquitectura DAO
+Flujo de datos: SCT anónimos → motor de reglas → dashboards institucionales → alertas psicosociales → capas de apoyo.
+Infraestructura: nodos y data centers comunitarios.
+Capas de gobernanza: institucional, territorial, humana.
 ---
 **SUR DAO dirige trueque inteligente.**
 ## 🏗️ Arquitectura SUR DAO
@@ -69,8 +64,24 @@ flowchart TD
   D --> E[Capas institucionales: MINEDUC, JUNAEB, Becas]
   E --> F[Capas humanas: Apoyo entre pares, Centro de estudiantes]
 
+Roadmap
+Fase 1: Piloto SUR DAO (USACH/Mineduc).
+Fase 2: Expansión a otras universidades y territorios.
+Fase 3: Integración con Earth-Commons-DAO para bienes comunes ecológicos.
 
+Cómo Participar
+Instituciones: colaborar en reconversión de créditos y dashboards.
+Estudiantes: acceder a alertas y apoyos.
+Comunidad: aportar nodos, data centers y acompañamiento humano.
+Contribuidores técnicos: revisar piloto_sur.py, docs/, manifiestos/
 
+Licencia y Valores
+Código abierto.
+Principios: transparencia, reciprocidad, sostenibilidad.
+
+### Visión y Propósito / Vision & Purpose
+Crear un sistema DAO que articule territorios, comunidades y universidades...
+Build a DAO system that connects territories, communities, and universities...
 
 
 
