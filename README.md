@@ -51,7 +51,7 @@ def winwin_ues(match):
         return "💰 UES: Nueva matrícula + MINEDUC: Retención"
     return "Revisar convalidación"
 
-
+```
 
 ## 📊 Mapa de Oportunidades
 🔴Zona Crítica: Psicología/Periodismo (deserción + saturación)
