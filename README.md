@@ -37,7 +37,7 @@ Datos basados en convalidaciones SCT reales; >60% habilita "win-win" institucion
 Ley 21.091 Art.28: SCT convalidación OBLIGATORIA.
 Filosofía: Los créditos no se pierden → se reconvierten inteligentemente.
 
-  
+ ```python 
   def winwin_ues(match):
     """
     Evalúa si un caso de reconversión de créditos SCT cumple condiciones
@@ -66,14 +66,14 @@ Filosofía: Los créditos no se pierden → se reconvierten inteligentemente.
     return "📌 Revisar caso: cumple requisitos mínimos pero falta validación de demanda"
 
 
-
+```
 📊 Mapa de Oportunidades
 🔴 Zona Crítica: Psicología / Periodismo (deserción + saturación).
 
 🟢 Zona Oportunidad: Computación / Construcción (deserción alta → demanda).
 
 🏗️ Arquitectura SUR DAO
-mermaid
+```mermaid
 flowchart TD
   A[Datos SCT anon.] --> B[Motor de reglas]
   B --> C[Dashboard VRA/VRAE]
