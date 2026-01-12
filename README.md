@@ -74,6 +74,8 @@ Se prioriza acompañamiento donde hay red activa, pero falta cobertura estatal.
 
 
 ```
+🛠️ Arquitectura
+
 ```mermaid
 flowchart TD
   A[Datos SCT anon.] --> B[Motor de reglas en Python]
@@ -82,7 +84,6 @@ flowchart TD
   D --> E[Capas institucionales: MINEDUC, JUNAEB, Becas]
   E --> F[Capas humanas: Apoyo entre pares, Centro de estudiantes]
 
-```
 📊 Datos clave
 28.8% tasa de deserción en primer año (SIES).
 427 renuncias en USACH durante 2022.
