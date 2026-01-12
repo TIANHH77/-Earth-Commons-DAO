@@ -1,6 +1,9 @@
 Earth-Commons-DAO / SUR DAO
 Gobernanza descentralizada para los bienes comunes y trayectorias educativas flexibles.  
 👉 SUR DAO Live
+[![SUR DAO Live](https://img.shields.io/badge/SUR%20DAO-Live-brightgreen?style=for-the-badge)](https://surdao-dashboard.streamlit.app/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-earthcommonsdaog-blueviolet?style=flat-square)](https://github.com/vivevolandonomade/earthcommonsdaog)
+
 
 🌍 Visión y Propósito / Vision & Purpose
 ES: Crear un sistema DAO que articule territorios, comunidades y universidades para proteger y reconvertir capital humano y ecológico.
