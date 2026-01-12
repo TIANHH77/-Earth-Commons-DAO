@@ -64,6 +64,12 @@ Contribuidores técnicos: revisar piloto_sur.py, docs/, manifiestos/.
 Código abierto.
 Principios: transparencia, reciprocidad, sostenibilidad.
 
+[![SUR DAO Live](https://img.shields.io/badge/SUR%20DAO-Live-brightgreen?style=for-the-badge)](https://surdao-dashboard.streamlit.app/)
+[![Open Source](https://img.shields.io/badge/Open%20Source-Yes-blue?style=flat-square)](https://github.com/vivevolandonomade/earthcommonsdaog)
+[![Community-Driven](https://img.shields.io/badge/Community-Driven-orange?style=flat-square)](https://github.com/vivevolandonomade/earthcommonsdaog)
+[![DAO Governance](https://img.shields.io/badge/DAO-Governance-purple?style=flat-square)](https://github.com/vivevolandonomade/earthcommonsdaog)
+[![Made in Chile](https://img.shields.io/badge/Made%20in-Chile-red?style=flat-square)](https://github.com/vivevolandonomade/earthcommonsdaog)
+
 
 
   
