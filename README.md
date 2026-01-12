@@ -10,12 +10,15 @@
 
 ## 📊 Problema
 
-| Año          | Ingresos | Deserción (28.8%) | Stock acumulado          |
-| ------------ | -------- | ----------------- | ------------------------ |
-| 2020         | 250k     | 72k               | 504k                     |
-| 2021         | 250k     | 72k               | 432k                     |
-| 2022         | 250k     | 72k               | 360k                     |
-| **Total 7 años** | —    | —                 | ~500k estudiantes sombra |
+📊 Problema
+
+| Año         | Ingresos | Deserción (28.8%) | Stock acumulado       |
+|-------------|----------|-------------------|-----------------------|
+| 2020        | 250k     | 72k               | 504k                  |
+| 2021        | 250k     | 72k               | 432k                  |
+| 2022        | 250k     | 72k               | 360k                  |
+| Total 7 años| —        | —                 | ~500k estudiantes sombra |
+
 
 ---
 
@@ -76,21 +79,27 @@ st.plotly_chart(fig_pie, use_container_width=True)
 ```
 🔔 Ejemplos de alertas del piloto
 
-ID	Carrera	Riesgo	Beca	Apoyo Par	Centro Estudiantes	Alerta generada
-1	Arquitectura	Medio	Inactivo	No	Inactivo	Sin beca ministerial
-2	Derecho	Medio	Inactivo	Sí	Activo	Sin beca + Apoyo pares + Centro activo
-4	Derecho	Alto	Inactivo	Sí	Inactivo	Riesgo alto + Sin beca + Apoyo pares
-https://github.com/user-attachments/assets/57b6b6bc-27d9-4639-be05-25a35e6ceafd
+🔔 Ejemplos de alertas del piloto
+
+| ID | Carrera      | Riesgo | Beca     | Apoyo Par | Centro Estudiantes | Alerta generada                                      |
+|----|--------------|--------|----------|-----------|---------------------|------------------------------------------------------|
+| 1  | Arquitectura | Medio  | Inactivo | No        | Inactivo            | Sin beca ministerial                                 |
+| 2  | Derecho      | Medio  | Inactivo | Sí        | Activo              | Sin beca + Apoyo pares + Centro activo              |
+| 4  | Derecho      | Alto   | Inactivo | Sí        | Inactivo            | Riesgo alto + Sin beca + Apoyo pares                |
+
 
 Lógica: Riesgo crítico = medio/alto + sin beca + sin pares + sin centro. Se prioriza acompañamiento donde hay red activa, pero falta cobertura estatal.
 ---
 🛠️ Arquitectura
-```mermaid flowchart TD
+
+```mermaid
+flowchart TD
   A[Datos SCT anon.] --> B[Motor de reglas en Python]
   B --> C[Dashboard VRA/VRAE]
   C --> D[Alertas psicosociales]
   D --> E[Capas institucionales: MINEDUC, JUNAEB, Becas]
   E --> F[Capas humanas: Apoyo entre pares, Centro de estudiantes]
+
 ```
 📊 Datos clave
 28.8% tasa de deserción en primer año (SIES).
