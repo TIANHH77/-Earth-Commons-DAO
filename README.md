@@ -1,23 +1,28 @@
 Earth-Commons-DAO / SUR DAO
 Gobernanza descentralizada para los bienes comunes y trayectorias educativas flexibles.  
 👉 SUR DAO Live
+
 🌍 Visión y Propósito / Vision & Purpose
 ES: Crear un sistema DAO que articule territorios, comunidades y universidades para proteger y reconvertir capital humano y ecológico.
 EN: Build a DAO system that connects territories, communities, and universities to protect and reconvert human and ecological capital.
+
 🎯 Propósito
 Retención estudiantil y reconversión de créditos académicos.
 Gobernanza comunitaria de datos y recursos.
 Activación de apoyos institucionales y humanos.
+
 📊 Crisis: 500k Estudiantes Sombra
 28.8% deserción en primer año (SIES).
 500k créditos vigentes acumulados en estudiantes que abandonaron.
 Capital humano latente estimado: $6B.
+
 🔄 Match Deserción → Afines Prioritarios
 Carrera origen	Tasa deserción	Destino afín prioritario	% Créditos SCT
 Ing. Computación	40.5%	Automatización Industrial A	75%
 Ciencias Exactas	59.5%	Ing. Civil + Pedagogía A/B	60%
 Técnico Construcción	40%	Ing. Civil Construcción A	80%
 Logística	35%	Gestión Pública A	65%
+
 🧩 Actores y Beneficios
 Actor	Problema Actual	SUR DAO Solución	Ganancia $ Anual
 MINEDUC	76% retención meta FES	+20% reingresos	+$500B
