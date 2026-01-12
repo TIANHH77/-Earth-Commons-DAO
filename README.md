@@ -73,8 +73,7 @@ Filosofía: Los créditos no se pierden → se reconvierten inteligentemente.
 🟢 Zona Oportunidad: Computación / Construcción (deserción alta → demanda).
 
 🏗️ Arquitectura SUR DAO
-```mermaid
-flowchart TD
+```mermaidflowchart TD
   A[Datos SCT anon.] --> B[Motor de reglas]
   B --> C[Dashboard VRA/VRAE]
   C --> D[Alertas psicosociales]
