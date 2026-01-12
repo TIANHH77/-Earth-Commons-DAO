@@ -24,7 +24,6 @@ Activar apoyos VRAE/VRA + capas comunitarias.
 Python dashboard con datos SCT anonimizados + capas institucionales y humanas.
 
 ⚙️ Funcionalidad (ejemplo en Python)
-## ⚙️ Funcionalidad (ejemplo en Python)
 import streamlit as st
 import pandas as pd
 import plotly.express as px
