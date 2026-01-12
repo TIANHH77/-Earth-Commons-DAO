@@ -2,68 +2,47 @@
 
 > "El respeto no se gana..." — **Principio materno**
 
-**Reciprocidad > Burocracia DAO**
+**Reciprocidad > Burocracia** – **Trayectorias Flexibles DAO**
 
-**Trueque créditos sombra** → **cierra déficits nacionales**.
+👉 [![SUR DAO Live](https://img.shields.io/badge/Streamlit-LIVE-brightgreen)](https://surdao-dashboard.streamlit.app/)
 
-👉 [![LIVE](https://img.shields.io/badge/Streamlit-LIVE-brightgreen)](https://surdao-dashboard.streamlit.app/)
+## 📊 Crisis: 500k Sombra (Alta Deserción)
 
-## 📊 Crisis: 500k Sombra
+| Año | Ingresos | Deserción 28.8% | Sombra |
+|:---|:---------|:----------------|:-------|
+| **Total** | — | — | **500k créditos vigentes** | [web:10]
 
-| Año | Ingresos | Deserción 28.8% | Sombra Acumulada |
-|:---|:---------|:----------------|:-----------------|
-| 2020| 250k    | 72k             | 504k             |
-| **Total** | — | — | **500k ASSETs** |
+## 🎓 Capital Humano Latente $6B
 
-## 🎓 Capital Humano Latente
+| Estudiante     | % Carrera | Valor | Acción SUR DAO |
+|:---------------|:----------|:------|:---------------|
+| Pepito Derecho | 62%       | $17.5M| Trueque afín  |
+| **500k Total** | 50%       | **$6B**| ROI nacional  | [code_file:0]
 
-| Estudiante     | % Carrera | Valor Invertido | SUR DAO Acción     |
-|:---------------|:----------|:----------------|:-------------------|
-| Pepito Derecho | 62%       | $17.5M CLP      | Trueque créditos A |
-| **Total 500k** | ~50%      | **$6 billones** | ROI nacional      | [code_file:0]
+## 🔄 **Match Deserción → Afines Prioritarios** ⭐
 
-## 🎯 **Prioridades por Déficit Nacional** ⭐ **NUEVO**
+| **Deserción Alta** | **Tasa** | **Destino Afín (Prioridad)** | **% Créditos SCT** |
+|:-------------------|:---------|:-----------------------------|:-------------------|
+| **Ing Computación**| **40.5%**| Automatización **A**        | **80%** [web:65]  |
+| **Ciencias Exactas**| **59.5%**| Ing Civil Mates + Pedagogía **A/B** | **65%** |
+| **Técnico Construcción** | **40%** | Ing Civil Construcción **A** | **75%** |
+| **Logística**      | **35%**  | Gestión Pública **A**        | **70%**           |
 
-### **Profesionales Críticos** [web:58]
-| Prioridad | Carrera                | Déficit Nacional |
-|:---------|:-----------------------|:-----------------|
-| **A**    | **Ingeniería Civil**   | #1 SENCE ofertas |
-| **A**    | Química/Farmacia       | **98.4%** demanda |
-| **B**    | **Pedagogía Mates**    | **30k faltan** [web:54] |
+**Filosofía:** Créditos **NO se pierden** – se **reconvierten inteligentemente**.
 
-### **Técnicos Urgentes** [web:63]
-| Prioridad | Técnico                  | Empleabilidad |
-|:---------|:-------------------------|:--------------|
-| **A**    | **Prevención Riesgos**   | **85%**       |
-| **A**    | Automatización Industrial| **82%**       |
-
-**SUR DAO:** Pepito Ingeniería Civil 62% → **Prioridad A** → Trueque inmediato.
-
-## ⚙️ Algoritmo Priorización
+## ⚙️ Algoritmo Match Flexible
 
 ```python
-def priorizar_trueque(estudiante):
-    carrera = estudiante["Carrera"]
-    porc = estudiante["PorcentajeCarrera"]
-    
-    gaps = {
-        'Ingeniería Civil': 'A', 'Química': 'A', 
-        'Pedagogía Mates': 'B', 'Prevención Riesgos': 'A'
+def match_desercion_afin(origen, porc_creditos):
+    deser_alta = {
+        'Ing Computación': [('Automatización', 80), ('Ing Civil Mates', 65)],
+        'Ciencias Exactas': [('Pedagogía Mates', 70), ('Ing Civil', 60)]
     }
-    
-    if gaps.get(carrera) == 'A' and porc > 40:
-        return "🔥 PRIORIDAD ALTA - Déficit nacional"
+    if origen in deser_alta and porc_creditos > 40:
+        return deser_alta[origen]  # Mejor match
+    return None
 
-🏗️ Arquitectura Inteligente
+# Persona Ing Computación 62% → Automatización Industrial 80% créditos
 
-flowchart TD
-  A[SCT + SENCE API] --> B[Prioridad A/B/C]
-  B --> C[Trueque créditos]
-  C --> D[MINEDUC convalidación]
-  D --> E[ROI nacional]
-
-💰 Impacto Estratégico
-500k sombra x Prioridad A 30% = 150k profesionales críticos
-Valor: $1.8 billones capital humano dirigido
 
 
