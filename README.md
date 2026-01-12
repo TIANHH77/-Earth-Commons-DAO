@@ -20,7 +20,40 @@ Reciprocidad > Burocracia
 
 +---
 +## 📊 Problema: 71k anual → 500k+ sombra acumulada + +| Año | Ingresos | Deserción (28.8%) | Stock acumulado | +|------|----------|-------------------|-----------------| +| 2020 | 250k | 72k | 504k | +| 2021 | 250k | 72k | 432k | +| 2022 | 250k | 72k | 360k | +| **Total 7 años** | — | — | ~500k estudiantes sombra | + +**Fuente:** Mineduc/SIES (28.8% primer año) + USACH Anuario (14.6% reprobación)
-+--- + +## ⚙️ Funcionalidad (ejemplo en Python) + +```python +st.subheader("Alertas combinadas") for i, row in df_full.iterrows(): riesgo = row["CategoriaRiesgo"] if riesgo in ["Riesgo alto", "Riesgo medio"]: acciones = [] if row["EstadoBeca"] == "Inactivo": acciones.append("Sin beca ministerial") if row["ApoyoPar"] == "Sí": acciones.append("Apoyo entre pares activo") if row["CentroEstudiantes"] == "Activo": acciones.append("Centro de estudiantes activo") st.markdown(f"**Estudiante {row['ID']} ({row['Carrera']})** – {riesgo} →
++--- + +## ⚙️ Funcionalidad (ejemplo en Python)import numpy as np
+
+def calcular_alerta(row):
+    riesgo = row["CategoriaRiesgo"]
+    beca = row.get("EstadoBeca", "Inactivo")
+    apoyo_par = row.get("ApoyoPar", "No")
+    centro = row.get("CentroEstudiantes", "Inactivo")
+
+    # Caso sin riesgo
+    if "Sin riesgo" in riesgo:
+        return "🟢 Sin riesgo"
+
+    # Riesgo leve
+    if "Riesgo leve" in riesgo:
+        return "🟡 Riesgo leve"
+
+    # Riesgo medio/alto
+    if "Riesgo medio" in riesgo or "Riesgo alto" in riesgo:
+        # Riesgo crítico: sin beca + sin pares + sin centro
+        if beca == "Inactivo" and apoyo_par == "No" and centro == "Inactivo":
+            return "🔴 Riesgo crítico (aislamiento total)"
+        # Riesgo alto/medio con alguna red activa
+        else:
+            return "🟠 Riesgo con red parcial"
+
+    return "⚪ No clasificado"
+
+# Aplicar al dataframe
+df_full["NivelAlerta"] = df_full.apply(calcular_alerta, axis=1)
+
+# Mostrar ejemplo
+st.subheader("🔔 Alertas clasificadas")
+st.dataframe(df_full[["ID","Carrera","CategoriaRiesgo","EstadoBeca","ApoyoPar","CentroEstudiantes","NivelAlerta"]])
+
 
 ## 📊 Problema
 
