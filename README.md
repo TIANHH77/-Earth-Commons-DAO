@@ -28,7 +28,6 @@
 ---
 
 ## ⚙️ Funcionalidad (ejemplo en Python)
-
 ```python
 import streamlit as st
 import pandas as pd
@@ -51,16 +50,13 @@ def calcular_alerta(row):
             return "🟠 Riesgo con red parcial"
     return "⚪ No clasificado"
 
-# Aplicar a dataframe
 df_full["NivelAlerta"] = df_full.apply(calcular_alerta, axis=1)
 
 st.subheader("🔔 Alertas clasificadas")
 st.dataframe(df_full[["ID","Carrera","CategoriaRiesgo","EstadoBeca","ApoyoPar","CentroEstudiantes","NivelAlerta"]])
-```
+
 📊 Distribución de NivelAlerta
 
-
-```python
 import plotly.express as px
 
 df_counts = df_full["NivelAlerta"].value_counts().reset_index()
@@ -76,7 +72,8 @@ fig_pie = px.pie(
 )
 fig_pie.update_traces(textinfo="percent+label")
 st.plotly_chart(fig_pie, use_container_width=True)
-```
+
+
 
 🔔 Ejemplos de alertas del piloto
 
