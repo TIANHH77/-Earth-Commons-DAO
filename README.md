@@ -1,8 +1,11 @@
 Earth-Commons-DAO / SUR DAO
 Gobernanza descentralizada para los bienes comunes y trayectorias educativas flexibles.  
-## 📊 Dashboard Live
-👉 [Ver Dashboard SUR DAO](https://surdao-dashboard.streamlit.app/)  
-👉 [Repo Data](https://github.com/vivevolandonomade/earthcommonsdaog)
+# SUR DAO - Earth Commons DAO
+[![SUR DAO Live](https://img.shields.io/badge/SUR%20DAO-Live-brightgreen)](https://surdao-dashboard.streamlit.app/)
+**Fase 1 USACH**: 274 estudiantes 3+ años → **42,480 créditos SCT** → **$509MM** impacto
+## [Data SIES 2025 →](/tree/main/data)
+[![Data Folder](https://img.shields.io/badge/Data-SIES_2025-blue)](https://github.com/TIANHH77/-Earth-Commons-DAO/tree/main/data)
+
 
 
 🌍 Visión y Propósito / Vision & Purpose
