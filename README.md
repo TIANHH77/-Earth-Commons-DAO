@@ -91,8 +91,7 @@ Lógica: Riesgo crítico = medio/alto + sin beca + sin pares + sin centro. Se pr
 ---
 🛠️ Arquitectura
 
-```mermaid
-flowchart TD
+```mermaidflowchart TD
   A[Datos SCT anon.] --> B[Motor de reglas en Python]
   B --> C[Dashboard VRA/VRAE]
   C --> D[Alertas psicosociales]
