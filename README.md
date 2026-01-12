@@ -47,20 +47,6 @@ def calcular_alerta(row):
 
 df_full["NivelAlerta"] = df_full.apply(calcular_alerta, axis=1)
 
-# 📊 Distribución de NivelAlerta
-df_counts = df_full["NivelAlerta"].value_counts().reset_index()
-df_counts.columns = ["NivelAlerta", "Cantidad"]
-
-fig_pie = px.pie(
-    df_counts,
-    names="NivelAlerta",
-    values="Cantidad",
-    color="NivelAlerta",
-    title="Proporción de estudiantes por nivel de alerta",
-    hole=0.3,
-)
-fig_pie.update_traces(textinfo="percent+label")
-st.plotly_chart(fig_pie, use_container_width=True)
 
 
 📊 Distribución de NivelAlerta
