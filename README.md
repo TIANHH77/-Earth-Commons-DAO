@@ -45,7 +45,9 @@ Ejemplos de reconversión:
 
 ---
 
+
 ## 🏗️ Arquitectura SUR DAO
+
 ```mermaid
 flowchart TD
   A[Datos SCT anon.] --> B[Motor de reglas]
@@ -53,6 +55,7 @@ flowchart TD
   C --> D[Alertas psicosociales]
   D --> E[Capas institucionales: MINEDUC, JUNAEB, Becas]
   E --> F[Capas humanas: Apoyo entre pares, Centro de estudiantes]
+
 
 
 
