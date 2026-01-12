@@ -45,7 +45,7 @@ def calcular_alerta(row):
         else:
             return "🟠 Riesgo con red parcial"
     return "⚪ No clasificado"
-
+```
 📊 Distribución de NivelAlerta
 import plotly.express as px
 
