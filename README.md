@@ -56,6 +56,9 @@ st.dataframe(df_full[["ID","Carrera","CategoriaRiesgo","EstadoBeca","ApoyoPar","
 
 
 df_full["NivelAlerta"] = df_full.apply(calcular_alerta, axis=1)
+
+
+
 ```
 
 
@@ -83,7 +86,7 @@ Se prioriza acompañamiento donde hay red activa, pero falta cobertura estatal.
   C --> D[Alertas psicosociales]
   D --> E[Capas institucionales: MINEDUC, JUNAEB, Becas]
   E --> F[Capas humanas: Apoyo entre pares, Centro de estudiantes]
-...
+```
 
 📊 Datos clave
 28.8% tasa de deserción en primer año (SIES).
