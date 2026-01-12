@@ -77,7 +77,7 @@ fig_pie = px.pie(
 fig_pie.update_traces(textinfo="percent+label")
 st.plotly_chart(fig_pie, use_container_width=True)
 ```
-🔔 Ejemplos de alertas del piloto
+
 
 🔔 Ejemplos de alertas del piloto
 
@@ -100,7 +100,7 @@ flowchart TD
   D --> E[Capas institucionales: MINEDUC, JUNAEB, Becas]
   E --> F[Capas humanas: Apoyo entre pares, Centro de estudiantes]
 
-```
+
 📊 Datos clave
 28.8% tasa de deserción en primer año (SIES).
 427 renuncias en USACH durante 2022.
