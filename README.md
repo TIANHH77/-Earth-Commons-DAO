@@ -28,12 +28,13 @@
 ## 🔄 Match Deserción → Afines Prioritarios
 Ejemplos de reconversión:  
 
-| Carrera origen        | Tasa deserción | Destino afín prioritario | % Créditos SCT reconocidos |
-|-----------------------|----------------|--------------------------|----------------------------|
-| Ing. Computación      | 40.5%          | Automatización Industrial A | 80% |
-| Ciencias Exactas      | 59.5%          | Ing. Civil + Pedagogía A/B | 65% |
-| Técnico Construcción  | 40%            | Ing. Civil Construcción A | 75% |
-| Logística             | 35%            | Gestión Pública A         | 70% |
+| Carrera origen     | Tasa deserción | Destino afín prioritario     | % Créditos SCT |
+|:-------------------|:---------------|:-----------------------------|:---------------|
+| Ing. Computación   | 40.5%          | Automatización Industrial A  | **75%**        |
+| Ciencias Exactas   | 59.5%          | Ing. Civil + Pedagogía A/B   | **60%**        |
+| Técnico Construcción | 40%          | Ing. Civil Construcción A    | **80%**        |
+| Logística          | 35%            | Gestión Pública A            | **65%**        |
+
 
 **Filosofía:** Los créditos **no se pierden** → se **reconvierten inteligentemente**.  
 
