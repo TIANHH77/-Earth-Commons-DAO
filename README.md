@@ -37,8 +37,8 @@ Datos basados en convalidaciones SCT reales; >60% habilita "win-win" institucion
 Ley 21.091 Art.28: SCT convalidación OBLIGATORIA.
 Filosofía: Los créditos no se pierden → se reconvierten inteligentemente.
 
-
-def winwin_ues(match):
+  
+  def winwin_ues(match):
     """
     Evalúa si un caso de reconversión de créditos SCT cumple condiciones
     para ser considerado 'win-win' entre UES y MINEDUC.
@@ -53,16 +53,16 @@ def winwin_ues(match):
     """
     if not match.get("ley_21091", False):
         return "❌ No cumple Ley 21.091 (convalidación obligatoria)"
-    
+
     if match.get("pct_sct", 0) < 60:
         return "⚠️ Créditos insuficientes para reconversión (>60% requerido)"
-    
+
     if match.get("riesgo_psicosocial", False):
         return "🧠 Derivar a apoyo psicosocial antes de reconversión"
-    
+
     if match.get("demanda_laboral", False):
         return "💰 UES: Nueva matrícula + MINEDUC: Retención + SENCE: Empleabilidad"
-    
+
     return "📌 Revisar caso: cumple requisitos mínimos pero falta validación de demanda"
 
 
@@ -80,6 +80,7 @@ flowchart TD
   C --> D[Alertas psicosociales]
   D --> E[Capas institucionales: MINEDUC, JUNAEB, Becas]
   E --> F[Capas humanas: Apoyo entre pares, Centro de estudiantes]
+
 
 Flujo de datos: SCT anónimos → motor de reglas → dashboards institucionales → alertas psicosociales → capas de apoyo.
 Infraestructura: nodos y data centers comunitarios.
@@ -100,12 +101,10 @@ Contribuidores técnicos: revisar piloto_sur.py, docs/, manifiestos/.
 Código abierto.
 Principios: transparencia, reciprocidad, sostenibilidad.
 
-[![SUR DAO Live](https://img.shields.io/badge/SUR%20DAO-Live-brightgreen?style=for-the-badge)](https://surdao-dashboard.streamlit.app/)
-[![Open Source](https://img.shields.io/badge/Open%20Source-Yes-blue?style=flat-square)](https://github.com/vivevolandonomade/earthcommonsdaog)
-[![Community-Driven](https://img.shields.io/badge/Community-Driven-orange?style=flat-square)](https://github.com/vivevolandonomade/earthcommonsdaog)
-[![DAO Governance](https://img.shields.io/badge/DAO-Governance-purple?style=flat-square)](https://github.com/vivevolandonomade/earthcommonsdaog)
-[![Made in Chile](https://img.shields.io/badge/Made%20in-Chile-red?style=flat-square)](https://github.com/vivevolandonomade/earthcommonsdaog)
-
-
+![SUR DAO Live](https://img.shields.io/badge/SUR%20DAO-Live-brightgreen?style=for-the-badge)
+![Open Source](https://img.shields.io/badge/Open%20Source-Yes-blue?style=flat-square)
+![Community Driven](https://img.shields.io/badge/Community-Driven-orange?style=flat-square)
+![DAO Governance](https://img.shields.io/badge/DAO-Governance-purple?style=flat-square)
+![Made in Chile](https://img.shields.io/badge/Made%20in-Chile-red?style=flat-square)
 
   
