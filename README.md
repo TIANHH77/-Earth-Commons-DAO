@@ -17,25 +17,31 @@ Activación de apoyos institucionales y humanos.
 Capital humano latente estimado: $6B.
 
 🔄 Match Deserción → Afines Prioritarios
-Carrera origen	Tasa deserción	Destino afín prioritario	% Créditos SCT
-Ing. Computación	40.5%	Automatización Industrial A	75%
-Ciencias Exactas	59.5%	Ing. Civil + Pedagogía A/B	60%
-Técnico Construcción	40%	Ing. Civil Construcción A	80%
-Logística	35%	Gestión Pública A	65%
+| Carrera Origen       | Tasa Deserción | Destino Afín Prioritario    | % Créditos SCT |
+| -------------------- | -------------- | --------------------------- | -------------- |
+| Ing. Computación     | 40.5%          | Automatización Industrial A | 75%            |
+| Ciencias Exactas     | 59.5%          | Ing. Civil + Pedagogía A/B  | 60%            |
+| Técnico Construcción | 40%            | Ing. Civil Construcción A   | 80%            |
+| Logística            | 35%            | Gestión Pública A           | 65%            |
+Datos basados en convalidaciones SCT reales; >60% habilita "win-win" institucional por Ley 21.091
+
 
 🧩 Actores y Beneficios
-Actor	Problema Actual	SUR DAO Solución	Ganancia $ Anual
-MINEDUC	76% retención meta FES	+20% reingresos	+$500B
-Universidades	-15% matrícula gratuidad	80% créditos → nueva matrícula	+$1.2B
-Estudiante	Deuda + 0 créditos	Trueque 1.5 años → título	Sin deuda
-SENCE	Déficit técnicos	Match deserción → Automatización	85% empleo
+| Actor         | Problema Actual          | SUR DAO Solución                 | Ganancia $ Anual |
+| ------------- | ------------------------ | -------------------------------- | ---------------- |
+| MINEDUC       | 76% retención meta FES   | +20% reingresos                  | +$500B           |
+| Universidades | -15% matrícula gratuidad | 80% créditos → nueva matrícula   | +$1.2B           |
+| Estudiante    | Deuda + 0 créditos       | Trueque 1.5 años → título        | Sin deuda        |
+| SENCE         | Déficit técnicos         | Match deserción → Automatización | 85% empleo       |
 Ley 21.091 Art.28: SCT convalidación OBLIGATORIA.
 Filosofía: Los créditos no se pierden → se reconvierten inteligentemente.
 
+´´´python
 def winwin_ues(match):
     if match["ley_21091"] and match["pct_sct"] > 60:
         return "💰 UES: Nueva matrícula + MINEDUC: Retención"
     return "Revisar convalidación"
+´´´
 
 📊 Mapa de Oportunidades
 🔴 Zona Crítica: Psicología / Periodismo (deserción + saturación).
