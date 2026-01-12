@@ -51,7 +51,9 @@ Filosofía: Los créditos no se pierden → se reconvierten inteligentemente.
 | Técnico Construcción                | UTEM           | 40.0%       | 180         | 6             | 4.2        | 168            | 2.0 🟢                                                  |
 | Logística                           | DUOC UC        | 35.0%       | 120         | 8             | 4.0        | 160            | 1.9 🟡                                                  |
 | Ing. Civil Construcción             | USACH          | 25.0%       | 250         | 12            | 3.5        | 140            | 1.7 🟢                                                  |
-| Automatización Industrial           | IP ChileValora | 20.0%       | 400         | 8             | 3.2        | 128            | 1.5 🟢 Oferta_Academica_2025_SIES_02_06_2025_WEB_E.csv​ |
+| Automatización Industrial           | IP ChileValora | 20.0%       | 400         | 8             | 3.2        | 128            | 1.5 🟢 
+
+                                                                          Oferta_Academica_2025_SIES_02_06_2025_WEB_E.csv​ |
 
 Datos Reales Procesados (SIES 2025 + Deserción)
 
