@@ -1,37 +1,15 @@
 import streamlit as st
-import pandas as pd
+from surdao_hibrido_v2 import surdao_hibrido
 
-st.set_page_config(layout="wide")
+st.title("🚀 SUR DAO Live – Datos Reales SIES 2025")
 
-# Datos reales ejecutados [code_file:33]
-@st.cache_data
-def load_real_data():
-    return pd.read_csv('surdao_real_matches_2025.csv')
+res = surdao_hibrido()
 
-df = load_real_data()
+col1, col2, col3 = st.columns(3)
+col1.metric("Carreras Nacionales", res['general_carreras'])
+col2.metric("USACH 3+ Años", res['usach_prior_3mas'])
+col3.metric("Capital $MM", f"${res['capital_recuperable_mm']:,.0f}")
 
-st.title("🚀 SUR DAO Live - Datos REALES SIES 2025")
-st.markdown("**USACH Fase 1: Deserción → Reconversión SCT**")
+st.subheader("Top 50 USACH Prioritarios")
+st.dataframe(res['top_50'].head(20))
 
-# KPIs fila 1
-col1, col2, col3, col4 = st.columns(4)
-col1.metric("Carreras Alta Deserción", len(df))
-col2.metric("Créditos SCT", f"{df['Creditos_Acum'].sum():,.0f}")
-col3.metric("Capital Recuperable", f"${df['Capital_Recuperable'].sum():.1f}MM")
-col4.metric("USACH Prioridad", "Ing. Civil Inf. + Exactas")
-
-# Tabla interactiva
-st.subheader("🎯 Top Matches USACH (Deserción >35%)")
-st.dataframe(df.style.format({'Capital_Recuperable': '${:.2f}MM'}), use_container_width=True)
-
-# Gráfico barras
-st.subheader("📊 Impacto Económico")
-chart_data = df.set_index('Carrera')['Capital_Recuperable']
-st.bar_chart(chart_data)
-
-# Match recomendaciones
-st.subheader("🔄 Recomendaciones SCT Transfer")
-for idx, row in df.iterrows():
-    st.success(f"**{row['Carrera']}** ({row['Desercion_SIES_pct']:.1f}% deserción) → {int(row['SCT_Transfer_pct'])}% créditos transferibles")
-
-st.caption("Fuente: MiFuturo SIES 2025 + deserción histórica [file:26][code_file:33]")
