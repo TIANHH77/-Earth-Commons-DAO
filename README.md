@@ -23,17 +23,6 @@ Reciprocidad > Burocracia
 +--- + +## ⚙️ Funcionalidad (ejemplo en Python) + +```python +st.subheader("Alertas combinadas") for i, row in df_full.iterrows(): riesgo = row["CategoriaRiesgo"] if riesgo in ["Riesgo alto", "Riesgo medio"]: acciones = [] if row["EstadoBeca"] == "Inactivo": acciones.append("Sin beca ministerial") if row["ApoyoPar"] == "Sí": acciones.append("Apoyo entre pares activo") if row["CentroEstudiantes"] == "Activo": acciones.append("Centro de estudiantes activo") st.markdown(f"**Estudiante {row['ID']} ({row['Carrera']})** – {riesgo} →
 
 ## 📊 Problema
-## 🧠 IA Entrenamiento SUR DAO
-
-```python
-# src/ml_train.py
-import pandas as pd
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split
-
-# Tu data mock
-usach = pd.DataFrame({
-    'nota': [7.0 + i/10 for
 
 
 [Tu tabla 71k-500k]
@@ -59,6 +48,17 @@ flowchart TD
 
 +```mermaid +flowchart TD + A[Datos SCT anon.] --> B[Motor de reglas en Python] + B --> C[Dashboard VRA/VRAE] + C --> D[Alertas psicosociales] + D --> E[Capas institucionales: MINEDUC, JUNAEB, Becas] + E --> F[Capas humanas: Apoyo entre pares, Centro de estudiantes] +
 
+## 🧠 IA Entrenamiento SUR DAO
+
+```python
+# src/ml_train.py
+import pandas as pd
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+
+# Tu data mock
+usach = pd.DataFrame({
+    'nota': [7.0 + i/10 for
 
 
 
