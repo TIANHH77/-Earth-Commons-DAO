@@ -57,6 +57,7 @@ flowchart TD
   C --> D[Alertas psicosociales]
   D --> E[Capas institucionales: MINEDUC, JUNAEB, Becas]
   E --> F[Capas humanas: Apoyo entre pares, Centro de estudiantes]
+
 Flujo de datos: SCT anónimos → motor de reglas → dashboards institucionales → alertas psicosociales → capas de apoyo.
 Infraestructura: nodos y data centers comunitarios.
 Capas de gobernanza: institucional, territorial, humana.
