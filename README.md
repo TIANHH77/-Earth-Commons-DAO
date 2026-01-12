@@ -66,15 +66,13 @@ def winwin_ues(match):
 🟢 Zona Oportunidad: Computación / Construcción (deserción alta → demanda).
 
 🏗️ Arquitectura SUR DAO
-```mermaidflowchart TD
+```mermaid flowchart TD
   A[Datos SCT anon.] --> B[Motor de reglas]
   B --> C[Dashboard VRA/VRAE]
   C --> D[Alertas psicosociales]
   D --> E[Capas institucionales: MINEDUC, JUNAEB, Becas]
   E --> F[Capas humanas: Apoyo pares, Centros estudiantes]
-
-
-
+```
 Flujo de datos: SCT anónimos → motor de reglas → dashboards institucionales → alertas psicosociales → capas de apoyo.
 Infraestructura: nodos y data centers comunitarios.
 Capas de gobernanza: institucional, territorial, humana.
