@@ -45,7 +45,7 @@ Ejemplos de reconversión:
 **Filosofía:** Los créditos **no se pierden** → se **reconvierten inteligentemente**.  
 
 ---
-
+```python
 def winwin_ues(match):
     if match["ley_21091"] and match["pct_sct"] > 60:
         return "💰 UES: Nueva matrícula + MINEDUC: Retención"
