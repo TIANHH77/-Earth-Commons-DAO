@@ -33,6 +33,7 @@ Datos basados en convalidaciones SCT reales; >60% habilita "win-win" institucion
 | Universidades | -15% matrícula gratuidad | 80% créditos → nueva matrícula   | +$1.2B           |
 | Estudiante    | Deuda + 0 créditos       | Trueque 1.5 años → título        | Sin deuda        |
 | SENCE         | Déficit técnicos         | Match deserción → Automatización | 85% empleo       |
+
 Ley 21.091 Art.28: SCT convalidación OBLIGATORIA.
 Filosofía: Los créditos no se pierden → se reconvierten inteligentemente.
 
