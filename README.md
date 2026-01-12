@@ -1,6 +1,6 @@
- "El respeto no se gana. Cuando vayas a algún lugar, trata de que después de irte, hayas aportado en algo ahí, que ojalá esté mejor de como cuando llegaste." +— 
+"El respeto no se gana. Cuando vayas a algún lugar, trata de que después de irte, hayas aportado en algo ahí, que ojalá esté mejor de como cuando llegaste." +— Principio materno. 
 
-Principio materno, SUR DAO+# SUR DAO – Piloto Retención Estudiantil USACH/Mineduc +**Reciprocidad > Burocracia**
+SUR DAO+# SUR DAO – Piloto Retención Estudiantil USACH/Mineduc +**Reciprocidad > -Burocracia**
 +Herramienta open-source que detecta estudiantes "sombra" (congelados, sin beca, riesgo alto) y alerta redes institucionales para acompañamiento proactivo.
 
 👉 Dashboard en tiempo real
@@ -25,14 +25,16 @@ Activar apoyos VRAE/VRA + capas comunitarias.
 Python dashboard con datos SCT anonimizados + capas institucionales y humanas.
 
 ⚙️ Funcionalidad (ejemplo en Python)
-+++python import numpy as np
+
+import streamlit as st
+import pandas as pd
 
 def calcular_alerta(row):
     riesgo = row["CategoriaRiesgo"]
     beca = row.get("EstadoBeca", "Inactivo")
     apoyo_par = row.get("ApoyoPar", "No")
     centro = row.get("CentroEstudiantes", "Inactivo")
-
+    
     if "Sin riesgo" in riesgo:
         return "🟢 Sin riesgo"
     if "Riesgo leve" in riesgo:
@@ -44,34 +46,19 @@ def calcular_alerta(row):
             return "🟠 Riesgo con red parcial"
     return "⚪ No clasificado"
 
+# Ejemplo uso
 df_full["NivelAlerta"] = df_full.apply(calcular_alerta, axis=1)
-
 st.subheader("🔔 Alertas clasificadas")
 st.dataframe(df_full[["ID","Carrera","CategoriaRiesgo","EstadoBeca","ApoyoPar","CentroEstudiantes","NivelAlerta"]])
 
-📊 Distribución de NivelAlerta
-+++python import plotly.express as px
-
-df_counts = df_full["NivelAlerta"].value_counts().reset_index()
-df_counts.columns = ["NivelAlerta", "Cantidad"]
-
-fig_pie = px.pie(
-    df_counts,
-    names="NivelAlerta",
-    values="Cantidad",
-    color="NivelAlerta",
-    title="Proporción de estudiantes por nivel de alerta",
-    hole=0.3
-)
-fig_pie.update_traces(textinfo="percent+label")
-st.plotly_chart(fig_pie, use_container_width=True)
 
 🔔 Ejemplos de alertas del piloto
 
-|ID	|Carrera	|Riesgo	|Beca	|Apoyo |Par	|Centro |Estudiantes	|Alerta |generada
-|1	|Arquitectura	|Medio	|Inactivo	|No	|Inactivo	|Sin beca ministerial
-|2	|Derecho	|Medio	|Inactivo	|Sí	|Activo	|Sin beca + |Apoyo pares + |Centro activo
-|4	|Derecho	|Alto	|Inactivo	|Sí	|Inactivo	|Riesgo alto + |Sin beca + |Apoyo pares
+| ID | Carrera      | Riesgo | Beca     | Apoyo Par | Centro   | Alerta Final              |
+| -- | ------------ | ------ | -------- | --------- | -------- | ------------------------- |
+| 1  | Arquitectura | Medio  | Inactivo | No        | Inactivo | 🔴 Riesgo crítico         |
+| 2  | Derecho      | Medio  | Inactivo | Sí        | Activo   | 🟠 Riesgo con red parcial |
+| 4  | Derecho      | Alto   | Inactivo | Sí        | Inactivo | 🟠 Riesgo con red parcial |
 
 Lógica: Riesgo crítico = medio/alto + sin beca + sin pares + sin centro. Se prioriza acompañamiento donde hay red activa, pero falta cobertura estatal.
 
@@ -82,6 +69,7 @@ flowchart TD
   C --> D[Alertas psicosociales]
   D --> E[Capas institucionales: MINEDUC, JUNAEB, Becas]
   E --> F[Capas humanas: Apoyo entre pares, Centro de estudiantes]
+
 
 
 📊 Datos clave
