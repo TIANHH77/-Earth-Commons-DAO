@@ -39,9 +39,32 @@ Filosofía: Los créditos no se pierden → se reconvierten inteligentemente.
 
 
 def winwin_ues(match):
-    if match["ley_21091"] and match["pct_sct"] > 60:
-        return "💰 UES: Nueva matrícula + MINEDUC: Retención"
-    return "Revisar convalidación"
+    """
+    Evalúa si un caso de reconversión de créditos SCT cumple condiciones
+    para ser considerado 'win-win' entre UES y MINEDUC.
+    
+    Parámetros:
+        match (dict): {
+            "ley_21091": bool,
+            "pct_sct": int,
+            "riesgo_psicosocial": bool,
+            "demanda_laboral": bool
+        }
+    """
+    if not match.get("ley_21091", False):
+        return "❌ No cumple Ley 21.091 (convalidación obligatoria)"
+    
+    if match.get("pct_sct", 0) < 60:
+        return "⚠️ Créditos insuficientes para reconversión (>60% requerido)"
+    
+    if match.get("riesgo_psicosocial", False):
+        return "🧠 Derivar a apoyo psicosocial antes de reconversión"
+    
+    if match.get("demanda_laboral", False):
+        return "💰 UES: Nueva matrícula + MINEDUC: Retención + SENCE: Empleabilidad"
+    
+    return "📌 Revisar caso: cumple requisitos mínimos pero falta validación de demanda"
+
 
 
 📊 Mapa de Oportunidades
