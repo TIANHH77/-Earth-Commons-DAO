@@ -24,6 +24,9 @@ Activar apoyos VRAE/VRA + capas comunitarias.
 Python dashboard con datos SCT anonimizados + capas institucionales y humanas.
 
 ⚙️ Funcionalidad (ejemplo en Python)
+⚙️ Funcionalidad (ejemplo en Python)
+
+```python
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -33,6 +36,7 @@ def calcular_alerta(row):
     beca = row.get("EstadoBeca", "Inactivo")
     apoyo_par = row.get("ApoyoPar", "No")
     centro = row.get("CentroEstudiantes", "Inactivo")
+    
     if "Sin riesgo" in riesgo:
         return "🟢 Sin riesgo"
     if "Riesgo leve" in riesgo:
@@ -43,6 +47,13 @@ def calcular_alerta(row):
         else:
             return "🟠 Riesgo con red parcial"
     return "⚪ No clasificado"
+
+# Aplicar a dataframe
+df_full["NivelAlerta"] = df_full.apply(calcular_alerta, axis=1)
+
+st.subheader("🔔 Alertas clasificadas")
+st.dataframe(df_full[["ID","Carrera","CategoriaRiesgo","EstadoBeca","ApoyoPar","CentroEstudiantes","NivelAlerta"]])
+
 
 df_full["NivelAlerta"] = df_full.apply(calcular_alerta, axis=1)
 
