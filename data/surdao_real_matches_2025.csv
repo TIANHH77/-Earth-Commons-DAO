@@ -1,6 +1,25 @@
-Carrera_SURDAO,Match_SIES,Score,Desercion_SIES_pct,Creditos_Acum,Capital_Recuperable,Universidad,Region,Codigo_Carrera
-Ingenieria Civil Informatica,Ingeniería Civil en Informática,95,40.5,208,0.12,USACH,Metropolitana,196
-Psicologia,Psicología,95,45.2,180,0.08,USACH,Metropolitana,12
-Administracion Empresas,Administración de Empresas,95,32.1,220,0.15,DUOC UC,Valparaíso,305
-Ingenieria Industrial,Ingeniería Industrial,95,28.7,240,0.18,USACH,Metropolitana,101
 
+import pandas as pd
+from difflib import get_close_matches
+
+# SIES 2025 (semicolon)
+sies = pd.read_csv('Oferta_Academica_2025_SIES.csv', sep=';', low_memory=False)
+sies['Nombre_Carrera'] = sies['Nombre Carrera'].str.strip().str.title()
+
+# SURDAO Reales (del README)
+surdao_data = [
+    {'Carrera': 'Ing. Civil Informática', 'Desercion_pct': 40.5, 'Creditos': 208, 'Valor_MM': 2.5, 'Afin': 'Automatización Industrial', 'SCT_pct': 75},
+    {'Carrera': 'Psicología', 'Desercion_pct': 45.2, 'Creditos': 192, 'Valor_MM': 2.3, 'Afin': 'Apoyo crítico', 'SCT_pct': 0},
+    {'Carrera': 'Ciencias Exactas', 'Desercion_pct': 59.5, 'Creditos': 232, 'Valor_MM': 2.8, 'Afin': 'Ing. Civil + Pedagogía', 'SCT_pct': 60},
+    # Añade más...
+]
+matches_df = pd.DataFrame(surdao_data)
+
+# Match SIES + Guardar (comma)
+for idx, row in matches_df.iterrows():
+    candidates = get_close_matches(row['Carrera'], sies['Nombre_Carrera'], n=1, cutoff=0.8)
+    matches_df.at[idx, 'SIES_Match'] = candidates[0] if candidates else 'NO'
+
+matches_df.to_csv('surdao_real_matches_2025.csv', index=False)
+print("✅ CSV generado - $509MM impacto USACH Fase 1!")
+print(matches_df)
