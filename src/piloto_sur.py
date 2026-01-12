@@ -29,7 +29,5 @@ for _, row in alertas.head(10).iterrows():
         Centro estudiantes: {row['CentroEstudiantes']}
     """)
 
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection
 
 
