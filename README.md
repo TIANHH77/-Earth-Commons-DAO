@@ -1,137 +1,69 @@
-# SUR DAO – Piloto Retención Estudiantil USACH/Mineduc  
-**Reciprocidad > Burocracia**
+# SUR DAO – Piloto Retención Estudiantil USACH/Mineduc
 
 > "El respeto no se gana. Cuando vayas a algún lugar, trata de que después de irte, hayas aportado en algo ahí, que ojalá esté mejor de como cuando llegaste."  
 > — Principio materno
 
-👉 [Dashboard en tiempo real](https://surdao-dashboard.streamlit.app/)
+**Reciprocidad > Burocracia**
 
----
+Detecta estudiantes **"sombra"** (congelados con créditos) → **trueque/recuperación** → ROI nacional.
 
-## 📊 Problema
+👉 [![SUR DAO Live](https://img.shields.io/badge/Streamlit-LIVE-brightgreen)](https://surdao-dashboard.streamlit.app/)
 
-📊 Problema
+## 📊 Problema: 500k Estudiantes Sombra
 
-| Año         | Ingresos | Deserción (28.8%) | Stock acumulado       |
-|-------------|----------|-------------------|-----------------------|
-| 2020        | 250k     | 72k               | 504k                  |
-| 2021        | 250k     | 72k               | 432k                  |
-| 2022        | 250k     | 72k               | 360k                  |
-| Total 7 años| —        | —                 | ~500k estudiantes sombra |
+| Año          | Ingresos | Deserción 28.8% | Stock Acumulado     |
+|:-------------|:---------|:----------------|:--------------------|
+| 2020         | 250k     | 72k             | 504k                |
+| 2021         | 250k     | 72k             | 432k                |
+| 2022         | 250k     | 72k             | 360k                |
+| **Total**    | **—**    | **—**           | **~500k sombra**    |
 
-## 💰 COSTO REAL CRISIS SOMBRA
+**[SIES/Mineduc]** [web:10]
 
-| Impacto             | Valor Anual     | Acumulado 7 años    |
-|---------------------|-----------------|---------------------|
-| Estudiantes perdidos| 72k             | **504k**            |
-| Inversión MINEDUC   | $360 mil millones | **$2.5 billones** |
-| USACH ingresos      | 427 matrícula   | **3k anual**        |
-| **Capital humano**  | Generación truncada | **Brecha social** |
+## 🎓 **NUEVO:** Capital Humano RESCATABLE
 
-**SUR DAO recupera:** 20% retención = $500 mil millones/año
+| Estudiante        | Porcentaje_Carrera | Años_Estudiados | Valor_Invertido_MCLP | SUR_DAO_Recupera           |
+|:------------------|:-------------------|:----------------|:---------------------|:---------------------------|
+| Pepito Derecho    | 62%                | 3.5             | $17.5M               | ✅ Trueque créditos         |
+| Juan Arquitectura | 45%                | 2               | $10M                 | ✅ Reingreso sin penalidad  |
+| Total 500k sombra | ~50%               | 2.5 promedio    | **$6 billones**      | ✅ ROI nacional             | [code_file:0]
 
-## 🎓 CAPITAL HUMANO RESCATABLE
+**No "desertores" – ASSETs latentes $6 billones!**
 
-| Estudiante Ejemplo | % Carrera | Años Estudiados | Valor Invertido | SUR DAO Recupera |
-|--------------------|-----------|-----------------|-----------------|------------------|
-| Pepito (Derecho)  | 62%       | 3.5 años        | $17.5M CLP      | ✅ Trueque créditos |
-| Juan (Arquitectura)| 45%      | 2 años          | $10M CLP        | ✅ Reingreso sin penalidad |
-| **500k Sombra**   | **~50%**  | **2.5 años promedio** | **$6 billones total** | **ROI nacional** |
-
-**Fórmula:** % créditos x costo anual x años promedio = CAPITAL HUMANO LATENTE
+## 🎯 Propósito
+SCT datos → % créditos completados → Trueque DAO → Reingreso
+Pepito 62% Derecho NO empieza cero → termina en 1.5 años
 
 
----
+## ⚙️ Motor Reglas
 
-## 🎯 Propósito / Purpose
-
-- Detectar tempranamente estudiantes en riesgo (congelamiento, deserción).  
-- Activar apoyos VRAE/VRA + capas comunitarias.  
-- Python dashboard con datos SCT anonimizados + capas institucionales y humanas.  
-
----
-
-## ⚙️ Funcionalidad (ejemplo en Python)
 ```python
-import streamlit as st
-import pandas as pd
-import plotly.express as px
-
 def calcular_alerta(row):
     riesgo = row["CategoriaRiesgo"]
+    %creditos = row["PorcentajeCarrera"]  # NUEVO
     beca = row.get("EstadoBeca", "Inactivo")
-    apoyo_par = row.get("ApoyoPar", "No")
-    centro = row.get("CentroEstudiantes", "Inactivo")
     
-    if "Sin riesgo" in riesgo:
-        return "🟢 Sin riesgo"
-    if "Riesgo leve" in riesgo:
-        return "🟡 Riesgo leve"
-    if "Riesgo medio" in riesgo or "Riesgo alto" in riesgo:
-        if beca == "Inactivo" and apoyo_par == "No" and centro == "Inactivo":
-            return "🔴 Riesgo crítico (aislamiento total)"
-        else:
-            return "🟠 Riesgo con red parcial"
-    return "⚪ No clasificado"
+    if %creditos > 50 and beca == "Inactivo":
+        return "🟡 Créditos rescatables (trueque DAO)"
+    # ... resto lógica original
 
-df_full["NivelAlerta"] = df_full.apply(calcular_alerta, axis=1)
+🔔 Ejemplos Prácticos
 
-st.subheader("🔔 Alertas clasificadas")
-st.dataframe(df_full[["ID","Carrera","CategoriaRiesgo","EstadoBeca","ApoyoPar","CentroEstudiantes","NivelAlerta"]])
-```
-📊 Distribución de NivelAlerta
-```python
-import plotly.express as px
+| ID | Carrera      | % Carrera | Alerta SUR DAO       |
+| -- | ------------ | --------- | -------------------- |
+| 1  | Arquitectura | 62%       | 🔴 Trueque créditos  |
+| 2  | Derecho      | 45%       | 🟠 Reingreso + pares |
 
-df_counts = df_full["NivelAlerta"].value_counts().reset_index()
-df_counts.columns = ["NivelAlerta", "Cantidad"]
+🏗️ Arquitectura Trueque
+flowchart TD
+  A[Datos SCT + % créditos] --> B[Motor reglas Python]
+  B --> C[Dashboard VRA + Trueque]
+  C --> D[Alertas "créditos rescatables"]
+  D --> E[MINEDUC valida → Becas]
+  E --> F[DAO pares trueque créditos]
 
-fig_pie = px.pie(
-    df_counts,
-    names="NivelAlerta",
-    values="Cantidad",
-    color="NivelAlerta",
-    title="Proporción de estudiantes por nivel de alerta",
-    hole=0.3
-)
-fig_pie.update_traces(textinfo="percent+label")
-st.plotly_chart(fig_pie, use_container_width=True)
-```
-
-
-🔔 Ejemplos de alertas del piloto
-
-| ID | Carrera      | Riesgo | Beca     | Apoyo Par | Centro Estudiantes | Alerta generada                                      |
-|----|--------------|--------|----------|-----------|---------------------|------------------------------------------------------|
-| 1  | Arquitectura | Medio  | Inactivo | No        | Inactivo            | Sin beca ministerial                                 |
-| 2  | Derecho      | Medio  | Inactivo | Sí        | Activo              | Sin beca + Apoyo pares + Centro activo              |
-| 4  | Derecho      | Alto   | Inactivo | Sí        | Inactivo            | Riesgo alto + Sin beca + Apoyo pares                |
-
-
-Lógica: Riesgo crítico = medio/alto + sin beca + sin pares + sin centro. Se prioriza acompañamiento donde hay red activa, pero falta cobertura estatal.
----
-🛠️ Arquitectura
-Créditos sombra → Trueque DAO:
-1. SCT anon → % completado carrera
-2. Motor reglas → "62% = activo rescatable"
-3. Alertas → "Pepito Derecho: oferta reingreso + pares"
-4. Instituciones → Valida créditos → Reingresa SIN empezar cero
-
-```mermaidflowchart TD
-  A[Datos SCT anon.] --> B[Motor de reglas en Python]
-  B --> C[Dashboard VRA/VRAE]
-  C --> D[Alertas psicosociales]
-  D --> E[Capas institucionales: MINEDUC, JUNAEB, Becas]
-  E --> F[Capas humanas: Apoyo entre pares, Centro de estudiantes]
-
-
-📊 Datos clave
-28.8% tasa de deserción en primer año (SIES).
-427 renuncias en USACH durante 2022.
-14.6% deserción permanente (OECD).
-Falta de coordinación entre MINEDUC, JUNAEB, becas internas y apoyo comunitario.
----
-"NO perdimos 500k estudiantes, tenemos 500k con 50% carrera listos para terminar.
-SUR DAO: Activo $6 billones vs pasivo 'desertores'."
+💰 Impacto Cuantificado
+500k x 50% carrera x $5M/año = $6 billones capital humano
+SUR DAO 20% recuperación = $1.2 billones ROI anual
 
 
