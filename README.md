@@ -37,12 +37,12 @@ Datos basados en convalidaciones SCT reales; >60% habilita "win-win" institucion
 Ley 21.091 Art.28: SCT convalidación OBLIGATORIA.
 Filosofía: Los créditos no se pierden → se reconvierten inteligentemente.
 
-´´´python
+
 def winwin_ues(match):
     if match["ley_21091"] and match["pct_sct"] > 60:
         return "💰 UES: Nueva matrícula + MINEDUC: Retención"
     return "Revisar convalidación"
-´´´
+
 
 📊 Mapa de Oportunidades
 🔴 Zona Crítica: Psicología / Periodismo (deserción + saturación).
