@@ -34,36 +34,29 @@ Datos basados en convalidaciones SCT reales; >60% habilita "win-win" institucion
 | Estudiante    | Deuda + 0 créditos       | Trueque 1.5 años → título        | Sin deuda        |
 | SENCE         | Déficit técnicos         | Match deserción → Automatización | 85% empleo       |
 
+
 Ley 21.091 Art.28: SCT convalidación OBLIGATORIA.
 Filosofía: Los créditos no se pierden → se reconvierten inteligentemente.
 
  ```python 
-  def winwin_ues(match):
+def winwin_ues(match):
     """
-    Evalúa si un caso de reconversión de créditos SCT cumple condiciones
-    para ser considerado 'win-win' entre UES y MINEDUC.
+    Evalúa reconversión SCT para win-win institucional.
     
-    Parámetros:
-        match (dict): {
-            "ley_21091": bool,
-            "pct_sct": int,
-            "riesgo_psicosocial": bool,
-            "demanda_laboral": bool
-        }
+    Args:
+        match (dict): {"ley_21091": bool, "pct_sct": int, 
+                       "riesgo_psicosocial": bool, "demanda_laboral": bool}
     """
     if not match.get("ley_21091", False):
         return "❌ No cumple Ley 21.091 (convalidación obligatoria)"
-
     if match.get("pct_sct", 0) < 60:
-        return "⚠️ Créditos insuficientes para reconversión (>60% requerido)"
-
+        return "⚠️ Créditos insuficientes (>60% requerido)"
     if match.get("riesgo_psicosocial", False):
-        return "🧠 Derivar a apoyo psicosocial antes de reconversión"
-
+        return "🧠 Derivar apoyo psicosocial"
     if match.get("demanda_laboral", False):
-        return "💰 UES: Nueva matrícula + MINEDUC: Retención + SENCE: Empleabilidad"
+        return "💰 UES: Matrícula + MINEDUC: Retención + SENCE: Empleo"
+    return "📌 Revisar demanda laboral"
 
-    return "📌 Revisar caso: cumple requisitos mínimos pero falta validación de demanda"
 
 
 ```
@@ -78,7 +71,8 @@ Filosofía: Los créditos no se pierden → se reconvierten inteligentemente.
   B --> C[Dashboard VRA/VRAE]
   C --> D[Alertas psicosociales]
   D --> E[Capas institucionales: MINEDUC, JUNAEB, Becas]
-  E --> F[Capas humanas: Apoyo entre pares, Centro de estudiantes]
+  E --> F[Capas humanas: Apoyo pares, Centros estudiantes]
+
 
 
 Flujo de datos: SCT anónimos → motor de reglas → dashboards institucionales → alertas psicosociales → capas de apoyo.
@@ -100,10 +94,11 @@ Contribuidores técnicos: revisar piloto_sur.py, docs/, manifiestos/.
 Código abierto.
 Principios: transparencia, reciprocidad, sostenibilidad.
 
-![SUR DAO Live](https://img.shields.io/badge/SUR%20DAO-Live-brightgreen?style=for-the-badge)
-![Open Source](https://img.shields.io/badge/Open%20Source-Yes-blue?style=flat-square)
-![Community Driven](https://img.shields.io/badge/Community-Driven-orange?style=flat-square)
-![DAO Governance](https://img.shields.io/badge/DAO-Governance-purple?style=flat-square)
-![Made in Chile](https://img.shields.io/badge/Made%20in-Chile-red?style=flat-square)
+[![SUR DAO Live](https://img.shields.io/badge/SUR%20DAO-Live-brightgreen?style=for-the-badge)](https://surdao-dashboard.streamlit.app/)
+[![Open Source](https://img.shields.io/badge/Open%20Source-Yes-blue?style=flat-square)](https://github.com/vivevolandonomade/earthcommonsdaog)
+[![Community-Driven](https://img.shields.io/badge/Community-Driven-orange?style=flat-square)](https://github.com/vivevolandonomade/earthcommonsdaog)
+[![DAO Governance](https://img.shields.io/badge/DAO-Governance-purple?style=flat-square)](https://github.com/vivevolandonomade/earthcommonsdaog)
+[![Made in Chile](https://img.shields.io/badge/Made%20in-Chile-red?style=flat-square)](https://github.com/vivevolandonomade/earthcommonsdaog)
+
 
   
