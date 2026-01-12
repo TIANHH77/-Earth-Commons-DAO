@@ -76,8 +76,8 @@ Se prioriza acompañamiento donde hay red activa, pero falta cobertura estatal.
 ```
 🛠️ Arquitectura
 
-```mermaid
-flowchart TD
+``````mermaid flowchart TD
+
   A[Datos SCT anon.] --> B[Motor de reglas en Python]
   B --> C[Dashboard VRA/VRAE]
   C --> D[Alertas psicosociales]
