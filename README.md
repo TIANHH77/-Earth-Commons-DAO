@@ -1,69 +1,69 @@
 # SUR DAO – Piloto Retención Estudiantil USACH/Mineduc
 
-> "El respeto no se gana. Cuando vayas a algún lugar, trata de que después de irte, hayas aportado en algo ahí, que ojalá esté mejor de como cuando llegaste."  
-> — Principio materno
+> "El respeto no se gana..." — **Principio materno**
 
-**Reciprocidad > Burocracia**
+**Reciprocidad > Burocracia DAO**
 
-Detecta estudiantes **"sombra"** (congelados con créditos) → **trueque/recuperación** → ROI nacional.
+**Trueque créditos sombra** → **cierra déficits nacionales**.
 
-👉 [![SUR DAO Live](https://img.shields.io/badge/Streamlit-LIVE-brightgreen)](https://surdao-dashboard.streamlit.app/)
+👉 [![LIVE](https://img.shields.io/badge/Streamlit-LIVE-brightgreen)](https://surdao-dashboard.streamlit.app/)
 
-## 📊 Problema: 500k Estudiantes Sombra
+## 📊 Crisis: 500k Sombra
 
-| Año          | Ingresos | Deserción 28.8% | Stock Acumulado     |
-|:-------------|:---------|:----------------|:--------------------|
-| 2020         | 250k     | 72k             | 504k                |
-| 2021         | 250k     | 72k             | 432k                |
-| 2022         | 250k     | 72k             | 360k                |
-| **Total**    | **—**    | **—**           | **~500k sombra**    |
+| Año | Ingresos | Deserción 28.8% | Sombra Acumulada |
+|:---|:---------|:----------------|:-----------------|
+| 2020| 250k    | 72k             | 504k             |
+| **Total** | — | — | **500k ASSETs** |
 
-**[SIES/Mineduc]** [web:10]
+## 🎓 Capital Humano Latente
 
-## 🎓 **NUEVO:** Capital Humano RESCATABLE
+| Estudiante     | % Carrera | Valor Invertido | SUR DAO Acción     |
+|:---------------|:----------|:----------------|:-------------------|
+| Pepito Derecho | 62%       | $17.5M CLP      | Trueque créditos A |
+| **Total 500k** | ~50%      | **$6 billones** | ROI nacional      | [code_file:0]
 
-| Estudiante        | Porcentaje_Carrera | Años_Estudiados | Valor_Invertido_MCLP | SUR_DAO_Recupera           |
-|:------------------|:-------------------|:----------------|:---------------------|:---------------------------|
-| Pepito Derecho    | 62%                | 3.5             | $17.5M               | ✅ Trueque créditos         |
-| Juan Arquitectura | 45%                | 2               | $10M                 | ✅ Reingreso sin penalidad  |
-| Total 500k sombra | ~50%               | 2.5 promedio    | **$6 billones**      | ✅ ROI nacional             | [code_file:0]
+## 🎯 **Prioridades por Déficit Nacional** ⭐ **NUEVO**
 
-**No "desertores" – ASSETs latentes $6 billones!**
+### **Profesionales Críticos** [web:58]
+| Prioridad | Carrera                | Déficit Nacional |
+|:---------|:-----------------------|:-----------------|
+| **A**    | **Ingeniería Civil**   | #1 SENCE ofertas |
+| **A**    | Química/Farmacia       | **98.4%** demanda |
+| **B**    | **Pedagogía Mates**    | **30k faltan** [web:54] |
 
-## 🎯 Propósito
-SCT datos → % créditos completados → Trueque DAO → Reingreso
-Pepito 62% Derecho NO empieza cero → termina en 1.5 años
+### **Técnicos Urgentes** [web:63]
+| Prioridad | Técnico                  | Empleabilidad |
+|:---------|:-------------------------|:--------------|
+| **A**    | **Prevención Riesgos**   | **85%**       |
+| **A**    | Automatización Industrial| **82%**       |
 
+**SUR DAO:** Pepito Ingeniería Civil 62% → **Prioridad A** → Trueque inmediato.
 
-## ⚙️ Motor Reglas
+## ⚙️ Algoritmo Priorización
 
 ```python
-def calcular_alerta(row):
-    riesgo = row["CategoriaRiesgo"]
-    %creditos = row["PorcentajeCarrera"]  # NUEVO
-    beca = row.get("EstadoBeca", "Inactivo")
+def priorizar_trueque(estudiante):
+    carrera = estudiante["Carrera"]
+    porc = estudiante["PorcentajeCarrera"]
     
-    if %creditos > 50 and beca == "Inactivo":
-        return "🟡 Créditos rescatables (trueque DAO)"
-    # ... resto lógica original
+    gaps = {
+        'Ingeniería Civil': 'A', 'Química': 'A', 
+        'Pedagogía Mates': 'B', 'Prevención Riesgos': 'A'
+    }
+    
+    if gaps.get(carrera) == 'A' and porc > 40:
+        return "🔥 PRIORIDAD ALTA - Déficit nacional"
 
-🔔 Ejemplos Prácticos
+🏗️ Arquitectura Inteligente
 
-| ID | Carrera      | % Carrera | Alerta SUR DAO       |
-| -- | ------------ | --------- | -------------------- |
-| 1  | Arquitectura | 62%       | 🔴 Trueque créditos  |
-| 2  | Derecho      | 45%       | 🟠 Reingreso + pares |
-
-🏗️ Arquitectura Trueque
 flowchart TD
-  A[Datos SCT + % créditos] --> B[Motor reglas Python]
-  B --> C[Dashboard VRA + Trueque]
-  C --> D[Alertas "créditos rescatables"]
-  D --> E[MINEDUC valida → Becas]
-  E --> F[DAO pares trueque créditos]
+  A[SCT + SENCE API] --> B[Prioridad A/B/C]
+  B --> C[Trueque créditos]
+  C --> D[MINEDUC convalidación]
+  D --> E[ROI nacional]
 
-💰 Impacto Cuantificado
-500k x 50% carrera x $5M/año = $6 billones capital humano
-SUR DAO 20% recuperación = $1.2 billones ROI anual
+💰 Impacto Estratégico
+500k sombra x Prioridad A 30% = 150k profesionales críticos
+Valor: $1.8 billones capital humano dirigido
 
 
