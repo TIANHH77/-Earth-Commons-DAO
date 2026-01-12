@@ -30,41 +30,23 @@
 
 **Filosofía:** Créditos **NO se pierden** – se **reconvierten inteligentemente**.
 
-## ⚙️ Algoritmo Match Flexible
 
-```python
-def match_desercion_afin(origen, porc_creditos):
-    deser_alta = {
-        'Ing Computación': [('Automatización', 80), ('Ing Civil Mates', 65)],
-        'Ciencias Exactas': [('Pedagogía Mates', 70), ('Ing Civil', 60)]
-    }
-    if origen in deser_alta and porc_creditos > 40:
-        return deser_alta[origen]  # Mejor match
-    return None
 
-# Pepito Ing Computación 62% → Automatización Industrial 80% créditos
+📊 Hallazgos clave
+Ciencias Exactas (59,5%): altísima deserción acumulada, aunque con saturación media.
+Psicología y Periodismo: deserción moderada (25–30%), pero saturación laboral máxima (5).
+Trabajo Social: intermedio, con deserción cercana al 28% y saturación alta (4).
+Ingeniería en Computación y Técnico en Construcción: deserción alta (40%), pero saturación laboral más baja (2).
+Logística: deserción significativa (35%), saturación baja (2).
 
-🔔 Ejemplo Práctico
-Pepito: Ing Computación 62% (deserción 40%)
-↓ SUR DAO Match
-→ Automatización Industrial A (déficit nacional)
-→ 80% créditos SCT vigentes
-→ Termina en 1.5 años → Título + empleo inmediato
+🎯 Interpretación para SUR DAO
 
-🏗️ Arquitectura Match Inteligente
-flowchart TD
-  A[SCT Deserción Alta + % créditos] 
-  A --> B[Match afines Prioridad A/B]
-  B --> C["Ing Comp → Automatización 80%"]
-  C --> D[MINEDUC convalidación SCT]
-  D --> E[Trueque DAO + Beca reactivada]
-  E --> F[ROI: Título + Empleo]
+Zona crítica: carreras con alta deserción + alta saturación → ahí se concentran las trayectorias sombra más urgentes (ej. Psicología, Periodismo, Trabajo Social).
 
-💰 Impacto Trayectoria Flexible
+Zona de oportunidad: carreras con alta deserción pero baja saturación → ahí se puede reconvertir capital humano hacia áreas deficitarias (ej. Computación → Automatización).
 
-500k sombra → 40% alta deserción = 200k target
-80% créditos promedio → 1.5 años egreso
-→ 133k egresados/año en áreas críticas
+Narrativa institucional: este mapa muestra que la deserción y la saturación no son pérdidas aisladas, sino que juntas forman un stock oculto de capital humano que puede ser reencauzado.
+
 
 
 
