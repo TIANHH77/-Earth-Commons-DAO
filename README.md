@@ -40,12 +40,11 @@ Ejemplos de reconversión:
 ---
 
 ## 📊 Mapa de Oportunidades
-- **Zona crítica**: carreras con alta deserción + alta saturación laboral (Psicología, Periodismo, Trabajo Social).  
-- **Zona de oportunidad**: carreras con alta deserción pero baja saturación → reconversión hacia áreas deficitarias (ej. Computación → Automatización).  
+🔴Zona Crítica: Psicología/Periodismo (deserción + saturación)
+🟢 Zona Oportunidad: Computación/Construcción (deserción alta → demanda)
 
 ---
-
-
+**SUR DAO dirige trueque inteligente.**
 ## 🏗️ Arquitectura SUR DAO
 
 ```mermaid
