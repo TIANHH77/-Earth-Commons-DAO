@@ -56,7 +56,7 @@ st.dataframe(df_full[["ID","Carrera","CategoriaRiesgo","EstadoBeca","ApoyoPar","
 
 
 df_full["NivelAlerta"] = df_full.apply(calcular_alerta, axis=1)
-
+```
 
 
 📊 Distribución de NivelAlerta
@@ -74,7 +74,7 @@ Se prioriza acompañamiento donde hay red activa, pero falta cobertura estatal.
 
 
 ```
-
+```mermaid
 flowchart TD
   A[Datos SCT anon.] --> B[Motor de reglas en Python]
   B --> C[Dashboard VRA/VRAE]
