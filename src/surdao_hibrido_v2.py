@@ -1,67 +1,34 @@
 import pandas as pd
 import numpy as np
 
-def surdao_hibrido_v2(csv_sies="data/Oferta_Academica_2025_SIES.csv", años_min=3):
-    """
-    SUR DAO Híbrido v2.0: SIES 2025 Full Parser + USACH 3+ años
-    """
-    # Encoding robusto
-    encodings = ['latin1', 'utf-8', 'ISO-8859-1']
-    df = None
-    for enc in encodings:
-        try:
-            df = pd.read_csv(csv_sies, encoding=enc, errors='ignore')
-            break
-        except:
-            continue
+def surdao_hibrido(csv_sies="data/Oferta_Academica_2025_SIES.csv", años_min=3):
+    # 1. Cargar base nacional
+    df = pd.read_csv(csv_sies, encoding='latin1', errors='ignore')
     
-    if df is None:
-        raise ValueError("No se pudo leer CSV SIES")
-    
-    # Validación columnas + fallback
-    col_mapping = {
-        'Vacantes Semestre Uno': ['Vacantes S1', 'Vacantes_Semestre_Uno'],
-        'Semestres reconocidos': ['Sem_rec', 'Semestres_recogidos'],
-        'Nombre IES': ['IES', 'Institucion'],
-        'Nombre Carrera': ['Carrera']
-    }
-    
-    for col_real, alternativos in col_mapping.items():
-        if col_real not in df.columns:
-            for alt in alternativos:
-                if alt in df.columns:
-                    df[col_real] = df[alt]
-                    break
-    
-    # Numéricas
-    df['Vacantes_S1'] = pd.to_numeric(df['Vacantes Semestre Uno'], errors='coerce')
-    df['Sem_rec'] = pd.to_numeric(df['Semestres reconocidos'], errors='coerce')
-    
-    # 1. GENERAL NACIONAL
-    general = df[(df['Vacantes_S1'] > 50) & (df['Sem_rec'] >= 6)].copy()
-    
-    # 2. LÓGICA AÑOS → CRÉDITOS
-    general['Años_Est'] = np.clip(general['Sem_rec']/2, años_min, 7)
+    # Normalizar columnas (según nombres reales del SIES)
+    df['Vacantes_S1'] = pd.to_numeric(df.get('Vacantes Semestre Uno', df.get('Vacantes S1')), errors='coerce')
+    df['Sem_rec'] = pd.to_numeric(df.get('Semestres reconocidos', df.get('Sem_Rec_SCT')), errors='coerce')
+
+    # 2. Filtrar carreras viables
+    general = df[(df['Vacantes_S1'] > 50) & (df['Sem_rec'] >= 6)]
+
+    # 3. Calcular años, créditos y valor humano
+    general['Años_Est'] = np.clip(general['Sem_rec']/2, 3, 7)
     general['Creditos'] = general['Años_Est'] * 40
     general['Valor_Humano'] = general['Creditos'] * 12000
-    
-    # 3. USACH FOCO
-    usach_mask = general['Nombre IES'].astype(str).str.contains('SANTIAGO|USACH', case=False, na=False)
-    usach_prior = general[usach_mask].copy()
-    
-    # 4. TOP IMPACTO
-    top_50 = usach_prior.nlargest(50, 'Valor_Humano')
-    top_50.to_csv('data/surdao_hibrido_usach_v2.csv', index=False)
-    
+
+    # 4. Foco USACH
+    usach_mask = general['Nombre IES'].str.contains('SANTIAGO|USACH', case=False, na=False)
+    usach_prior = general[usach_mask & (general['Años_Est'] >= años_min)]
+
+    # 5. Export top 50
+    top_hibrido = usach_prior.nlargest(50, 'Valor_Humano')
+    top_hibrido.to_csv('data/surdao_hibrido_usach_v2.csv', index=False)
+
     return {
         'general_carreras': len(general),
         'usach_prior_3mas': len(usach_prior),
-        'top_50': top_50,
-        'creditos_totales': top_50['Creditos'].sum(),
-        'capital_mm': top_50['Valor_Humano'].sum() / 1e6
+        'top_50': top_hibrido,
+        'capital_recuperable_mm': top_hibrido['Valor_Humano'].sum() / 1e6
     }
 
-# Test
-if __name__ == "__main__":
-    res = surdao_hibrido_v2()
-    print(f"USACH 3+ años: {res['usach_prior_3mas']} | ${res['capital_mm']:.0f}MM")
