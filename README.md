@@ -19,6 +19,27 @@
 | 2022        | 250k     | 72k               | 360k                  |
 | Total 7 años| —        | —                 | ~500k estudiantes sombra |
 
+## 💰 COSTO REAL CRISIS SOMBRA
+
+| Impacto             | Valor Anual     | Acumulado 7 años    |
+|---------------------|-----------------|---------------------|
+| Estudiantes perdidos| 72k             | **504k**            |
+| Inversión MINEDUC   | $360 mil millones | **$2.5 billones** |
+| USACH ingresos      | 427 matrícula   | **3k anual**        |
+| **Capital humano**  | Generación truncada | **Brecha social** |
+
+**SUR DAO recupera:** 20% retención = $500 mil millones/año
+
+## 🎓 CAPITAL HUMANO RESCATABLE
+
+| Estudiante Ejemplo | % Carrera | Años Estudiados | Valor Invertido | SUR DAO Recupera |
+|--------------------|-----------|-----------------|-----------------|------------------|
+| Pepito (Derecho)  | 62%       | 3.5 años        | $17.5M CLP      | ✅ Trueque créditos |
+| Juan (Arquitectura)| 45%      | 2 años          | $10M CLP        | ✅ Reingreso sin penalidad |
+| **500k Sombra**   | **~50%**  | **2.5 años promedio** | **$6 billones total** | **ROI nacional** |
+
+**Fórmula:** % créditos x costo anual x años promedio = CAPITAL HUMANO LATENTE
+
 
 ---
 
@@ -90,6 +111,11 @@ st.plotly_chart(fig_pie, use_container_width=True)
 Lógica: Riesgo crítico = medio/alto + sin beca + sin pares + sin centro. Se prioriza acompañamiento donde hay red activa, pero falta cobertura estatal.
 ---
 🛠️ Arquitectura
+Créditos sombra → Trueque DAO:
+1. SCT anon → % completado carrera
+2. Motor reglas → "62% = activo rescatable"
+3. Alertas → "Pepito Derecho: oferta reingreso + pares"
+4. Instituciones → Valida créditos → Reingresa SIN empezar cero
 
 ```mermaidflowchart TD
   A[Datos SCT anon.] --> B[Motor de reglas en Python]
@@ -105,5 +131,7 @@ Lógica: Riesgo crítico = medio/alto + sin beca + sin pares + sin centro. Se pr
 14.6% deserción permanente (OECD).
 Falta de coordinación entre MINEDUC, JUNAEB, becas internas y apoyo comunitario.
 ---
+"NO perdimos 500k estudiantes, tenemos 500k con 50% carrera listos para terminar.
+SUR DAO: Activo $6 billones vs pasivo 'desertores'."
 
 
