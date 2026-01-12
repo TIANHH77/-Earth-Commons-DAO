@@ -41,6 +41,21 @@ Datos basados en convalidaciones SCT reales; >60% habilita "win-win" institucion
 Ley 21.091 Art.28: SCT convalidación OBLIGATORIA.
 Filosofía: Los créditos no se pierden → se reconvierten inteligentemente.
 
+
+
+| Carrera                             | Institución    | Deserción % | Vacantes S1 | Sem. Rec. SCT | Años Prom. | Créditos Acum. | Valor Humano ($MM)                                      |
+| ----------------------------------- | -------------- | ----------- | ----------- | ------------- | ---------- | -------------- | ------------------------------------------------------- |
+| Ing. Civil Informática (USACH C196) | USACH          | 40.5%       | 600         | 10            | 5.2        | 208            | 2.5 🟢                                                  |
+| Psicología (C12)                    | USACH          | 45.2%       | 150         | 10            | 4.8        | 192            | 2.3 🔴                                                  |
+| Ciencias Exactas (C100)             | USACH          | 59.5%       | 450         | 11            | 5.8        | 232            | 2.8 🟢                                                  |
+| Técnico Construcción                | UTEM           | 40.0%       | 180         | 6             | 4.2        | 168            | 2.0 🟢                                                  |
+| Logística                           | DUOC UC        | 35.0%       | 120         | 8             | 4.0        | 160            | 1.9 🟡                                                  |
+| Ing. Civil Construcción             | USACH          | 25.0%       | 250         | 12            | 3.5        | 140            | 1.7 🟢                                                  |
+| Automatización Industrial           | IP ChileValora | 20.0%       | 400         | 8             | 3.2        | 128            | 1.5 🟢 Oferta_Academica_2025_SIES_02_06_2025_WEB_E.csv​ |
+
+Datos Reales Procesados (SIES 2025 + Deserción)
+
+
  ```python 
 def winwin_ues(match):
     """
