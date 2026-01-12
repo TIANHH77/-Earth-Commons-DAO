@@ -42,7 +42,32 @@ def match_desercion_afin(origen, porc_creditos):
         return deser_alta[origen]  # Mejor match
     return None
 
-# Persona Ing Computación 62% → Automatización Industrial 80% créditos
+# Pepito Ing Computación 62% → Automatización Industrial 80% créditos
+
+🔔 Ejemplo Práctico
+Pepito: Ing Computación 62% (deserción 40%)
+↓ SUR DAO Match
+→ Automatización Industrial A (déficit nacional)
+→ 80% créditos SCT vigentes
+→ Termina en 1.5 años → Título + empleo inmediato
+
+🏗️ Arquitectura Match Inteligente
+flowchart TD
+  A[SCT Deserción Alta + % créditos] 
+  A --> B[Match afines Prioridad A/B]
+  B --> C["Ing Comp → Automatización 80%"]
+  C --> D[MINEDUC convalidación SCT]
+  D --> E[Trueque DAO + Beca reactivada]
+  E --> F[ROI: Título + Empleo]
+
+💰 Impacto Trayectoria Flexible
+
+500k sombra → 40% alta deserción = 200k target
+80% créditos promedio → 1.5 años egreso
+→ 133k egresados/año en áreas críticas
+
+
+
 
 
 
