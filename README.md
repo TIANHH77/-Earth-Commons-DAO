@@ -1,8 +1,8 @@
 Earth-Commons-DAO / SUR DAO
 Gobernanza descentralizada para los bienes comunes y trayectorias educativas flexibles.  
-👉 SUR DAO Live
-[![SUR DAO Live](https://img.shields.io/badge/SUR%20DAO-Live-brightgreen?style=for-the-badge)](https://surdao-dashboard.streamlit.app/)
-[![GitHub Repo](https://img.shields.io/badge/GitHub-earthcommonsdaog-blueviolet?style=flat-square)](https://github.com/vivevolandonomade/earthcommonsdaog)
+## 📊 Dashboard Live
+👉 [Ver Dashboard SUR DAO](https://surdao-dashboard.streamlit.app/)  
+👉 [Repo Data](https://github.com/vivevolandonomade/earthcommonsdaog)
 
 
 🌍 Visión y Propósito / Vision & Purpose
@@ -57,51 +57,66 @@ Filosofía: Los créditos no se pierden → se reconvierten inteligentemente.
 
 Datos Reales Procesados (SIES 2025 + Deserción)
 
+[![SUR DAO Live](https://img.shields.io/badge/SUR%20DAO-Live-brightgreen?style=for-the-badge)](https://surdao-dashboard.streamlit.app/)
+![Open Source](https://img.shields.io/badge/Open%20Source-Yes-blue?style=flat-square)
+![Community Driven](https://img.shields.io/badge/Community-Driven-orange?style=flat-square)
+![DAO Governance](https://img.shields.io/badge/DAO-Governance-purple?style=flat-square)
+![Made in Chile](https://img.shields.io/badge/Made%20in-Chile-red?style=flat-square)
 
- ```python 
-def winwin_ues(match):
-    """
-    Evalúa reconversión SCT para win-win institucional.
-    
-    Args:
-        match (dict): {"ley_21091": bool, "pct_sct": int, 
-                       "riesgo_psicosocial": bool, "demanda_laboral": bool}
-    """
-    if not match.get("ley_21091", False):
-        return "❌ No cumple Ley 21.091 (convalidación obligatoria)"
-    if match.get("pct_sct", 0) < 60:
-        return "⚠️ Créditos insuficientes (>60% requerido)"
-    if match.get("riesgo_psicosocial", False):
-        return "🧠 Derivar apoyo psicosocial"
-    if match.get("demanda_laboral", False):
-        return "💰 UES: Matrícula + MINEDUC: Retención + SENCE: Empleo"
-    return "📌 Revisar demanda laboral"
+# 🌑 SUR DAO – Piloto USACH Fase 1
+**$509MM** capital humano recuperable | **274 estudiantes 3+ años** | **SIES 2025 real-time**
+
+SUR DAO Híbrido combina parser nacional SIES 2025 con foco territorial USACH.  
+Transforma créditos SCT de estudiantes desertores en capital humano recuperable, con impacto directo en retención y empleabilidad.
+
+---
+
+## 🎯 Visión
+Gobernanza descentralizada para bienes comunes y trayectorias educativas flexibles.  
+Reconversión inteligente de créditos SCT → nuevas matrículas → impacto económico y social.
+
+---
+
+## 📊 KPIs Fase 1
+- **Carreras nacionales viables:** 4,500+  
+- **USACH 3+ años prioritarios:** 274 estudiantes  
+- **Créditos recuperables:** 42,480 SCT  
+- **Capital humano:** $509MM  
+
+---
+
+## 🎓 Top USACH Matches
+| Carrera                   | Deserción | Créditos | Valor Humano ($MM) | Match Afín |
+|---------------------------|-----------|----------|--------------------|------------|
+| Ing. Civil Informática    | 40.5%     | 208      | 2.5                | Automatización 🟢 |
+| Ciencias Exactas          | 59.5%     | 232      | 2.8                | Ing. Civil 🟢 |
+| Técnico Construcción      | 40.0%     | 200      | 2.4                | Civil Construcción 🟢 |
+| Psicología                | 45.2%     | 192      | 2.3                | 🔴 Crítica Apoyo |
+| Logística USACH           | 35.0%     | 160      | 1.9                | Gestión Pública 🟡 |
+
+---
 
 
 
-```
-📊 Mapa de Oportunidades
-🔴 Zona Crítica: Psicología / Periodismo (deserción + saturación).
+---
 
-🟢 Zona Oportunidad: Computación / Construcción (deserción alta → demanda).
+## 🛣️ Roadmap
+- **Fase 1:** USACH piloto – 274 estudiantes, $509MM impacto.  
+- **Fase 2:** Escalabilidad nacional – 10k carreras parser SIES.  
+- **Fase 3:** Integración Earth-Commons-DAO – bienes comunes ecológicos.  
 
-🏗️ Arquitectura SUR DAO
-```mermaid flowchart TD
-  A[Datos SCT anon.] --> B[Motor de reglas]
-  B --> C[Dashboard VRA/VRAE]
-  C --> D[Alertas psicosociales]
-  D --> E[Capas institucionales: MINEDUC, JUNAEB, Becas]
-  E --> F[Capas humanas: Apoyo pares, Centros estudiantes]
-```
-Flujo de datos: SCT anónimos → motor de reglas → dashboards institucionales → alertas psicosociales → capas de apoyo.
-Infraestructura: nodos y data centers comunitarios.
-Capas de gobernanza: institucional, territorial, humana.
+---
 
-🛣️ Roadmap
-Fase 1: Piloto SUR DAO (USACH/Mineduc).
-Fase 2: Expansión a otras universidades y territorios.
-Fase 3: Integración con Earth-Commons-DAO para bienes comunes ecológicos.
+## 📜 Valores
+- Transparencia  
+- Reciprocidad  
+- Sostenibilidad  
+- Comunidad  
 
+---
+
+
+ 
 🤝 Cómo Participar
 Instituciones: colaborar en reconversión de créditos y dashboards.
 Estudiantes: acceder a alertas y apoyos.
