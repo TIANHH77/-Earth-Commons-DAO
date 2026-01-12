@@ -56,7 +56,7 @@ df_full["NivelAlerta"] = df_full.apply(calcular_alerta, axis=1)
 
 st.subheader("🔔 Alertas clasificadas")
 st.dataframe(df_full[["ID","Carrera","CategoriaRiesgo","EstadoBeca","ApoyoPar","CentroEstudiantes","NivelAlerta"]])
-
+```
 📊 Distribución de NivelAlerta
 
 
@@ -76,6 +76,7 @@ fig_pie = px.pie(
 )
 fig_pie.update_traces(textinfo="percent+label")
 st.plotly_chart(fig_pie, use_container_width=True)
+```
 
 🔔 Ejemplos de alertas del piloto
 
@@ -88,6 +89,7 @@ ID	Carrera	Riesgo	Beca	Apoyo Par	Centro Estudiantes	Alerta generada
 Lógica: Riesgo crítico = medio/alto + sin beca + sin pares + sin centro. Se prioriza acompañamiento donde hay red activa, pero falta cobertura estatal.
 
 
+
 🛠️ Arquitectura
 
 
@@ -98,7 +100,7 @@ flowchart TD
   C --> D[Alertas psicosociales]
   D --> E[Capas institucionales: MINEDUC, JUNAEB, Becas]
   E --> F[Capas humanas: Apoyo entre pares, Centro de estudiantes]
-
+```
 📊 Datos clave
 28.8% tasa de deserción en primer año (SIES).
 427 renuncias en USACH durante 2022.
