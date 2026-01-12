@@ -11,6 +11,7 @@ usach = pd.DataFrame({
     "Riesgo": ["Alto" if i % 3 == 0 else "Medio" if i % 3 == 1 else "Bajo" for i in range(1, 101)],
     "EstadoBeca": ["Inactivo" if i % 4 == 0 else "Activo" for i in range(1, 101)],
     "ApoyoPar": ["Sí" if i % 2 == 0 else "No" for i in range(1, 101)],
+    "CreditosSCT": [60 + (i % 5) * 10 for i in range(1, 101)],  # créditos acumulados
 })
 
 # --- KPIs principales ---
@@ -46,4 +47,22 @@ st.markdown("""
 - 🔴 **Zona Crítica:** Psicología / Periodismo (deserción + saturación)  
 - 🟢 **Zona Oportunidad:** Computación / Construcción (deserción alta → demanda)  
 """)
+
+# --- Simulación de reconversión de créditos SCT ---
+st.subheader("🔄 Simulación de Reconversión de Créditos SCT")
+
+# Slider para elegir % de créditos a reconvertir
+pct_reconversion = st.slider("Porcentaje de créditos a reconvertir", 0, 100, 60)
+
+# Filtrar estudiantes con créditos suficientes
+reconvertidos = usach[usach["CreditosSCT"] >= pct_reconversion]
+
+st.write(f"Estudiantes con ≥ {pct_reconversion}% créditos SCT disponibles para reconversión: {reconvertidos.shape[0]}")
+
+# Mostrar algunos casos
+st.dataframe(reconvertidos[["Nombre", "Carrera", "CreditosSCT"]].head(10))
+
+# KPI de impacto estimado
+impacto = reconvertidos.shape[0] * 1.5  # ejemplo: cada reconversión equivale a 1.5 años de matrícula recuperada
+st.metric("Impacto estimado en años-matrícula recuperados", impacto)
 
