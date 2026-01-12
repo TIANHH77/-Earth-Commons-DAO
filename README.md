@@ -3,13 +3,7 @@
 Principio materno, SUR DAO+# SUR DAO – Piloto Retención Estudiantil USACH/Mineduc +**Reciprocidad > Burocracia**
 +Herramienta open-source que detecta estudiantes "sombra" (congelados, sin beca, riesgo alto) y alerta redes institucionales para acompañamiento proactivo.
 
-
-SUR DAO – Piloto Retención Estudiantil USACH/Mineduc
-Reciprocidad > Burocracia
-
 👉 Dashboard en tiempo real
-# SUR DAO – Piloto Retención Estudiantil USACH/Mineduc
-**Reciprocidad > Burocracia**
 [![Streamlit](https://surdao-dashboard.streamlit.app/)]
 
 ## 📊 Problema
@@ -54,13 +48,32 @@ df_full["NivelAlerta"] = df_full.apply(calcular_alerta, axis=1)
 st.subheader("🔔 Alertas clasificadas")
 st.dataframe(df_full[["ID","Carrera","CategoriaRiesgo","EstadoBeca","ApoyoPar","CentroEstudiantes","NivelAlerta"]])
 
+import plotly.express as px
+
+st.subheader("📊 Distribución de NivelAlerta")
+
+# Contar estudiantes por categoría
+df_counts = df_full["NivelAlerta"].value_counts().reset_index()
+df_counts.columns = ["NivelAlerta", "Cantidad"]
+
+# Gráfico de torta
+fig_pie = px.pie(
+    df_counts,
+    names="NivelAlerta",
+    values="Cantidad",
+    color="NivelAlerta",
+    title="Proporción de estudiantes por nivel de alerta",
+    hole=0.3
+)
+
+fig_pie.update_traces(textinfo="percent+label")
+st.plotly_chart(fig_pie, use_container_width=True)
 
 ## 📊 Problema
 
 
 [Tu tabla 71k-500k]
 
-## 🛠️ Arquitectura
 ## 🛠️ Arquitectura
 ```mermaid
 flowchart TD
