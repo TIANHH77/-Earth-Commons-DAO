@@ -25,10 +25,9 @@ Python dashboard con datos SCT anonimizados + capas institucionales y humanas.
 
 ⚙️ Funcionalidad (ejemplo en Python)
 ## ⚙️ Funcionalidad (ejemplo en Python)
-
-```python
 import streamlit as st
 import pandas as pd
+import plotly.express as px
 
 def calcular_alerta(row):
     riesgo = row["CategoriaRiesgo"]
@@ -45,10 +44,10 @@ def calcular_alerta(row):
         else:
             return "🟠 Riesgo con red parcial"
     return "⚪ No clasificado"
-```
-📊 Distribución de NivelAlerta
-import plotly.express as px
 
+df_full["NivelAlerta"] = df_full.apply(calcular_alerta, axis=1)
+
+# 📊 Distribución de NivelAlerta
 df_counts = df_full["NivelAlerta"].value_counts().reset_index()
 df_counts.columns = ["NivelAlerta", "Cantidad"]
 
@@ -58,20 +57,28 @@ fig_pie = px.pie(
     values="Cantidad",
     color="NivelAlerta",
     title="Proporción de estudiantes por nivel de alerta",
-    hole=0.3
+    hole=0.3,
 )
 fig_pie.update_traces(textinfo="percent+label")
 st.plotly_chart(fig_pie, use_container_width=True)
 
-🔔 Ejemplos de alertas del piloto
-ID	Carrera	Riesgo	Beca	Apoyo Par	Centro Estudiantes	Alerta generada
-1	Arquitectura	Medio	Inactivo	No	Inactivo	Sin beca ministerial
-2	Derecho	Medio	Inactivo	Sí	Activo	Sin beca + Apoyo pares + Centro activo
-4	Derecho	Alto	Inactivo	Sí	Inactivo	Riesgo alto + Sin beca + Apoyo pares
-<img width="841" height="378" alt="image" src="https://github.com/user-attachments/assets/b948b413-59e2-4976-89d8-85db2b357c59" />
-Lógica: Riesgo crítico = medio/alto + sin beca + sin pares + sin centro. Se prioriza acompañamiento donde hay red activa, pero falta cobertura estatal.
 
-🛠️ Arquitectura
+📊 Distribución de NivelAlerta
+import plotly.express as px
+🔔 Ejemplos de alertas del piloto
+
+| ID | Carrera      | Riesgo | Beca     | Apoyo Par | Centro Estudiantes | Alerta generada                                      |
+|----|--------------|--------|----------|-----------|---------------------|------------------------------------------------------|
+| 1  | Arquitectura | Medio  | Inactivo | No        | Inactivo            | Sin beca ministerial                                 |
+| 2  | Derecho      | Medio  | Inactivo | Sí        | Activo              | Sin beca + Apoyo pares + Centro activo              |
+| 4  | Derecho      | Alto   | Inactivo | Sí        | Inactivo            | Riesgo alto + Sin beca + Apoyo pares                |
+
+Lógica: Riesgo crítico = medio/alto + sin beca + sin pares + sin centro.
+Se prioriza acompañamiento donde hay red activa, pero falta cobertura estatal.
+
+
+```
+
 flowchart TD
   A[Datos SCT anon.] --> B[Motor de reglas en Python]
   B --> C[Dashboard VRA/VRAE]
@@ -79,29 +86,12 @@ flowchart TD
   D --> E[Capas institucionales: MINEDUC, JUNAEB, Becas]
   E --> F[Capas humanas: Apoyo entre pares, Centro de estudiantes]
 
+```
 📊 Datos clave
 28.8% tasa de deserción en primer año (SIES).
 427 renuncias en USACH durante 2022.
 14.6% deserción permanente (OECD).
 Falta de coordinación entre MINEDUC, JUNAEB, becas internas y apoyo comunitario.
-
-🧠 IA Entrenamiento SUR DAO
-# src/ml_train.py
-import pandas as pd
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split
-
-usach = pd.DataFrame({
-    'nota': [7.0 + i/10 for i in range(100)],
-    'riesgo': ['alto' if i%3==0 else 'medio' for i in range(100)]
-})
-
-X = usach[['nota']]
-y = usach['riesgo']
-
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
-model = RandomForestClassifier()
-model.fit(X_train, y_train)
 
 
 
