@@ -1,3 +1,6 @@
+
+![SUR DAO Banner](https://copilot.microsoft.com/th/id/BCO.b1452c7c-93f0-43f1-9087-2365368e283b.png)
+
 [![SUR DAO Live](https://img.shields.io/badge/SUR%20DAO-Live-brightgreen)](https://surdao-dashboard.streamlit.app/)
 ![Open Source](https://img.shields.io/badge/Open%20Source-Yes-blue)
 ![Community Driven](https://img.shields.io/badge/Community-Driven-orange)
