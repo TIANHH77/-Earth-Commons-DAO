@@ -28,6 +28,7 @@
 ---
 
 ## ⚙️ Funcionalidad (ejemplo en Python)
+
 ```python
 import streamlit as st
 import pandas as pd
@@ -73,8 +74,6 @@ fig_pie = px.pie(
 fig_pie.update_traces(textinfo="percent+label")
 st.plotly_chart(fig_pie, use_container_width=True)
 
-
-
 🔔 Ejemplos de alertas del piloto
 
 
@@ -82,31 +81,24 @@ ID	Carrera	Riesgo	Beca	Apoyo Par	Centro Estudiantes	Alerta generada
 1	Arquitectura	Medio	Inactivo	No	Inactivo	Sin beca ministerial
 2	Derecho	Medio	Inactivo	Sí	Activo	Sin beca + Apoyo pares + Centro activo
 4	Derecho	Alto	Inactivo	Sí	Inactivo	Riesgo alto + Sin beca + Apoyo pares
-<img width="841" height="465" alt="image" src="https://github.com/user-attachments/assets/57b6b6bc-27d9-4639-be05-25a35e6ceafd" />
+https://github.com/user-attachments/assets/57b6b6bc-27d9-4639-be05-25a35e6ceafd
+
 Lógica: Riesgo crítico = medio/alto + sin beca + sin pares + sin centro. Se prioriza acompañamiento donde hay red activa, pero falta cobertura estatal.
-
-
 
 🛠️ Arquitectura
 
-
-```mermaid
 flowchart TD
   A[Datos SCT anon.] --> B[Motor de reglas en Python]
   B --> C[Dashboard VRA/VRAE]
   C --> D[Alertas psicosociales]
   D --> E[Capas institucionales: MINEDUC, JUNAEB, Becas]
   E --> F[Capas humanas: Apoyo entre pares, Centro de estudiantes]
-```
+
 📊 Datos clave
 28.8% tasa de deserción en primer año (SIES).
 427 renuncias en USACH durante 2022.
 14.6% deserción permanente (OECD).
 Falta de coordinación entre MINEDUC, JUNAEB, becas internas y apoyo comunitario.
-
-
-
-
 
 
 
