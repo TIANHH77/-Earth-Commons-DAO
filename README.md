@@ -31,7 +31,7 @@
 ---
 
 ## ⚙️ Funcionalidad (ejemplo en Python)
-```**.python
+```**python
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -59,7 +59,7 @@ st.subheader("🔔 Alertas clasificadas")
 st.dataframe(df_full[["ID","Carrera","CategoriaRiesgo","EstadoBeca","ApoyoPar","CentroEstudiantes","NivelAlerta"]])
 ```
 📊 Distribución de NivelAlerta
-```**.python
+```**python
 import plotly.express as px
 
 df_counts = df_full["NivelAlerta"].value_counts().reset_index()
@@ -91,7 +91,7 @@ Lógica: Riesgo crítico = medio/alto + sin beca + sin pares + sin centro. Se pr
 ---
 🛠️ Arquitectura
 
-```**.mermaid
+```**mermaid
 flowchart TD
   A[Datos SCT anon.] --> B[Motor de reglas en Python]
   B --> C[Dashboard VRA/VRAE]
