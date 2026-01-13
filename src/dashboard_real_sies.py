@@ -38,5 +38,34 @@ fig.update_layout(
 )
 st.plotly_chart(fig, use_container_width=True)
 
+import plotly.express as px
+
+st.subheader("📈 Relación entre Deserción y Capital Recuperable")
+
+# Gráfico de dispersión
+fig_scatter = px.scatter(
+    df,
+    x="Desercion_SIES_pct",
+    y="Capital_Recuperable",
+    color="Universidad",
+    size="Creditos_Acum",
+    hover_name="Carrera_SURDAO",
+    labels={
+        "Desercion_SIES_pct": "Tasa de Deserción (%)",
+        "Capital_Recuperable": "Capital Recuperable ($MM)"
+    },
+    title="Relación entre tasa de deserción y capital recuperable por carrera"
+)
+
+fig_scatter.update_traces(marker=dict(opacity=0.7, line=dict(width=1, color='DarkSlateGrey')))
+fig_scatter.update_layout(
+    xaxis_title="Tasa de Deserción (%)",
+    yaxis_title="Capital Recuperable ($MM)",
+    legend_title="Universidad"
+)
+
+st.plotly_chart(fig_scatter, use_container_width=True)
+
+
 
 
