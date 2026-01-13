@@ -1,20 +1,22 @@
 import pandas as pd
-from difflib import get_close_matches
 
-sies = pd.read_csv('Oferta_Academica_2025_SIES.csv', sep=';', low_memory=False)
-sies['Nombre_Carrera'] = sies['Nombre Carrera'].str.strip().str.title()
+# 1. Cargar SIES base
+sies = pd.read_csv("data/surdao_real_matches_2025.csv")
 
-surdao_data = [
-    {'Carrera': 'Ing. Civil Informática', 'Desercion_pct': 40.5, 'Creditos': 208, 'Valor_MM': 2.5, 'Afin': 'Automatización Industrial', 'SCT_pct': 75},
-    {'Carrera': 'Psicología', 'Desercion_pct': 45.2, 'Creditos': 192, 'Valor_MM': 2.3, 'Afin': 'Apoyo crítico', 'SCT_pct': 0},
-    {'Carrera': 'Ciencias Exactas', 'Desercion_pct': 59.5, 'Creditos': 232, 'Valor_MM': 2.8, 'Afin': 'Ing. Civil + Pedagogía', 'SCT_pct': 60}
-]
-matches_df = pd.DataFrame(surdao_data)
+# 2. Descargar MiFuturo (empleabilidad)
+mifuturo = pd.read_csv("data/mifuturo_empleabilidad_2025.csv", sep=";")
 
-for idx, row in matches_df.iterrows():
-    candidates = get_close_matches(row['Carrera'], sies['Nombre_Carrera'], n=1, cutoff=0.8)
-    matches_df.at[idx, 'SIES_Match'] = candidates[0] if candidates else 'NO'
+# 3. Mapear empleabilidad a SIES
+sies["Empleabilidad_%"] = sies["Codigo_Carrera"].map(
+    mifuturo.set_index("Codigo_Carrera")["Empleabilidad_%"]
+)
 
-matches_df.to_csv('surdao_real_matches_2025.csv', index=False)
-print("✅ CSV generado!")
-print(matches_df)
+# 4. Match final con tabla SURDAO
+matches_df = sies.copy()
+matches_df["Empleabilidad"] = matches_df["Carrera_SURDAO"].map(
+    sies.set_index("Carrera_SURDAO")["Empleabilidad_%"]
+)
+
+# 5. Guardar SUPER CSV
+matches_df.to_csv("data/surdao_super_matches_2026.csv", index=False)
+
