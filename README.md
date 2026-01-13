@@ -63,14 +63,12 @@
 ---
 
 ## 🎓 Top USACH Matches
-| Carrera | Deserción | Créditos | Valor Humano ($MM) | Match Afín |
-|---------|-----------|----------|--------------------|------------|
-| Ing. Civil Informática | 40.5% | 208 | 2.5 | Automatización 🟢 |
-| Ciencias Exactas | 59.5% | 232 | 2.8 | Ing. Civil 🟢 |
-| Técnico Construcción | 40.0% | 200 | 2.4 | Civil Construcción 🟢 |
-| Psicología | 45.2% | 192 | 2.3 | 🔴 Crítica Apoyo |
-| Logística USACH | 35.0% | 160 | 1.9 | Gestión Pública 🟡 |
-
+| Dataset                     | Fuente                         | ¿Por qué cruzar?                   | Impacto SURDAO                                              |
+| --------------------------- | ------------------------------ | ---------------------------------- | ----------------------------------------------------------- |
+| MiFuturo Empleabilidad 2025 | mifuturo.cl                    | %Empleo + sueldo 1er año egresados | Match deserción → carreras >90% empleo 🟢 Química 98% ($2M) |
+| Deserción CNED 2024         | CNED/MINEDUC                   | Tasa deserción real por carrera    | Priorizar USACH 40%+ (Informática, Psicología)              |
+| SCT Convalidaciones         | sct-chile.consejoderectores.cl | %Transfer créditos Ley 21.091      | Automatización 75% match                                    |
+| UTN Argentina Oferta        | utn.edu.ar                     | Tec. Automatización, Logística     | Fase 2 Rosario                                              |
 ---
 
 ## 🛣️ Roadmap
