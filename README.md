@@ -68,7 +68,7 @@
 | MiFuturo Empleabilidad 2025 | mifuturo.cl                    | %Empleo + sueldo 1er año egresados | Match deserción → carreras >90% empleo 🟢 Química 98% ($2M) |
 | Deserción CNED 2024         | CNED/MINEDUC                   | Tasa deserción real por carrera    | Priorizar USACH 40%+ (Informática, Psicología)              |
 | SCT Convalidaciones         | sct-chile.consejoderectores.cl | %Transfer créditos Ley 21.091      | Automatización 75% match                                    |
-| UTN Argentina Oferta        | utn.edu.ar                     | Tec. Automatización, Logística     | Fase 2 Rosario                                              |
+                                             
 ---
 
 ## 🛣️ Roadmap
