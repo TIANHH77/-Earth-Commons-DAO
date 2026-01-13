@@ -3,11 +3,9 @@ import pandas as pd
 import plotly.express as px   # 👈 aquí importas Plotly
 
 st.title("🌑 SUR DAO - Dashboard SIES 2025")
-
 @st.cache_data
 def load_data():
     return pd.read_csv("data/surdao_real_matches_2025.csv")
-
 df = load_data()
 
 # --- KPIs principales ---
