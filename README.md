@@ -71,13 +71,18 @@ SUR DAO no es solo un dashboard: es una invitación a participar en la **capa so
 ## 🔎 Caminos de aporte en SUR DAO
 
 ### 👩‍💻 1. Contribuir desde el código
+
 Si te interesa la parte técnica:
-- Clona el repo:  
+- Clona el repo:
+    
   ```bash
+  
   git clone https://github.com/TIANHH77/-Earth-Commons-DAO.git
   cd -Earth-Commons-DAO
+  
 Instala dependencias:
 pip install -r requirements.txt
+
 Corre el dashboard en local:
 streamlit run src/dashboard_real_sies.py
 
@@ -98,8 +103,8 @@ Explica cómo se conecta con la lógica de la capa sombra.
 Propón indicadores o narrativas que puedan integrarse al dashboard.
 Abre un issue para discutir la integración con la comunidad.
 
-🧩 4. Contribuir desde la narrativa
-### 📝 4. Contribuir desde el relato
+
+📝 4. Contribuir desde el relato
 
 No todo aporte necesita ser técnico o numérico.  
 También puedes contribuir desde tu **historia, tu experiencia y tu narrativa**:
@@ -129,11 +134,6 @@ Cada rama del árbol representa una forma distinta de fortalecer la capa sombra:
 📝 Relatos: quienes traen su historia, metáforas y reflexiones para darle voz a lo invisible.
 Cada rama es un camino, pero todas alimentan el mismo bosque: el común.
 
-🧭 Filosofía
-Cada camino es válido. No importa si tu aporte es técnico, informacional, comunitario o narrativo:
-todos fortalecen la capa sombra y amplían el común.
-
-
 ```mermaid
 graph TD
     A[🟣 SUR DAO - Capa Sombra] --> B[👩‍💻 Código]
@@ -155,6 +155,11 @@ graph TD
     E --> E1[Escribir historias personales]
     E --> E2[Reflexiones sobre deserción/empleabilidad]
     E --> E3[Metáforas y narrativas colectivas]
+
+🧭 Filosofía
+Cada camino es válido. No importa si tu aporte es técnico, informacional, comunitario o narrativo:
+todos fortalecen la capa sombra y amplían el común.
+
 
 
   
