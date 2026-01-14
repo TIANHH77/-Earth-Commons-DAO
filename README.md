@@ -1,4 +1,33 @@
 
+# Earth Commons DAO – Protocolo 4-Capas Permissionless
+**Gobernanza Descentralizada + Economía Recíproca 2025**
+
+**Testnet LIVE**: earthcommonsdao.netlify.app  
+**Dashboard SUR**: https://surdao-dashboard.streamlit.app/ [file:82]  
+**ZK Privacy**: Midnight NIGHT Glacier Drop ~30M wallets [web:113]  
+
+## 📋 ÍNDICE
+1. [Diagnóstico](#1-diagnóstico)
+2. [Arquitectura 4 Capas](#2-arquitectura)
+3. [SUR DAO](#3-sur-dao)
+...
+
+## 1. Diagnóstico Sistémico
+**LATAM Informal**: 33% PIB formal, 42% hogares dependientes [web:110]  
+**Cuidado invisible**: $10.8T global [web:100]  
+**DAOs**: 13k+ | $24.5B treasuries 2025 [web:100]
+
+## 2. Arquitectura 4 Capas
+```mermaid
+graph TD
+    A[Formal: DAOs Uniswap $5.4B] --> B[ZK Privacy: Midnight]
+    B --> C[Consent Match: SUR Trueque]
+    C --> D[Evolución: Legacy Proof]
+
+
+
+
+
 [![SUR DAO Live](https://img.shields.io/badge/SUR%20DAO-Live-brightgreen)](https://surdao-dashboard.streamlit.app/)
 ![Open Source](https://img.shields.io/badge/Open%20Source-Yes-blue)
 ![Community Driven](https://img.shields.io/badge/Community-Driven-orange)
