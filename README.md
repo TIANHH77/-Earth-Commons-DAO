@@ -106,11 +106,27 @@ Propón indicadores o narrativas que puedan integrarse al dashboard.
 Abre un issue para discutir la integración con la comunidad.
 
 🧩 4. Contribuir desde la narrativa
-Si tu aporte es más conceptual o comunicacional:
-Mejora el README con relatos, diagramas o traducciones.
-Añade visualizaciones en Mermaid para explicar procesos.
-Propón campañas de activación (ej. posts en Reddit, redes sociales).
-Abre un pull request con tu narrativa.
+### 📝 4. Contribuir desde el relato
+
+No todo aporte necesita ser técnico o numérico.  
+También puedes contribuir desde tu **historia, tu experiencia y tu narrativa**:
+
+- Escribe tu relato en un archivo Markdown dentro de `docs/relatos/`.
+- Cuenta cómo tu experiencia se conecta con la **capa sombra**: deserción, trueque, comunidad, invisibilidad.
+- Usa tu voz para mostrar lo que no aparece en los datos.
+- Propón metáforas, imágenes o reflexiones que ayuden a otros a comprender la lógica de SUR DAO.
+- Abre un **pull request** con tu relato, o un **issue** para iniciar conversación.
+
+#### Ejemplo de estructura de relato
+```markdown
+# Mi historia en la capa sombra
+## Contexto
+(Describe tu experiencia: ingreso a la universidad, deserción, trueque, comunidad…)
+## Conexión con SUR DAO
+(Explica cómo tu historia refleja la capa sombra y cómo podría integrarse al dashboard o a la narrativa.)
+## Reflexión
+(Comparte lo que aprendiste, lo que duele, lo que inspira.)
+
 
 🧭 Filosofía
 Cada camino es válido. No importa si tu aporte es técnico, informacional, comunitario o narrativo:
