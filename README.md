@@ -33,11 +33,7 @@ graph TD
     C --> D[Evolución: Legacy Proof]
 ```
 
-
-
-
-
-
+```
 [![SUR DAO Live](https://img.shields.io/badge/SUR%20DAO-Live-brightgreen)](https://surdao-dashboard.streamlit.app/)
 ![Open Source](https://img.shields.io/badge/Open%20Source-Yes-blue)
 ![Community Driven](https://img.shields.io/badge/Community-Driven-orange)
