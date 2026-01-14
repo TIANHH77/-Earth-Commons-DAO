@@ -33,21 +33,16 @@ graph TD
 ![Community Driven](https://img.shields.io/badge/Community-Driven-orange)
 ![DAO Governance](https://img.shields.io/badge/DAO-Governance-purple)
 ![Made in Chile](https://img.shields.io/badge/Made%20in-Chile-red)
-
+```
 # 🌑 SUR DAO - Earth Commons Dashboard
 
 ## 📖 Propósito
 SUR DAO nace para visibilizar la **capa sombra** de la economía del conocimiento: ese espacio invisible donde estudiantes, carreras y comunidades sostienen el tejido social y económico.  
 Este dashboard es una herramienta institucional y narrativa que conecta datos de deserción, empleabilidad y capital recuperable con la misión de SUR DAO: **transformar información en acción colectiva**.
 
-
-
-
 ## 🚀 Demo en vivo
 👉 [Accede al Dashboard aquí](https://surdao-dashboard.streamlit.app)  
 Explora indicadores, tablas y visualizaciones interactivas.
-
-
 
 ## 📊 Funcionalidades
 - **KPIs principales**: total de carreras, créditos acumulados, capital recuperable.
@@ -83,9 +78,7 @@ This dashboard is both an institutional tool and a storytelling artifact, turnin
 
 ## 🤝 Contribución
 ## 🌍 Activación comunitaria
-
 SUR DAO no es solo un dashboard: es una invitación a participar en la **capa sombra**.
-
 ### 🔗 Herramientas vivas
 - [Dashboard en Streamlit](https://surdao-dashboard.streamlit.app)  
 - README narrativo bilingüe  
@@ -98,9 +91,7 @@ SUR DAO no es solo un dashboard: es una invitación a participar en la **capa so
 - 🌍 Desde proyectos: integrar iniciativas comunitarias bajo la lógica de la capa sombra.
 
 ## 🔎 Caminos de aporte en SUR DAO
-
 ### 👩‍💻 1. Contribuir desde el código
-
 Si te interesa la parte técnica:
 - Clona el repo:
     
