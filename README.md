@@ -6,11 +6,17 @@
 **Dashboard SUR**: https://surdao-dashboard.streamlit.app/ [file:82]  
 **ZK Privacy**: Midnight NIGHT Glacier Drop ~30M wallets [web:113]  
 
+[![SUR DAO Live](https://img.shields.io/badge/SUR%20DAO-Live-brightgreen)](https://surdao-dashboard.streamlit.app/)
+![Open Source](https://img.shields.io/badge/Open%20Source-Yes-blue)
+![Community Driven](https://img.shields.io/badge/Community-Driven-orange)
+![DAO Governance](https://img.shields.io/badge/DAO-Governance-purple)
+![Made in Chile](https://img.shields.io/badge/Made%20in-Chile-red)
+
 ## 📋 ÍNDICE
-1. [Diagnóstico](#1-diagnóstico)
-2. [Arquitectura 4 Capas](#2-arquitectura)
+1. [Diagnóstico Sistémico](#1-diagnóstico-sistémico)
+2. [Arquitectura 4 Capas](#2-arquitectura-4-capas)  
 3. [SUR DAO](#3-sur-dao)
-...
+4. [Contribución](#4-contribucion)
 
 ## 1. Diagnóstico Sistémico
 **LATAM Informal**: 33% PIB formal, 42% hogares dependientes [web:110]  
