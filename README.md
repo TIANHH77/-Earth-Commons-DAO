@@ -5,103 +5,50 @@
 ![DAO Governance](https://img.shields.io/badge/DAO-Governance-purple)
 ![Made in Chile](https://img.shields.io/badge/Made%20in-Chile-red)
 
-# 🌍 Earth-Commons-DAO / SUR DAO
-**Gobernanza descentralizada para los bienes comunes y trayectorias educativas flexibles.**
+# 🌑 SUR DAO - Earth Commons Dashboard
 
-## 🚀 SUR DAO Live – Fase 1 USACH
-- 274 estudiantes 3+ años  
-- 42,480 créditos SCT  
-- $509MM impacto económico recuperable  
+## 📖 Propósito
+SUR DAO nace para visibilizar la **capa sombra** de la economía del conocimiento: ese espacio invisible donde estudiantes, carreras y comunidades sostienen el tejido social y económico.  
+Este dashboard es una herramienta institucional y narrativa que conecta datos de deserción, empleabilidad y capital recuperable con la misión de SUR DAO: **transformar información en acción colectiva**.
 
-📂 **Data SIES 2025 →** [data/](data/)
+## 🚀 Demo en vivo
+👉 [Accede al Dashboard aquí](https://surdao-dashboard.streamlit.app)  
+Explora indicadores, tablas y visualizaciones interactivas.
 
----
+## 📊 Funcionalidades
+- **KPIs principales**: total de carreras, créditos acumulados, capital recuperable.
+- **Tabla interactiva**: matches SURDAO-SIES con filtros y exploración.
+- **Visualizaciones narrativas**:
+  - 📊 Barras: impacto económico por carrera.
+  - 📈 Scatter: deserción vs capital recuperable.
+  - 🔵 Bubble Chart: deserción vs empleabilidad vs capital recuperable.
 
-## 🌍 Visión y Propósito
-**ES:** Crear un sistema DAO que articule territorios, comunidades y universidades para proteger y reconvertir capital humano y ecológico.  
-**EN:** Build a DAO system that connects territories, communities, and universities to protect and reconvert human and ecological capital.
+## 🎨 Identidad visual
+El dashboard utiliza un tema oscuro con acentos institucionales, evocando la **capa sombra** y la narrativa ética de SUR DAO.  
+Colores, tipografía y símbolos están pensados para transmitir **claridad, resiliencia y comunidad**.
 
----
+## 🛠️ Tecnologías
+- [Streamlit](https://streamlit.io/) → interfaz interactiva.
+- [Plotly](https://plotly.com/python/) → visualizaciones dinámicas.
+- [Pandas](https://pandas.pydata.org/) → manejo de datos.
 
-## 🎯 Propósito
-- Retención estudiantil y reconversión de créditos académicos  
-- Gobernanza comunitaria de datos y recursos  
-- Activación de apoyos institucionales y humanos  
+## 📂 Estructura del repo
+- `src/dashboard_real_sies.py` → archivo principal del dashboard.
+- `data/surdao_real_matches_2025.csv` → dataset base.
+- `.streamlit/config.toml` → configuración de tema visual.
+- `requirements.txt` → dependencias del proyecto.
 
----
+## 🌍 Versión bilingüe
+### English
+SUR DAO reveals the **shadow layer** of the knowledge economy, where invisible efforts sustain collective progress.  
+This dashboard is both an institutional tool and a storytelling artifact, turning data into **collective empowerment**.
 
-## 📊 Crisis
-- 500k Estudiantes Sombra  
-- 28.8% deserción en primer año (SIES)  
-- 500k créditos vigentes acumulados en estudiantes que abandonaron  
-- Capital humano latente estimado: **$6B**
-
----
-
-## 🔄 Match Deserción → Afines Prioritarios
-| Carrera Origen | Tasa Deserción | Destino Afín Prioritario | % Créditos SCT |
-|----------------|----------------|--------------------------|----------------|
-| Ing. Computación | 40.5% | Automatización Industrial A | 75% |
-| Ciencias Exactas | 59.5% | Ing. Civil + Pedagogía A/B | 60% |
-| Técnico Construcción | 40% | Ing. Civil Construcción A | 80% |
-| Logística | 35% | Gestión Pública A | 65% |
-
-> Datos basados en convalidaciones SCT reales; >60% habilita "win-win" institucional por Ley 21.091
+👉 [Live Dashboard](https://surdao-dashboard.streamlit.app)
 
 ---
 
-## 🧩 Actores y Beneficios
-| Actor | Problema Actual | SUR DAO Solución | Ganancia $ Anual |
-|-------|-----------------|------------------|------------------|
-| MINEDUC | 76% retención meta FES | +20% reingresos | +$500B |
-| Universidades | -15% matrícula gratuidad | 80% créditos → nueva matrícula | +$1.2B |
-| Estudiante | Deuda + 0 créditos | Trueque 1.5 años → título | Sin deuda |
-| SENCE | Déficit técnicos | Match deserción → Automatización | 85% empleo |
-
----
-
-## 🎓 Top USACH Matches
-| Dataset                     | Fuente                         | ¿Por qué cruzar?                   | Impacto SURDAO                                              |
-| --------------------------- | ------------------------------ | ---------------------------------- | ----------------------------------------------------------- |
-| MiFuturo Empleabilidad 2025 | mifuturo.cl                    | %Empleo + sueldo 1er año egresados | Match deserción → carreras >90% empleo 🟢 Química 98% ($2M) |
-| Deserción CNED 2024         | CNED/MINEDUC                   | Tasa deserción real por carrera    | Priorizar USACH 40%+ (Informática, Psicología)              |
-| SCT Convalidaciones         | sct-chile.consejoderectores.cl | %Transfer créditos Ley 21.091      | Automatización 75% match                                    |
-                                             
----
-
-## 🛣️ Roadmap
-- **Fase 1:** USACH piloto – 274 estudiantes, $509MM impacto  
-- **Fase 2:** Escalabilidad nacional – 10k carreras parser SIES  
-- **Fase 3:** Integración Earth-Commons-DAO – bienes comunes ecológicos  
-
----
-
-## 📜 Valores
-- Transparencia  
-- Reciprocidad  
-- Sostenibilidad  
-- Comunidad  
-
----
-
-## 🤝 Cómo Participar
-- **Instituciones:** colaborar en reconversión de créditos y dashboards  
-- **Estudiantes:** acceder a alertas y apoyos  
-- **Comunidad:** aportar nodos, data centers y acompañamiento humano  
-- **Contribuidores técnicos:** revisar `src/procesar_sies.py`, `docs/`, `manifiestos/`
-
----
-
-## 📜 Licencia
-Código abierto. Principios: transparencia, reciprocidad, sostenibilidad.
-
----
-
-[![SUR DAO Live](https://img.shields.io/badge/SUR%20DAO-Live-brightgreen?style=for-the-badge)](https://surdao-dashboard.streamlit.app/)
-[![Open Source](https://img.shields.io/badge/Open%20Source-Yes-blue?style=flat-square)](https://github.com/vivevolandonomade/earthcommonsdaog)
-[![Community-Driven](https://img.shields.io/badge/Community-Driven-orange?style=flat-square)](https://github.com/vivevolandonomade/earthcommonsdaog)
-[![DAO Governance](https://img.shields.io/badge/DAO-Governance-purple?style=flat-square)](https://github.com/vivevolandonomade/earthcommonsdaog)
-[![Made in Chile](https://img.shields.io/badge/Made%20in-Chile-red?style=flat-square)](https://github.com/vivevolandonomade/earthcommonsdaog)
-
+## 🤝 Contribución
+Este proyecto es abierto a la comunidad. Puedes proponer mejoras, abrir issues o enviar pull requests.  
+Together, we build the commons.
 
   
