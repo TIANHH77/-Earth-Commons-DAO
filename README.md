@@ -128,10 +128,17 @@ También puedes contribuir desde tu **historia, tu experiencia y tu narrativa**:
 (Comparte lo que aprendiste, lo que duele, lo que inspira.)
 
 
+🌳 Caminos de aporte
+Cada rama del árbol representa una forma distinta de fortalecer la capa sombra:
+👩‍💻 Código: quienes disfrutan del desarrollo técnico y quieren mejorar el dashboard.
+📊 Datos: quienes aportan información, validan datasets o documentan nuevas fuentes.
+🌍 Proyectos comunitarios: quienes ya ejecutan iniciativas y buscan integrarlas bajo esta lógica.
+📝 Relatos: quienes traen su historia, metáforas y reflexiones para darle voz a lo invisible.
+Cada rama es un camino, pero todas alimentan el mismo bosque: el común.
+
 🧭 Filosofía
 Cada camino es válido. No importa si tu aporte es técnico, informacional, comunitario o narrativo:
 todos fortalecen la capa sombra y amplían el común.
-
 
 ´´´mermaid 
 graph TD
@@ -154,5 +161,5 @@ graph TD
     E --> E1[Escribir historias personales]
     E --> E2[Reflexiones sobre deserción/empleabilidad]
     E --> E3[Metáforas y narrativas colectivas]
-´´´
+
   
