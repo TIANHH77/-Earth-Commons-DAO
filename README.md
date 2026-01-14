@@ -140,6 +140,7 @@ Cada rama es un camino, pero todas alimentan el mismo bosque: el común.
 Cada camino es válido. No importa si tu aporte es técnico, informacional, comunitario o narrativo:
 todos fortalecen la capa sombra y amplían el común.
 
+
 graph TD
     A[🟣 SUR DAO - Capa Sombra] --> B[👩‍💻 Código]
     A --> C[📊 Datos]
@@ -160,6 +161,7 @@ graph TD
     E --> E1[Escribir historias personales]
     E --> E2[Reflexiones sobre deserción/empleabilidad]
     E --> E3[Metáforas y narrativas colectivas]
+
 
 
   
