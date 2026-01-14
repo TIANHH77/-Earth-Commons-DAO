@@ -25,10 +25,9 @@
 
 ## 2. Arquitectura 4 Capas
 
-graph TD
-  A[...] --> B[...]
 
-```mermaid
+```mermaid graph TD
+  A[...] --> B[...]
 graph TD
     A[Formal: DAOs Uniswap $5.4B] --> B[ZK Privacy: Midnight]
     B --> C[Consent Match: SUR Trueque]
@@ -44,6 +43,7 @@ graph TD
 ![DAO Governance](https://img.shields.io/badge/DAO-Governance-purple)
 ![Made in Chile](https://img.shields.io/badge/Made%20in-Chile-red)
 ```
+
 # 🌑 SUR DAO - Earth Commons Dashboard
 
 ## 📖 Propósito
