@@ -20,8 +20,7 @@
 ## 2. Arquitectura 4 Capas
 
 
-```mermaid
-graph TD
+```mermaidgraph TD
     A[Formal: DAOs Uniswap $5.4B] --> B[ZK Privacy: Midnight]
     B --> C[Consent Match: SUR Trueque]
     C --> D[Evolución: Legacy Proof]
