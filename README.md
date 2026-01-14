@@ -26,15 +26,6 @@ graph TD
     B --> C[Consent Match: SUR Trueque]
     C --> D[Evolución: Legacy Proof]
 ```
-
-```
-[![SUR DAO Live](https://img.shields.io/badge/SUR%20DAO-Live-brightgreen)](https://surdao-dashboard.streamlit.app/)
-![Open Source](https://img.shields.io/badge/Open%20Source-Yes-blue)
-![Community Driven](https://img.shields.io/badge/Community-Driven-orange)
-![DAO Governance](https://img.shields.io/badge/DAO-Governance-purple)
-![Made in Chile](https://img.shields.io/badge/Made%20in-Chile-red)
-```
-
 # 🌑 SUR DAO - Earth Commons Dashboard
 
 ## 📖 Propósito
