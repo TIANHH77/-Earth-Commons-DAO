@@ -14,6 +14,18 @@ Este dashboard es una herramienta institucional y narrativa que conecta datos de
 ## 🚀 Demo en vivo
 👉 [Accede al Dashboard aquí](https://surdao-dashboard.streamlit.app)  
 Explora indicadores, tablas y visualizaciones interactivas.
+## 🖼️ Capturas del Dashboard
+### 📊 KPIs principales
+![KPIs](docs/screenshots/kpis.png)
+### 📄 Tabla interactiva
+![Tabla](docs/screenshots/tabla.png)
+### 📊 Barras
+![Barras](docs/screenshots/barras.png)
+### 📈 Scatter
+![Scatter](docs/screenshots/scatter.png)
+### 🔵 Bubble Chart
+![Bubble](docs/screenshots/bubble.png)
+
 
 ## 📊 Funcionalidades
 - **KPIs principales**: total de carreras, créditos acumulados, capital recuperable.
