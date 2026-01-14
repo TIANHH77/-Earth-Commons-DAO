@@ -163,8 +163,7 @@ Cada rama del árbol representa una forma distinta de fortalecer la capa sombra:
 📝 Relatos: quienes traen su historia, metáforas y reflexiones para darle voz a lo invisible.
 Cada rama es un camino, pero todas alimentan el mismo bosque: el común.
 
-```mermaid
-graph TD
+```mermaid graph TD
     A[🟣 SUR DAO - Capa Sombra] --> B[👩‍💻 Código]
     A --> C[📊 Datos]
     A --> D[🌐 Proyectos comunitarios]
@@ -184,6 +183,13 @@ graph TD
     E --> E1[Escribir historias personales]
     E --> E2[Reflexiones sobre deserción/empleabilidad]
     E --> E3[Metáforas y narrativas colectivas]
+```
+
+## 📈 KPIs Live SUR DAO
+[![Deserción](https://img.shields.io/badge/Deserción-28.8%25-red)](https://surdao-dashboard.streamlit.app/)
+[![Matches](https://img.shields.io/badge/Matches-15-blue)](https://surdao-dashboard.streamlit.app/)
+[![Capital](https://img.shields.io/badge/Capital-%24509MM-green)](https://surdao-dashboard.streamlit.app/)
+
 
 🧭 Filosofía
 Cada camino es válido. No importa si tu aporte es técnico, informacional, comunitario o narrativo:
