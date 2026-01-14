@@ -9,9 +9,5 @@ textColor="#F5F5F5"
 font="sans serif"
 
 
-st.set_page_config(
-    page_title="SUR DAO Dashboard",
-    page_icon="🌑",   # o un logo .png en tu repo
-    layout="wide"
-)
+
 
