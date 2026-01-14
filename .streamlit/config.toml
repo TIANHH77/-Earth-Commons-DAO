@@ -1,7 +1,10 @@
+[server]
+headless = true
+
 [theme]
-primaryColor="#4CAF50"
-backgroundColor="#0E1117"
-secondaryBackgroundColor="#262730"
-textColor="#FAFAFA"
+primaryColor="#4B0082"
+backgroundColor="#0D0D0D"
+secondaryBackgroundColor="#1C1C1C"
+textColor="#F5F5F5"
 font="sans serif"
 
