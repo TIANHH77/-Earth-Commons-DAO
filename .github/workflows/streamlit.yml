@@ -1,16 +1,25 @@
 name: Deploy Streamlit
+
 on:
   push:
     branches: [ main ]
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-python@v5
-      with:
-        python-version: '3.11'
-    - run: pip install streamlit pandas
-    - uses: streamlitio/deploy-streamlit-github-actions@v1
-      with:
-        app-location: piloto_sur.py
+      # 1. Checkout del repo
+      - uses: actions/checkout@v4
+
+      # 2. Configurar Python
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # 3. Instalar dependencias desde requirements.txt
+      - run: pip install -r requirements.txt
+
+      # 4. Desplegar en Streamlit Cloud
+      - uses: streamlitio/deploy-streamlit-github-actions@v1
+        with:
+          app-location: piloto_sur.py
