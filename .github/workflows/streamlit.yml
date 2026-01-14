@@ -22,4 +22,5 @@ jobs:
       # 4. Desplegar en Streamlit Cloud
       - uses: streamlitio/deploy-streamlit-github-actions@v1
         with:
-          app-location: piloto_sur.py
+          app-location: src/piloto_sur.py
+
