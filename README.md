@@ -6,12 +6,6 @@
 **Dashboard SUR**: https://surdao-dashboard.streamlit.app/ [file:82]  
 **ZK Privacy**: Midnight NIGHT Glacier Drop ~30M wallets [web:113]  
 
-[![SUR DAO Live](https://img.shields.io/badge/SUR%20DAO-Live-brightgreen)](https://surdao-dashboard.streamlit.app/)
-![Open Source](https://img.shields.io/badge/Open%20Source-Yes-blue)
-![Community Driven](https://img.shields.io/badge/Community-Driven-orange)
-![DAO Governance](https://img.shields.io/badge/DAO-Governance-purple)
-![Made in Chile](https://img.shields.io/badge/Made%20in-Chile-red)
-
 ## 📋 ÍNDICE
 1. [Diagnóstico Sistémico](#1-diagnóstico-sistémico)
 2. [Arquitectura 4 Capas](#2-arquitectura-4-capas)  
@@ -130,7 +124,6 @@ Explica cómo se conecta con la lógica de la capa sombra.
 Propón indicadores o narrativas que puedan integrarse al dashboard.
 Abre un issue para discutir la integración con la comunidad.
 
-
 📝 4. Contribuir desde el relato
 
 No todo aporte necesita ser técnico o numérico.  
@@ -161,7 +154,8 @@ Cada rama del árbol representa una forma distinta de fortalecer la capa sombra:
 📝 Relatos: quienes traen su historia, metáforas y reflexiones para darle voz a lo invisible.
 Cada rama es un camino, pero todas alimentan el mismo bosque: el común.
 
-```mermaid graph TD
+```mermaid
+    graph TD
     A[🟣 SUR DAO - Capa Sombra] --> B[👩‍💻 Código]
     A --> C[📊 Datos]
     A --> D[🌐 Proyectos comunitarios]
