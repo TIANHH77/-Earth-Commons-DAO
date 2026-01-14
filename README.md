@@ -11,20 +11,13 @@
 SUR DAO nace para visibilizar la **capa sombra** de la economía del conocimiento: ese espacio invisible donde estudiantes, carreras y comunidades sostienen el tejido social y económico.  
 Este dashboard es una herramienta institucional y narrativa que conecta datos de deserción, empleabilidad y capital recuperable con la misión de SUR DAO: **transformar información en acción colectiva**.
 
+
+
+
 ## 🚀 Demo en vivo
 👉 [Accede al Dashboard aquí](https://surdao-dashboard.streamlit.app)  
 Explora indicadores, tablas y visualizaciones interactivas.
-## 🖼️ Capturas del Dashboard
-### 📊 KPIs principales
-![KPIs](docs/screenshots/kpis.png)
-### 📄 Tabla interactiva
-![Tabla](docs/screenshots/tabla.png)
-### 📊 Barras
-![Barras](docs/screenshots/barras.png)
-### 📈 Scatter
-![Scatter](docs/screenshots/scatter.png)
-### 🔵 Bubble Chart
-![Bubble](docs/screenshots/bubble.png)
+
 
 
 ## 📊 Funcionalidades
