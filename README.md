@@ -24,6 +24,10 @@
 **DAOs**: 13k+ | $24.5B treasuries 2025 [web:100]
 
 ## 2. Arquitectura 4 Capas
+
+graph TD
+  A[...] --> B[...]
+
 ```mermaid
 graph TD
     A[Formal: DAOs Uniswap $5.4B] --> B[ZK Privacy: Midnight]
