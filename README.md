@@ -39,6 +39,20 @@ graph TD
     B --> C[IA como Custodia]
     C --> D[Transformación situada]
 ```
+```mermaid
+graph TD
+    A[Comunidad Humana] --> B[Institución]
+    B --> C[Datos Invisibles]
+    C --> D[Dashboard SUR]
+
+    D --> E[IA Custodia Ética]
+    E --> F[Transparencia]
+    E --> G[Acción Colectiva]
+
+    F --> H[Decisión Humana]
+    G --> H
+    H --> A
+```
 
 
 # 🌑 SUR DAO - Earth Commons Dashboard
