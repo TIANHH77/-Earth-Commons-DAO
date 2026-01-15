@@ -210,6 +210,23 @@ graph TD
 ```
 
 
+
+```mermaid
+graph TD
+    A[Comunidad Humana] --> B[Institución]
+    B --> C[Datos Invisibles]
+    C --> D[Dashboard SUR]
+
+    D --> E[IA Custodia Ética]
+    E --> F[Transparencia]
+    E --> G[Acción Colectiva]
+
+    F --> H[Decisión Humana]
+    G --> H
+    H --> A
+```
+
+
 ## 📈 KPIs Live SUR DAO
 [![Deserción](https://img.shields.io/badge/Deserción-28.8%25-red)](https://surdao-dashboard.streamlit.app/)
 [![Matches](https://img.shields.io/badge/Matches-15-blue)](https://surdao-dashboard.streamlit.app/)
