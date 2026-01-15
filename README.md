@@ -109,10 +109,8 @@ Si te interesa la parte técnica:
   
 Instala dependencias:
 pip install -r requirements.txt
-
 Corre el dashboard en local:
 streamlit run src/dashboard_real_sies.py
-
 Propón mejoras en visualizaciones, KPIs o flujo de datos.
 Abre un pull request con tus cambios.
 
