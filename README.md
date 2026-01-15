@@ -213,18 +213,15 @@ graph TD
 
 ```mermaid
 graph TD
-    A[Comunidad Humana] --> B[Institución]
-    B --> C[Datos Invisibles]
-    C --> D[Dashboard SUR]
-
-    D --> E[IA Custodia Ética]
-    E --> F[Transparencia]
-    E --> G[Acción Colectiva]
-
-    F --> H[Decisión Humana]
-    G --> H
-    H --> A
+    A[Indicadores Clave] --> B[Alertas Críticas]
+    B --> C[Mapa de Oportunidades]
+    C --> D[Simulación SCT]
+    D --> E[Impacto Recuperado]
+    E --> F[Custodia Ética]
+    F --> G[Decisión Humana]
+    G --> H[Transformación Situada]
 ```
+
 
 
 ## 📈 KPIs Live SUR DAO
