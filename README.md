@@ -1,6 +1,6 @@
 
-# Earth Commons DAO – Protocolo 4-Capas Permissionless
-**Gobernanza Descentralizada + Economía Recíproca 2025**
+SUR DAO – Dashboard para la capa sombra  
+Un protocolo abierto para transformar datos invisibles en acción colectiva
 
 **Testnet LIVE**: earthcommonsdao.netlify.app  
 **Dashboard SUR**: https://surdao-dashboard.streamlit.app/ [file:82]  
