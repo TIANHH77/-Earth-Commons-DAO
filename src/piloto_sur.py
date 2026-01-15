@@ -42,4 +42,6 @@ with tab1:
     col1.metric("Carreras Matches", len(df_real['carrera'].unique()) if not df_real.empty else 42)
     col2.metric("Total Créditos", f"${df_real['creditos'].sum():,.0f}MM" if not df_real.empty else "$1.2MM")
     col3.metric("Deserción Impacto", f"{df_real['creditos'].sum()*0.288:,.0f}MM" if not df_real.empty else "350MM")
-    st.dataframe(df_real if not df_real.e
+    st.dataframe(df_real if not df_real.
+
+                 
