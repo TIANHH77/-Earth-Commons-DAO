@@ -1,4 +1,4 @@
-name: Deploy Streamlit
+name: Deploy Streamlit SUR DAO
 
 on:
   push:
@@ -18,7 +18,8 @@ jobs:
       
       - uses: streamlitio/deploy-streamlit-github-actions@v1
         with:
-          app-location: app.py  # ← CAMBIA A TU ARCHIVO REAL
+          app-location: src/piloto_sur.py  # ← TU PILOTO SUR
+
 
 
 
