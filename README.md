@@ -1,4 +1,4 @@
-🌑 Mantra breve
+🌑
 “La sombra no se vende.
 La custodia no se compra.
 La IA vigila, pero lo humano decide.”
