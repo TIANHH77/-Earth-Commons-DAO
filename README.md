@@ -159,9 +159,9 @@ Cada rama del árbol representa una forma distinta de fortalecer la capa sombra:
 🌍 Proyectos comunitarios: quienes ya ejecutan iniciativas y buscan integrarlas bajo esta lógica.
 📝 Relatos: quienes traen su historia, metáforas y reflexiones para darle voz a lo invisible.
 Cada rama es un camino, pero todas alimentan el mismo bosque: el común.
-
+```
 ```mermaid
-    graph TD
+graph TD
     A[🟣 SUR DAO - Capa Sombra] --> B[👩‍💻 Código]
     A --> C[📊 Datos]
     A --> D[🌐 Proyectos comunitarios]
