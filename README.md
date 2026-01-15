@@ -181,6 +181,17 @@ graph TD
     E --> E3[Metáforas y narrativas colectivas]
 ```
 
+
+```mermaid
+graph TD
+    A[Código técnico] --> E[Dashboard]
+    B[Datos informacionales] --> E
+    C[Proyectos comunitarios] --> E
+    D[Relatos narrativos] --> E
+    E[Fortalecen la capa sombra]
+```
+
+
 ## 📈 KPIs Live SUR DAO
 [![Deserción](https://img.shields.io/badge/Deserción-28.8%25-red)](https://surdao-dashboard.streamlit.app/)
 [![Matches](https://img.shields.io/badge/Matches-15-blue)](https://surdao-dashboard.streamlit.app/)
