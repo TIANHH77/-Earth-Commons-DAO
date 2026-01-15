@@ -19,14 +19,28 @@
 
 ## 2. Arquitectura 4 Capas
 
-
-```mermaid graph TD
+```mermaid
+graph TD
     A[Formal: DAOs Uniswap $5.4B] --> B[ZK Privacy: Midnight]
     B --> C[Consent Match: SUR Trueque]
     C --> D[Evolución: Legacy Proof]
 
-
+    D --> E[USACH Infraestructura]
+    E --> F[DPI al Sistema]
+    F --> G[TO como Bisagra]
+    G --> H[IA como Custodia Humana]
+    H --> I[Cuarto Poder: Dashboard Sur]
+    I --> J[Transformación situada]
 ```
+
+```mermaid
+graph TD
+    A[Sombra] --> B[TO como Bisagra]
+    B --> C[IA como Custodia]
+    C --> D[Transformación situada]
+```
+
+
 # 🌑 SUR DAO - Earth Commons Dashboard
 
 ## 📖 Propósito
