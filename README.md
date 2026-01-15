@@ -1,3 +1,7 @@
+🌑 Mantra breve
+“La sombra no se vende.
+La custodia no se compra.
+La IA vigila, pero lo humano decide.”
 
 SUR DAO – Dashboard para la capa sombra  
 Un protocolo abierto para transformar datos invisibles en acción colectiva
