@@ -56,3 +56,21 @@ with tab2:
 st.markdown("---")
 st.markdown("[GitHub](https://github.com/TIANHH77/-Earth-Commons-DAO) | [Ley 21.314](https://www.bcn.cl/leychile/navegar?idNorma=1186362)")
 
+import streamlit as st
+import pandas as pd
+
+try:
+    df = pd.read_csv('data/sies_carreras.csv')  # Tu path
+except FileNotFoundError:
+    st.error("📊 Data SIES faltante → modo demo")
+    df = pd.DataFrame({
+        'metricas': ['desercion', 'matricula'],
+        'carreras': ['Ingenieria Civil USACH', 'Data Science UTN'],
+        '2024': [15.2, 8.5],
+        '2026_futuro': [12.0, 6.0]
+    })
+
+st.title("🌍 SUR DAO Dashboard")
+st.metric("Deserción Ingeniería", "15.2%", "-2.5%")
+st.dataframe(df)
+st.line_chart(df.set_index('carreras'))
