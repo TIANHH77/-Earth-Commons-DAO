@@ -8,20 +8,17 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      # 1. Checkout del repo
       - uses: actions/checkout@v4
-
-      # 2. Configurar Python
+      
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
-      # 3. Instalar dependencias desde requirements.txt
+      
       - run: pip install -r requirements.txt
-
-      # 4. Desplegar en Streamlit Cloud
+      
       - uses: streamlitio/deploy-streamlit-github-actions@v1
         with:
-          app-location: src/piloto_sur.py
+          app-location: app.py  # ← CAMBIA A TU ARCHIVO REAL
+
 
 
