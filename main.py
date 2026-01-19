@@ -36,11 +36,8 @@ with tab4:
                      hover_name="Carrera_SURDAO", title="Deserción vs Capital")
     st.plotly_chart(fig, width="stretch")
 
-  with tab5:
-  
-   st.subheader("🔵 Bubble Chart - Deserción vs Créditos")
-    
-    # TU CÓDIGO EXACTO (funciona 100%):
+with tab5:
+    st.subheader("🔵 Bubble Chart - Deserción vs Créditos")
     fig_bubble = px.scatter(
         df.head(20),
         x="Desercion_SIES_pct",
@@ -51,6 +48,9 @@ with tab4:
         title="📊 Deserción vs Créditos (burbuja por capital)"
     )
     st.plotly_chart(fig_bubble, width="stretch")
+
+  
+
 
 
 
