@@ -1,3 +1,9 @@
+
+from pyngrok import ngrok
+public_url = ngrok.connect(8501)
+st.write(f"🌐 GLOBAL LIVE: {public_url}")
+
+
 import streamlit as st
 import pandas as pd
 import plotly.express as px
