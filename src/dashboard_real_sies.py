@@ -10,6 +10,9 @@ st.title("🌑 SUR DAO - Capa Sombra Dashboard")
 @st.cache_data
 def load_data():
     df = pd.read_csv("data/surdao_real_matches_2025.csv")
+    # Renombrar columna clave para simplificar
+    if "Carrera_SURDAO" in df.columns:
+        df.rename(columns={"Carrera_SURDAO": "carrera"}, inplace=True)
     # Añadir columna de empleabilidad si falta
     if "Empleabilidad_%" not in df.columns:
         df["Empleabilidad_%"] = 85.0
@@ -40,12 +43,12 @@ with tab3:
     st.subheader("📊 Impacto Económico por Carrera")
     fig_bar = px.bar(
         df,
-        x="Carrera_SURDAO",
+        x="carrera",
         y="Capital_Recuperable",
         color="Universidad",
         text="Capital_Recuperable",
         labels={
-            "Carrera_SURDAO": "Carrera",
+            "carrera": "Carrera",
             "Capital_Recuperable": "Capital Recuperable ($MM)"
         },
         title="Capital humano recuperable por carrera"
@@ -62,7 +65,7 @@ with tab4:
         y="Capital_Recuperable",
         color="Universidad",
         size="Creditos_Acum",
-        hover_name="Carrera_SURDAO",
+        hover_name="carrera",
         labels={
             "Desercion_SIES_pct": "Tasa de Deserción (%)",
             "Capital_Recuperable": "Capital Recuperable ($MM)"
@@ -80,7 +83,7 @@ with tab5:
         y="Empleabilidad_%",
         size="Capital_Recuperable",
         color="Universidad",
-        hover_name="Carrera_SURDAO",
+        hover_name="carrera",
         labels={
             "Desercion_SIES_pct": "Tasa de Deserción (%)",
             "Empleabilidad_%": "Empleabilidad (%)",
@@ -95,5 +98,6 @@ with tab5:
         legend_title="Universidad"
     )
     st.plotly_chart(fig_bubble, use_container_width=True)
+
 
 
