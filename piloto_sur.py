@@ -1,7 +1,28 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import unicodedata
 
+# -----------------------------
+# Función para normalizar columnas
+# -----------------------------
+def normalize_columns(df):
+    """
+    Normaliza los nombres de columnas:
+    - Elimina espacios al inicio y al final
+    - Convierte todo a minúsculas
+    - Reemplaza tildes y caracteres especiales por su forma básica
+    """
+    def clean(col):
+        col = col.strip().lower()
+        col = unicodedata.normalize('NFKD', col).encode('ascii', errors='ignore').decode('utf-8')
+        return col
+    df.columns = [clean(c) for c in df.columns]
+    return df
+
+# -----------------------------
+# Configuración de la app
+# -----------------------------
 st.set_page_config(page_title="SUR DAO USACH", layout="wide", page_icon="🌑")
 st.title("🌑 SUR DAO - Custodia de Trayectorias USACH")
 st.markdown("**Datos reales SIES 2025 + USACH** | Infraestructura porosa para retención")
@@ -43,16 +64,21 @@ hibrido = load_csv("data/surdao_hibrido_v2.csv", demo_df=pd.DataFrame({
     "Match_Afin": ["Automatización 🟢", "🔴 Crítica Apoyo"]
 }))
 
-becas = load_csv("data/becas.csv", index_col="ID")
-junaeb = load_csv("data/junaeb.csv", index_col="ID")
+becas   = load_csv("data/becas.csv", index_col="ID")
+junaeb  = load_csv("data/junaeb.csv", index_col="ID")
 mineduc = load_csv("data/mineduc.csv", index_col="ID")
-usach = load_csv("data/usach.csv")
-pares = load_csv("data/pares.csv", index_col="ID")
+usach   = load_csv("data/usach.csv")
+pares   = load_csv("data/pares.csv", index_col="ID")
+
+# 🔮 Normalizar todos en bloque
+datasets = [real, hibrido, becas, junaeb, mineduc, usach, pares]
+datasets = [normalize_columns(df) for df in datasets]
+real, hibrido, becas, junaeb, mineduc, usach, pares = datasets
 
 # -----------------------------
 # Merge maestro
 # -----------------------------
-df_master = real.merge(hibrido, left_on="carrera", right_on="Carrera", how="outer")
+df_master = real.merge(hibrido, on="carrera", how="outer")
 df_master = df_master.merge(usach, on="carrera", how="outer")
 df_master = df_master.merge(becas, left_index=True, right_index=True, how="outer")
 df_master = df_master.merge(junaeb, left_index=True, right_index=True, how="outer")
@@ -67,10 +93,10 @@ df_master.to_csv("data/surdao_master.csv", index=False)
 # -----------------------------
 col1, col2, col3 = st.columns(3)
 col1.metric("Carreras Analizadas", len(df_master))
-if "Creditos" in df_master.columns:
-    col2.metric("Créditos SCT Total", f"{df_master['Creditos'].sum():.0f}")
-if "Valor_Humano_MM" in df_master.columns:
-    col3.metric("Impacto Humano", f"${df_master['Valor_Humano_MM'].sum():.1f}MM")
+if "creditos" in df_master.columns:
+    col2.metric("Créditos SCT Total", f"{df_master['creditos'].sum():.0f}")
+if "valor_humano_mm" in df_master.columns:
+    col3.metric("Impacto Humano", f"${df_master['valor_humano_mm'].sum():.1f}MM")
 
 # -----------------------------
 # Tabs
@@ -102,4 +128,10 @@ with tab3:
 # Gráfico impacto
 # -----------------------------
 if "impacto_mm" in df_master.columns and "carrera" in df_master.columns:
-    fig = px.bar(df_master.head(10), x="carrera",
+    fig = px.bar(df_master.head(10), x="carrera", y="impacto_mm",
+                 title="Impacto Humano por Carrera (Top 10)", color="desercion_pct")
+    st.plotly_chart(fig, use_container_width=True)
+
+st.markdown("---")
+st.markdown("*SUR DAO Fase 1 - Datos SIES Mineduc 2025*")
+st.markdown("[Repo](https://github.com/TIANHH77/-Earth-Commons-DAO)")
